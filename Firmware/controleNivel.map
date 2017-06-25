@@ -1,0 +1,2160 @@
+ASxxxx Linker V03.00 + NoICE + sdld,  page 1.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  l_BIT_BANK                      
+C:   00000000  l_CABS                          
+C:   00000000  l_GSINIT1                       
+C:   00000000  l_GSINIT5                       
+C:   00000000  l_IABS                          
+C:   00000000  l_ISEG                          
+C:   00000000  l_PSEG                          
+C:   00000000  l_REG_BANK_1                    
+C:   00000000  l_REG_BANK_2                    
+C:   00000000  l_REG_BANK_3                    
+C:   00000000  l_RSEG                          
+C:   00000000  l_RSEG0                         
+C:   00000000  l_RSEG1                         
+C:   00000000  l_XABS                          
+C:   00000000  l_XINIT                         
+C:   00000000  l_XISEG                         
+C:   00000000  l_XSEG                          
+C:   00000000  l__CODE                         
+C:   00000000  s_BSEG                          
+C:   00000000  s_CABS                          
+C:   00000000  s_DSEG                          
+C:   00000000  s_HOME                          
+C:   00000000  s_IABS                          
+C:   00000000  s_ISEG                          
+C:   00000000  s_REG_BANK_0                    
+C:   00000000  s_RSEG                          
+C:   00000000  s_RSEG0                         
+C:   00000000  s_RSEG1                         
+C:   00000000  s_RSEG2                         
+C:   00000000  s_XABS                          
+C:   00000001  l_RSEG2                         
+C:   00000001  s_PSEG                          
+C:   00000001  s_XISEG                         
+C:   00000001  s_XSEG                          
+C:   00000002  l_BSEG_BYTES                    
+C:   00000002  l_OSEG                          
+C:   00000003  l_GSFINAL                       
+C:   00000003  l_GSINIT0                       
+C:   00000008  l_REG_BANK_0                    
+C:   00000008  s_OSEG                          
+C:   00000008  s_REG_BANK_1                    
+C:   0000000A  l_GSINIT2                       
+C:   00000010  l_BSEG                          
+C:   00000010  s_REG_BANK_2                    
+C:   00000018  s_BIT_BANK                      
+C:   00000018  s_REG_BANK_3                    
+C:   0000001E  l_CONST                         
+C:   00000020  s_BSEG_BYTES                    
+C:   00000020  s__CODE                         
+C:   00000022  l_GSINIT3                       
+ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CABS                                00000000    00000000 =           0. bytes (ABS,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000029  l_HOME                          
+C:   00000029  s_GSINIT0                       
+C:   0000002A  l_GSINIT4                       
+C:   0000002C  s_GSINIT1                       
+C:   0000002C  s_GSINIT2                       
+C:   00000036  s_GSINIT3                       
+C:   00000048  l_SSEG                          
+C:   0000004F  l_GSINIT                        
+C:   00000058  s_GSINIT4                       
+C:   00000062  l_DSEG                          
+C:   00000082  s_GSINIT                        
+C:   00000082  s_GSINIT5                       
+C:   000000B8  s_SSEG                          
+C:   000000D1  s_GSFINAL                       
+C:   000000D4  s_CSEG                          
+C:   00000100  l_IRAM                          
+C:   00000898  l_CSEG                          
+C:   0000096C  s_CONST                         
+C:   0000098A  s_XINIT                         
+ASxxxx Linker V03.00 + NoICE + sdld,  page 3.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+RSEG2                               00000000    00000001 =           1. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B7  G$lcdCS$0$0                        controleNivel
+     000000B7  _lcdCS                             controleNivel
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000000  .__.ABS.                           _startup
+     00000080  G$P0$0$0                           controleNivel
+     00000080  G$P0_0$0$0                         controleNivel
+     00000080  _P0                                controleNivel
+     00000080  _P0_0                              controleNivel
+     00000081  G$P0_1$0$0                         controleNivel
+     00000081  G$SP$0$0                           controleNivel
+     00000081  _P0_1                              controleNivel
+     00000081  _SP                                controleNivel
+     00000082  G$DPL$0$0                          controleNivel
+     00000082  G$P0_2$0$0                         controleNivel
+     00000082  _DPL                               controleNivel
+     00000082  _P0_2                              controleNivel
+     00000083  G$DPH$0$0                          controleNivel
+     00000083  G$P0_3$0$0                         controleNivel
+     00000083  _DPH                               controleNivel
+     00000083  _P0_3                              controleNivel
+     00000084  G$P0_4$0$0                         controleNivel
+     00000084  _P0_4                              controleNivel
+     00000085  G$P0_5$0$0                         controleNivel
+     00000085  _P0_5                              controleNivel
+     00000086  G$P0_6$0$0                         controleNivel
+     00000086  _P0_6                              controleNivel
+     00000087  G$P0_7$0$0                         controleNivel
+     00000087  G$PCON$0$0                         controleNivel
+     00000087  _P0_7                              controleNivel
+     00000087  _PCON                              controleNivel
+     00000088  G$IT0$0$0                          controleNivel
+     00000088  G$TCON$0$0                         controleNivel
+     00000088  _IT0                               controleNivel
+     00000088  _TCON                              controleNivel
+     00000089  G$IE0$0$0                          controleNivel
+     00000089  G$TMOD$0$0                         controleNivel
+     00000089  _IE0                               controleNivel
+     00000089  _TMOD                              controleNivel
+     0000008A  G$IT1$0$0                          controleNivel
+     0000008A  G$TL0$0$0                          controleNivel
+     0000008A  _IT1                               controleNivel
+     0000008A  _TL0                               controleNivel
+     0000008B  G$IE1$0$0                          controleNivel
+     0000008B  G$TL1$0$0                          controleNivel
+     0000008B  _IE1                               controleNivel
+     0000008B  _TL1                               controleNivel
+     0000008C  G$TH0$0$0                          controleNivel
+     0000008C  G$TR0$0$0                          controleNivel
+     0000008C  _TH0                               controleNivel
+     0000008C  _TR0                               controleNivel
+     0000008D  G$TF0$0$0                          controleNivel
+     0000008D  G$TH1$0$0                          controleNivel
+     0000008D  _TF0                               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000008D  _TH1                               controleNivel
+     0000008E  G$TR1$0$0                          controleNivel
+     0000008E  _TR1                               controleNivel
+     0000008F  G$CLKREG$0$0                       controleNivel
+     0000008F  G$TF1$0$0                          controleNivel
+     0000008F  _CLKREG                            controleNivel
+     0000008F  _TF1                               controleNivel
+     00000090  G$LCD$0$0                          controleNivel
+     00000090  G$P1$0$0                           controleNivel
+     00000090  G$P1_0$0$0                         controleNivel
+     00000090  G$S1D1$0$0                         controleNivel
+     00000090  _LCD                               controleNivel
+     00000090  _P1                                controleNivel
+     00000090  _P1_0                              controleNivel
+     00000090  _S1D1                              controleNivel
+     00000091  G$P1_1$0$0                         controleNivel
+     00000091  G$S2D2$0$0                         controleNivel
+     00000091  _P1_1                              controleNivel
+     00000091  _S2D2                              controleNivel
+     00000092  G$P1_2$0$0                         controleNivel
+     00000092  G$TrigPin$0$0                      controleNivel
+     00000092  _P1_2                              controleNivel
+     00000092  _TrigPin                           controleNivel
+     00000093  G$P1_3$0$0                         controleNivel
+     00000093  G$adcCS$0$0                        controleNivel
+     00000093  _P1_3                              controleNivel
+     00000093  _adcCS                             controleNivel
+     00000094  G$P1_4$0$0                         controleNivel
+     00000094  _P1_4                              controleNivel
+     00000095  G$P1_5$0$0                         controleNivel
+     00000095  _P1_5                              controleNivel
+     00000096  G$P1_6$0$0                         controleNivel
+     00000096  _P1_6                              controleNivel
+     00000097  G$P1_7$0$0                         controleNivel
+     00000097  _P1_7                              controleNivel
+     00000098  G$RI$0$0                           controleNivel
+     00000098  G$SCON$0$0                         controleNivel
+     00000098  _RI                                controleNivel
+     00000098  _SCON                              controleNivel
+     00000099  G$SBUF$0$0                         controleNivel
+     00000099  G$TI$0$0                           controleNivel
+     00000099  _SBUF                              controleNivel
+     00000099  _TI                                controleNivel
+     0000009A  G$RB8$0$0                          controleNivel
+     0000009A  _RB8                               controleNivel
+     0000009B  G$TB8$0$0                          controleNivel
+     0000009B  _TB8                               controleNivel
+     0000009C  G$REN$0$0                          controleNivel
+     0000009C  _REN                               controleNivel
+     0000009D  G$SM2$0$0                          controleNivel
+     0000009D  _SM2                               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000009E  G$SM1$0$0                          controleNivel
+     0000009E  _SM1                               controleNivel
+     0000009F  G$SM0$0$0                          controleNivel
+     0000009F  _SM0                               controleNivel
+     000000A0  G$P2$0$0                           controleNivel
+     000000A0  G$P2_0$0$0                         controleNivel
+     000000A0  _P2                                controleNivel
+     000000A0  _P2_0                              controleNivel
+     000000A0  __XPAGE                            
+     000000A1  G$P2_1$0$0                         controleNivel
+     000000A1  _P2_1                              controleNivel
+     000000A2  G$P2_2$0$0                         controleNivel
+     000000A2  _P2_2                              controleNivel
+     000000A3  G$P2_3$0$0                         controleNivel
+     000000A3  _P2_3                              controleNivel
+     000000A4  G$P2_4$0$0                         controleNivel
+     000000A4  _P2_4                              controleNivel
+     000000A5  G$P2_5$0$0                         controleNivel
+     000000A5  _P2_5                              controleNivel
+     000000A6  G$P2_6$0$0                         controleNivel
+     000000A6  _P2_6                              controleNivel
+     000000A7  G$P2_7$0$0                         controleNivel
+     000000A7  _P2_7                              controleNivel
+     000000A8  G$EX0$0$0                          controleNivel
+     000000A8  G$IE$0$0                           controleNivel
+     000000A8  _EX0                               controleNivel
+     000000A8  _IE                                controleNivel
+     000000A9  G$ET0$0$0                          controleNivel
+     000000A9  _ET0                               controleNivel
+     000000AA  G$EX1$0$0                          controleNivel
+     000000AA  _EX1                               controleNivel
+     000000AB  G$ET1$0$0                          controleNivel
+     000000AB  _ET1                               controleNivel
+     000000AC  G$ES$0$0                           controleNivel
+     000000AC  _ES                                controleNivel
+     000000AF  G$EA$0$0                           controleNivel
+     000000AF  _EA                                controleNivel
+     000000B0  G$P3$0$0                           controleNivel
+     000000B0  G$P3_0$0$0                         controleNivel
+     000000B0  G$RXD$0$0                          controleNivel
+     000000B0  G$RxLed$0$0                        controleNivel
+     000000B0  _P3                                controleNivel
+     000000B0  _P3_0                              controleNivel
+     000000B0  _RXD                               controleNivel
+     000000B0  _RxLed                             controleNivel
+     000000B1  G$P3_1$0$0                         controleNivel
+     000000B1  G$TXD$0$0                          controleNivel
+     000000B1  G$TxBip$0$0                        controleNivel
+     000000B1  _P3_1                              controleNivel
+     000000B1  _TXD                               controleNivel
+     000000B1  _TxBip                             controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B2  G$INT0$0$0                         controleNivel
+     000000B2  G$P3_2$0$0                         controleNivel
+     000000B2  G$SwInt$0$0                        controleNivel
+     000000B2  _INT0                              controleNivel
+     000000B2  _P3_2                              controleNivel
+     000000B2  _SwInt                             controleNivel
+     000000B3  G$INT1$0$0                         controleNivel
+     000000B3  G$P3_3$0$0                         controleNivel
+     000000B3  _INT1                              controleNivel
+     000000B3  _P3_3                              controleNivel
+     000000B4  G$DC$0$0                           controleNivel
+     000000B4  G$P3_4$0$0                         controleNivel
+     000000B4  G$T0$0$0                           controleNivel
+     000000B4  G$adcCk$0$0                        controleNivel
+     000000B4  _DC                                controleNivel
+     000000B4  _P3_4                              controleNivel
+     000000B4  _T0                                controleNivel
+     000000B4  _adcCk                             controleNivel
+     000000B5  G$P3_5$0$0                         controleNivel
+     000000B5  G$RW$0$0                           controleNivel
+     000000B5  G$T1$0$0                           controleNivel
+     000000B5  G$adcDt$0$0                        controleNivel
+     000000B5  _P3_5                              controleNivel
+     000000B5  _RW                                controleNivel
+     000000B5  _T1                                controleNivel
+     000000B5  _adcDt                             controleNivel
+     000000B6  G$P3_6$0$0                         controleNivel
+     000000B6  G$WR$0$0                           controleNivel
+     000000B6  _P3_6                              controleNivel
+     000000B6  _WR                                controleNivel
+     000000B7  G$P3_7$0$0                         controleNivel
+     000000B7  G$RD$0$0                           controleNivel
+     000000B7  _P3_7                              controleNivel
+     000000B7  _RD                                controleNivel
+     000000B8  G$IP$0$0                           controleNivel
+     000000B8  G$PX0$0$0                          controleNivel
+     000000B8  _IP                                controleNivel
+     000000B8  _PX0                               controleNivel
+     000000B9  G$PT0$0$0                          controleNivel
+     000000B9  _PT0                               controleNivel
+     000000BA  G$PX1$0$0                          controleNivel
+     000000BA  _PX1                               controleNivel
+     000000BB  G$PT1$0$0                          controleNivel
+     000000BB  _PT1                               controleNivel
+     000000BC  G$PS$0$0                           controleNivel
+     000000BC  _PS                                controleNivel
+     000000D0  G$P$0$0                            controleNivel
+     000000D0  G$PSW$0$0                          controleNivel
+     000000D0  _P                                 controleNivel
+     000000D0  _PSW                               controleNivel
+     000000D1  G$F1$0$0                           controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+.  .ABS.                            00000000    00000000 =           0. bytes (ABS,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000D1  _F1                                controleNivel
+     000000D2  G$OV$0$0                           controleNivel
+     000000D2  _OV                                controleNivel
+     000000D3  G$RS0$0$0                          controleNivel
+     000000D3  _RS0                               controleNivel
+     000000D4  G$RS1$0$0                          controleNivel
+     000000D4  _RS1                               controleNivel
+     000000D5  G$F0$0$0                           controleNivel
+     000000D5  _F0                                controleNivel
+     000000D6  G$AC$0$0                           controleNivel
+     000000D6  _AC                                controleNivel
+     000000D7  G$CY$0$0                           controleNivel
+     000000D7  _CY                                controleNivel
+     000000E0  G$ACC$0$0                          controleNivel
+     000000E0  _ACC                               controleNivel
+     000000F0  G$B$0$0                            controleNivel
+     000000F0  _B                                 controleNivel
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+BSEG_BYTES                          00000020    00000002 =           2. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 10.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+REG_BANK_0                          00000000    00000008 =           8. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 11.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000062 =          98. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000022  G$S1$0$0                           controleNivel
+     00000022  _S1                                controleNivel
+     00000023  G$S2$0$0                           controleNivel
+     00000023  _S2                                controleNivel
+     00000024  G$cont$0$0                         controleNivel
+     00000024  _cont                              controleNivel
+     00000025  G$disp1$0$0                        controleNivel
+     00000025  _disp1                             controleNivel
+     00000026  G$disp2$0$0                        controleNivel
+     00000026  _disp2                             controleNivel
+     00000027  G$cnt100$0$0                       controleNivel
+     00000027  _cnt100                            controleNivel
+     00000028  G$cnt200$0$0                       controleNivel
+     00000028  _cnt200                            controleNivel
+     00000029  G$x50us$0$0                        controleNivel
+     00000029  _x50us                             controleNivel
+     0000002A  G$freq$0$0                         controleNivel
+     0000002A  _freq                              controleNivel
+     0000002B  G$RxByte$0$0                       controleNivel
+     0000002B  _RxByte                            controleNivel
+     0000002C  G$TxByte$0$0                       controleNivel
+     0000002C  _TxByte                            controleNivel
+     0000002D  G$rRxB$0$0                         controleNivel
+     0000002D  _rRxB                              controleNivel
+     0000002E  G$wRxB$0$0                         controleNivel
+     0000002E  _wRxB                              controleNivel
+     0000002F  G$rTxB$0$0                         controleNivel
+     0000002F  _rTxB                              controleNivel
+     00000030  G$wTxB$0$0                         controleNivel
+     00000030  _wTxB                              controleNivel
+     00000031  G$RxB$0$0                          controleNivel
+     00000031  _RxB                               controleNivel
+     00000041  G$TxB$0$0                          controleNivel
+     00000041  _TxB                               controleNivel
+     00000051  G$algs$0$0                         controleNivel
+     00000051  _algs                              controleNivel
+     00000056  LcontroleNivel.char2LCD$val$1$12   controleNivel
+     00000056  _char2LCD_PARM_2                   controleNivel
+     00000057  LcontroleNivel.char2LCD$dot$1$12   controleNivel
+     00000057  _char2LCD_PARM_3                   controleNivel
+     00000058  LcontroleNivel.algs2ser$asc0$1$2   controleNivel
+     00000058  _algs2ser_PARM_2                   controleNivel
+     0000005A  LcontroleNivel.algs2ser$dot$1$25   controleNivel
+     0000005A  _algs2ser_PARM_3                   controleNivel
+     0000005B  LcontroleNivel.char2Ser$val$1$34   controleNivel
+     0000005B  _char2Ser_PARM_2                   controleNivel
+     0000005C  LcontroleNivel.char2Ser$dot$1$34   controleNivel
+     0000005C  _char2Ser_PARM_3                   controleNivel
+     0000005D  LcontroleNivel.int2Ser$val$1$36    controleNivel
+     0000005D  _int2Ser_PARM_2                    controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 12.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+DSEG                                00000000    00000062 =          98. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000005F  LcontroleNivel.int2Ser$dot$1$36    controleNivel
+     0000005F  _int2Ser_PARM_3                    controleNivel
+     00000060  G$Echo$0$0                         controleNivel
+     00000060  _Echo                              controleNivel
+     00000062  G$TrigCont$0$0                     controleNivel
+     00000062  _TrigCont                          controleNivel
+     00000063  G$pid$0$0                          controleNivel
+     00000063  _pid                               controleNivel
+     00000066  G$pwm$0$0                          controleNivel
+     00000066  _pwm                               controleNivel
+     00000067  G$malha$0$0                        controleNivel
+     00000067  _malha                             controleNivel
+     00000068  LcontroleNivel.main$setup$1$49     controleNivel
+     00000069  LcontroleNivel.main$tempC$1$49     controleNivel
+     0000006A  LcontroleNivel.main$errAt$1$49     controleNivel
+     0000006B  LcontroleNivel.main$ctrlAt$1$49    controleNivel
+     0000006D  LcontroleNivel.main$P$1$49         controleNivel
+     0000006F  LcontroleNivel.main$I$1$49         controleNivel
+     00000071  LcontroleNivel.main$tempo$1$49     controleNivel
+     00000073  LcontroleNivel.main$contSetup$1$   controleNivel
+     00000074  LcontroleNivel.main$setupR$1$49    controleNivel
+     00000077  LcontroleNivel.main$number$1$49    controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 13.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+OSEG                                00000008    00000002 =           2. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     00000008  __divsint_PARM_2                   _divuint
+     00000008  __divuint_PARM_2                   _divuint
+     00000008  __modsint_PARM_2                   _moduint
+     00000008  __moduint_PARM_2                   _moduint
+     00000008  __mulint_PARM_2                    _mulint
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 14.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+SSEG                                000000B8    00000048 =          72. bytes (REL,OVR)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     000000B8  __start__stack                     controleNivel
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 15.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+HOME                                00000000    00000029 =          41. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000000  A$controleNivel$653                controleNivel
+C:   00000003  A$controleNivel$654                controleNivel
+C:   0000000B  A$controleNivel$656                controleNivel
+C:   00000013  A$controleNivel$658                controleNivel
+C:   0000001B  A$controleNivel$660                controleNivel
+C:   00000023  A$controleNivel$662                controleNivel
+C:   00000026  A$controleNivel$791                controleNivel
+C:   00000026  __sdcc_program_startup             controleNivel
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT0                             00000029    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000029  __sdcc_gsinit_startup              
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT2                             0000002C    0000000A =          10. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT3                             00000036    00000022 =          34. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000036  __mcs51_genXINIT                   
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT4                             00000058    0000002A =          42. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000058  __mcs51_genRAMCLEAR                
+C:   0000005E  __mcs51_genXRAMCLEAR               
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              00000082    0000004F =          79. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000082  A$controleNivel$678                controleNivel
+C:   00000082  C$uRTOS_2.21.h$38$1$49             controleNivel
+C:   00000085  A$controleNivel$681                controleNivel
+C:   00000085  C$uRTOS_2.21.h$39$1$49             controleNivel
+C:   00000088  A$controleNivel$684                controleNivel
+C:   00000088  C$uRTOS_2.21.h$40$1$49             controleNivel
+C:   0000008B  A$controleNivel$687                controleNivel
+C:   0000008B  C$uRTOS_2.21.h$41$1$49             controleNivel
+C:   0000008E  A$controleNivel$690                controleNivel
+C:   0000008E  C$uRTOS_2.21.h$42$1$49             controleNivel
+C:   00000091  A$controleNivel$693                controleNivel
+C:   00000091  C$uRTOS_2.21.h$43$1$49             controleNivel
+C:   00000094  A$controleNivel$696                controleNivel
+C:   00000094  C$uRTOS_2.21.h$44$1$49             controleNivel
+C:   00000097  A$controleNivel$699                controleNivel
+C:   00000097  C$uRTOS_2.21.h$46$1$49             controleNivel
+C:   0000009A  A$controleNivel$702                controleNivel
+C:   0000009A  C$uRTOS_2.21.h$49$1$49             controleNivel
+C:   0000009D  A$controleNivel$705                controleNivel
+C:   0000009D  C$uRTOS_2.21.h$50$1$49             controleNivel
+C:   000000A0  A$controleNivel$708                controleNivel
+C:   000000A0  C$uRTOS_2.21.h$51$1$49             controleNivel
+C:   000000A3  A$controleNivel$711                controleNivel
+C:   000000A3  C$uRTOS_2.21.h$52$1$49             controleNivel
+C:   000000A6  A$controleNivel$714                controleNivel
+C:   000000A6  C$controleNivel.c$10$1$49          controleNivel
+C:   000000A7  A$controleNivel$715                controleNivel
+C:   000000A9  A$controleNivel$716                controleNivel
+C:   000000AB  A$controleNivel$719                controleNivel
+C:   000000AB  C$controleNivel.c$11$1$49          controleNivel
+C:   000000AE  A$controleNivel$723                controleNivel
+C:   000000AE  C$controleNivel.c$12$1$49          controleNivel
+C:   000000B0  A$controleNivel$725                controleNivel
+C:   000000B2  A$controleNivel$727                controleNivel
+C:   000000B4  A$controleNivel$731                controleNivel
+C:   000000B4  C$controleNivel.c$13$1$49          controleNivel
+C:   000000B6  A$controleNivel$734                controleNivel
+C:   000000B6  C$controleNivel.c$14$1$49          controleNivel
+C:   000000B9  A$controleNivel$738                controleNivel
+C:   000000B9  C$uRTOS_2.21.h$27$1$49             controleNivel
+C:   000000BB  A$controleNivel$742                controleNivel
+C:   000000BB  C$uRTOS_2.21.h$28$1$49             controleNivel
+C:   000000BD  A$controleNivel$746                controleNivel
+C:   000000BD  C$uRTOS_2.21.h$29$1$49             controleNivel
+C:   000000BF  A$controleNivel$750                controleNivel
+C:   000000BF  C$uRTOS_2.21.h$30$1$49             controleNivel
+C:   000000C1  A$controleNivel$754                controleNivel
+C:   000000C1  C$uRTOS_2.21.h$31$1$49             controleNivel
+C:   000000C3  A$controleNivel$758                controleNivel
+C:   000000C3  C$uRTOS_2.21.h$32$1$49             controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSINIT                              00000082    0000004F =          79. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000C5  A$controleNivel$762                controleNivel
+C:   000000C5  C$uRTOS_2.21.h$33$1$49             controleNivel
+C:   000000C7  A$controleNivel$766                controleNivel
+C:   000000C7  C$uRTOS_2.21.h$34$1$49             controleNivel
+C:   000000C9  A$controleNivel$770                controleNivel
+C:   000000C9  C$uRTOS_2.21.h$35$1$49             controleNivel
+C:   000000CB  A$controleNivel$774                controleNivel
+C:   000000CB  C$uRTOS_2.21.h$37$1$49             controleNivel
+C:   000000CD  A$controleNivel$778                controleNivel
+C:   000000CD  C$controleNivel.c$15$1$49          controleNivel
+C:   000000CF  A$controleNivel$782                controleNivel
+C:   000000CF  C$uRTOS_2.21.h$20$1$49             controleNivel
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+GSFINAL                             000000D1    00000003 =           3. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000D1  A$controleNivel$784                controleNivel
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000000D4  A$controleNivel$815                controleNivel
+C:   000000D4  C$uRTOS_2.21.h$76$0$0              controleNivel
+C:   000000D4  G$ext_0$0$0                        controleNivel
+C:   000000D4  _ext_0                             controleNivel
+C:   000000D6  A$controleNivel$816                controleNivel
+C:   000000D8  A$controleNivel$820                controleNivel
+C:   000000D8  C$uRTOS_2.21.h$77$1$2              controleNivel
+C:   000000DA  A$controleNivel$823                controleNivel
+C:   000000DA  C$uRTOS_2.21.h$78$1$2              controleNivel
+C:   000000DD  A$controleNivel$826                controleNivel
+C:   000000DD  C$uRTOS_2.21.h$79$2$3              controleNivel
+C:   000000DF  A$controleNivel$827                controleNivel
+C:   000000E1  A$controleNivel$828                controleNivel
+C:   000000E3  A$controleNivel$829                controleNivel
+C:   000000E5  A$controleNivel$830                controleNivel
+C:   000000E7  A$controleNivel$834                controleNivel
+C:   000000E7  C$uRTOS_2.21.h$82$2$4              controleNivel
+C:   000000E9  A$controleNivel$835                controleNivel
+C:   000000EB  A$controleNivel$836                controleNivel
+C:   000000ED  A$controleNivel$837                controleNivel
+C:   000000EF  A$controleNivel$839                controleNivel
+C:   000000F1  A$controleNivel$840                controleNivel
+C:   000000F3  A$controleNivel$843                controleNivel
+C:   000000F3  C$uRTOS_2.21.h$84$1$2              controleNivel
+C:   000000F3  XG$ext_0$0$0                       controleNivel
+C:   000000F4  A$controleNivel$861                controleNivel
+C:   000000F4  C$uRTOS_2.21.h$129$1$6             controleNivel
+C:   000000F4  C$uRTOS_2.21.h$89$1$2              controleNivel
+C:   000000F4  G$timer_0$0$0                      controleNivel
+C:   000000F4  _timer_0                           controleNivel
+C:   000000F6  A$controleNivel$862                controleNivel
+C:   000000F8  A$controleNivel$863                controleNivel
+C:   000000FB  A$controleNivel$864                controleNivel
+C:   000000FE  A$controleNivel$865                controleNivel
+C:   00000101  A$controleNivel$867                controleNivel
+C:   00000104  A$controleNivel$868                controleNivel
+C:   00000106  A$controleNivel$870                controleNivel
+C:   00000109  A$controleNivel$871                controleNivel
+C:   0000010C  A$controleNivel$872                controleNivel
+C:   0000010F  A$controleNivel$873                controleNivel
+C:   00000112  A$controleNivel$874                controleNivel
+C:   00000114  A$controleNivel$876                controleNivel
+C:   00000117  A$controleNivel$877                controleNivel
+C:   00000119  A$controleNivel$878                controleNivel
+C:   0000011C  A$controleNivel$879                controleNivel
+C:   0000011E  A$controleNivel$881                controleNivel
+C:   00000121  A$controleNivel$883                controleNivel
+C:   00000123  A$controleNivel$884                controleNivel
+C:   00000126  A$controleNivel$885                controleNivel
+C:   00000129  A$controleNivel$886                controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000012C  A$controleNivel$888                controleNivel
+C:   0000012E  A$controleNivel$889                controleNivel
+C:   00000130  A$controleNivel$890                controleNivel
+C:   00000132  A$controleNivel$892                controleNivel
+C:   00000134  A$controleNivel$893                controleNivel
+C:   00000137  A$controleNivel$894                controleNivel
+C:   0000013A  A$controleNivel$895                controleNivel
+C:   0000013D  A$controleNivel$897                controleNivel
+C:   0000013F  A$controleNivel$898                controleNivel
+C:   00000141  A$controleNivel$901                controleNivel
+C:   00000143  A$controleNivel$902                controleNivel
+C:   00000146  A$controleNivel$903                controleNivel
+C:   00000148  A$controleNivel$905                controleNivel
+C:   0000014B  A$controleNivel$907                controleNivel
+C:   0000014D  A$controleNivel$908                controleNivel
+C:   0000014F  A$controleNivel$909                controleNivel
+C:   00000150  A$controleNivel$926                controleNivel
+C:   00000150  C$uRTOS_2.21.h$130$1$6             controleNivel
+C:   00000150  C$uRTOS_2.21.h$134$1$6             controleNivel
+C:   00000150  C$uRTOS_2.21.h$148$1$7             controleNivel
+C:   00000150  G$delay50$0$0                      controleNivel
+C:   00000150  XG$timer_0$0$0                     controleNivel
+C:   00000150  _delay50                           controleNivel
+C:   00000152  A$controleNivel$927                controleNivel
+C:   00000154  A$controleNivel$928                controleNivel
+C:   00000156  A$controleNivel$929                controleNivel
+C:   00000157  A$controleNivel$930                controleNivel
+C:   00000159  A$controleNivel$931                controleNivel
+C:   0000015B  A$controleNivel$932                controleNivel
+C:   0000015D  A$controleNivel$934                controleNivel
+C:   0000015E  A$controleNivel$936                controleNivel
+C:   00000161  A$controleNivel$937                controleNivel
+C:   00000163  A$controleNivel$938                controleNivel
+C:   00000165  A$controleNivel$939                controleNivel
+C:   00000166  A$controleNivel$955                controleNivel
+C:   00000166  C$uRTOS_2.21.h$149$1$7             controleNivel
+C:   00000166  C$uRTOS_2.21.h$153$1$7             controleNivel
+C:   00000166  G$wrLCD8$0$0                       controleNivel
+C:   00000166  XG$delay50$0$0                     controleNivel
+C:   00000166  _wrLCD8                            controleNivel
+C:   00000168  A$controleNivel$959                controleNivel
+C:   00000168  C$uRTOS_2.21.h$154$1$9             controleNivel
+C:   0000016A  A$controleNivel$960                controleNivel
+C:   0000016C  A$controleNivel$962                controleNivel
+C:   0000016E  A$controleNivel$965                controleNivel
+C:   0000016E  C$uRTOS_2.21.h$155$1$9             controleNivel
+C:   0000016F  A$controleNivel$966                controleNivel
+C:   00000171  A$controleNivel$968                controleNivel
+C:   00000173  A$controleNivel$969                controleNivel
+C:   00000175  A$controleNivel$970                controleNivel
+C:   00000176  A$controleNivel$971                controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000178  A$controleNivel$973                controleNivel
+C:   0000017A  A$controleNivel$974                controleNivel
+C:   0000017C  A$controleNivel$977                controleNivel
+C:   0000017C  C$uRTOS_2.21.h$156$1$9             controleNivel
+C:   0000017D  A$controleNivel$978                controleNivel
+C:   0000017F  A$controleNivel$980                controleNivel
+C:   00000181  A$controleNivel$981                controleNivel
+C:   00000183  A$controleNivel$982                controleNivel
+C:   00000184  A$controleNivel$983                controleNivel
+C:   00000185  A$controleNivel$985                controleNivel
+C:   00000187  A$controleNivel$986                controleNivel
+C:   00000189  A$controleNivel$989                controleNivel
+C:   00000189  C$uRTOS_2.21.h$157$1$9             controleNivel
+C:   0000018C  A$controleNivel$990                controleNivel
+C:   0000018F  A$controleNivel$994                controleNivel
+C:   0000018F  C$uRTOS_2.21.h$158$1$9             controleNivel
+C:   00000191  A$controleNivel$997                controleNivel
+C:   00000191  C$uRTOS_2.21.h$159$1$9             controleNivel
+C:   00000194  A$controleNivel$998                controleNivel
+C:   00000197  A$controleNivel$1002               controleNivel
+C:   00000197  C$uRTOS_2.21.h$160$1$9             controleNivel
+C:   00000199  A$controleNivel$1005               controleNivel
+C:   00000199  C$uRTOS_2.21.h$161$1$9             controleNivel
+C:   0000019C  A$controleNivel$1006               controleNivel
+C:   0000019F  A$controleNivel$1010               controleNivel
+C:   0000019F  C$uRTOS_2.21.h$162$1$9             controleNivel
+C:   000001A1  A$controleNivel$1012               controleNivel
+C:   000001A3  A$controleNivel$1015               controleNivel
+C:   000001A3  C$uRTOS_2.21.h$163$1$9             controleNivel
+C:   000001A3  XG$wrLCD8$0$0                      controleNivel
+C:   000001A4  A$controleNivel$1029               controleNivel
+C:   000001A4  C$uRTOS_2.21.h$167$1$9             controleNivel
+C:   000001A4  G$wrLCD4$0$0                       controleNivel
+C:   000001A4  _wrLCD4                            controleNivel
+C:   000001A6  A$controleNivel$1032               controleNivel
+C:   000001A6  C$uRTOS_2.21.h$169$1$11            controleNivel
+C:   000001A8  A$controleNivel$1033               controleNivel
+C:   000001A9  A$controleNivel$1034               controleNivel
+C:   000001AA  A$controleNivel$1038               controleNivel
+C:   000001AA  C$uRTOS_2.21.h$170$1$11            controleNivel
+C:   000001AC  A$controleNivel$1039               controleNivel
+C:   000001AE  A$controleNivel$1040               controleNivel
+C:   000001B0  A$controleNivel$1041               controleNivel
+C:   000001B2  A$controleNivel$1042               controleNivel
+C:   000001B5  A$controleNivel$1043               controleNivel
+C:   000001B7  A$controleNivel$1046               controleNivel
+C:   000001B7  C$uRTOS_2.21.h$171$1$11            controleNivel
+C:   000001B8  A$controleNivel$1047               controleNivel
+C:   000001B9  A$controleNivel$1048               controleNivel
+C:   000001BB  A$controleNivel$1049               controleNivel
+C:   000001BC  A$controleNivel$1050               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000001BE  A$controleNivel$1051               controleNivel
+C:   000001BF  A$controleNivel$1052               controleNivel
+C:   000001C0  A$controleNivel$1056               controleNivel
+C:   000001C0  C$uRTOS_2.21.h$172$1$11            controleNivel
+C:   000001C2  A$controleNivel$1057               controleNivel
+C:   000001C4  A$controleNivel$1058               controleNivel
+C:   000001C6  A$controleNivel$1059               controleNivel
+C:   000001C9  A$controleNivel$1062               controleNivel
+C:   000001C9  C$uRTOS_2.21.h$173$1$11            controleNivel
+C:   000001C9  XG$wrLCD4$0$0                      controleNivel
+C:   000001CA  A$controleNivel$1078               controleNivel
+C:   000001CA  C$uRTOS_2.21.h$178$1$11            controleNivel
+C:   000001CA  G$char2LCD$0$0                     controleNivel
+C:   000001CA  _char2LCD                          controleNivel
+C:   000001CC  A$controleNivel$1082               controleNivel
+C:   000001CC  C$uRTOS_2.21.h$180$1$13            controleNivel
+C:   000001CE  A$controleNivel$1083               controleNivel
+C:   000001D0  A$controleNivel$1084               controleNivel
+C:   000001D3  A$controleNivel$1087               controleNivel
+C:   000001D3  C$uRTOS_2.21.h$181$1$13            controleNivel
+C:   000001D6  A$controleNivel$1088               controleNivel
+C:   000001D8  A$controleNivel$1089               controleNivel
+C:   000001D9  A$controleNivel$1090               controleNivel
+C:   000001DB  A$controleNivel$1091               controleNivel
+C:   000001DD  A$controleNivel$1094               controleNivel
+C:   000001DD  C$uRTOS_2.21.h$182$1$13            controleNivel
+C:   000001E0  A$controleNivel$1095               controleNivel
+C:   000001E2  A$controleNivel$1096               controleNivel
+C:   000001E3  A$controleNivel$1097               controleNivel
+C:   000001E6  A$controleNivel$1100               controleNivel
+C:   000001E6  C$uRTOS_2.21.h$183$1$13            controleNivel
+C:   000001E9  A$controleNivel$1101               controleNivel
+C:   000001EB  A$controleNivel$1102               controleNivel
+C:   000001EC  A$controleNivel$1103               controleNivel
+C:   000001EE  A$controleNivel$1104               controleNivel
+C:   000001F0  A$controleNivel$1107               controleNivel
+C:   000001F0  C$uRTOS_2.21.h$184$1$13            controleNivel
+C:   000001F3  A$controleNivel$1108               controleNivel
+C:   000001F5  A$controleNivel$1109               controleNivel
+C:   000001F6  A$controleNivel$1110               controleNivel
+C:   000001F8  A$controleNivel$1111               controleNivel
+C:   000001FA  A$controleNivel$1112               controleNivel
+C:   000001FC  A$controleNivel$1115               controleNivel
+C:   000001FE  A$controleNivel$1119               controleNivel
+C:   000001FE  C$uRTOS_2.21.h$186$3$15            controleNivel
+C:   000001FF  A$controleNivel$1120               controleNivel
+C:   00000202  A$controleNivel$1122               controleNivel
+C:   00000204  A$controleNivel$1123               controleNivel
+C:   00000207  A$controleNivel$1124               controleNivel
+C:   00000209  A$controleNivel$1125               controleNivel
+C:   0000020C  A$controleNivel$1126               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000020E  A$controleNivel$1130               controleNivel
+C:   0000020E  C$uRTOS_2.21.h$187$3$15            controleNivel
+C:   0000020F  A$controleNivel$1131               controleNivel
+C:   00000211  A$controleNivel$1132               controleNivel
+C:   00000212  A$controleNivel$1133               controleNivel
+C:   00000214  A$controleNivel$1135               controleNivel
+C:   00000216  A$controleNivel$1136               controleNivel
+C:   00000218  A$controleNivel$1137               controleNivel
+C:   0000021B  A$controleNivel$1138               controleNivel
+C:   0000021D  A$controleNivel$1141               controleNivel
+C:   0000021D  C$uRTOS_2.21.h$185$2$14            controleNivel
+C:   0000021E  A$controleNivel$1142               controleNivel
+C:   00000221  A$controleNivel$1144               controleNivel
+C:   00000223  A$controleNivel$1147               controleNivel
+C:   00000223  C$uRTOS_2.21.h$189$2$14            controleNivel
+C:   00000223  XG$char2LCD$0$0                    controleNivel
+C:   00000224  A$controleNivel$1165               controleNivel
+C:   00000224  C$uRTOS_2.21.h$193$2$14            controleNivel
+C:   00000224  C$uRTOS_2.21.h$197$1$16            controleNivel
+C:   00000224  G$iniLCD4$0$0                      controleNivel
+C:   00000224  _iniLCD4                           controleNivel
+C:   00000226  A$controleNivel$1169               controleNivel
+C:   00000226  C$uRTOS_2.21.h$198$1$16            controleNivel
+C:   00000228  A$controleNivel$1170               controleNivel
+C:   0000022B  A$controleNivel$1177               controleNivel
+C:   0000022B  C$uRTOS_2.21.h$199$1$16            controleNivel
+C:   0000022B  C$uRTOS_2.21.h$200$1$16            controleNivel
+C:   0000022E  A$controleNivel$1178               controleNivel
+C:   00000230  A$controleNivel$1183               controleNivel
+C:   00000230  C$uRTOS_2.21.h$201$1$16            controleNivel
+C:   00000232  A$controleNivel$1184               controleNivel
+C:   00000235  A$controleNivel$1185               controleNivel
+C:   00000238  A$controleNivel$1189               controleNivel
+C:   00000238  C$uRTOS_2.21.h$202$1$16            controleNivel
+C:   0000023B  A$controleNivel$1191               controleNivel
+C:   0000023E  A$controleNivel$1195               controleNivel
+C:   0000023E  C$uRTOS_2.21.h$203$1$16            controleNivel
+C:   00000240  A$controleNivel$1196               controleNivel
+C:   00000243  A$controleNivel$1197               controleNivel
+C:   00000246  A$controleNivel$1201               controleNivel
+C:   00000246  C$uRTOS_2.21.h$204$1$16            controleNivel
+C:   00000249  A$controleNivel$1203               controleNivel
+C:   0000024C  A$controleNivel$1207               controleNivel
+C:   0000024C  C$uRTOS_2.21.h$205$1$16            controleNivel
+C:   0000024E  A$controleNivel$1208               controleNivel
+C:   00000251  A$controleNivel$1209               controleNivel
+C:   00000254  A$controleNivel$1212               controleNivel
+C:   00000254  C$uRTOS_2.21.h$206$1$16            controleNivel
+C:   00000257  A$controleNivel$1213               controleNivel
+C:   0000025A  A$controleNivel$1217               controleNivel
+C:   0000025A  C$uRTOS_2.21.h$207$1$16            controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000025C  A$controleNivel$1218               controleNivel
+C:   0000025F  A$controleNivel$1219               controleNivel
+C:   00000262  A$controleNivel$1222               controleNivel
+C:   00000262  C$uRTOS_2.21.h$208$1$16            controleNivel
+C:   00000265  A$controleNivel$1223               controleNivel
+C:   00000268  A$controleNivel$1226               controleNivel
+C:   0000026A  A$controleNivel$1230               controleNivel
+C:   0000026A  C$uRTOS_2.21.h$210$3$18            controleNivel
+C:   0000026B  A$controleNivel$1231               controleNivel
+C:   0000026E  A$controleNivel$1232               controleNivel
+C:   0000026F  A$controleNivel$1233               controleNivel
+C:   00000270  A$controleNivel$1237               controleNivel
+C:   00000270  C$uRTOS_2.21.h$211$3$18            controleNivel
+C:   00000272  A$controleNivel$1238               controleNivel
+C:   00000274  A$controleNivel$1239               controleNivel
+C:   00000276  A$controleNivel$1240               controleNivel
+C:   00000279  A$controleNivel$1241               controleNivel
+C:   0000027B  A$controleNivel$1245               controleNivel
+C:   0000027B  C$uRTOS_2.21.h$212$3$18            controleNivel
+C:   0000027E  A$controleNivel$1249               controleNivel
+C:   0000027E  C$uRTOS_2.21.h$213$3$18            controleNivel
+C:   00000281  A$controleNivel$1252               controleNivel
+C:   00000281  C$uRTOS_2.21.h$209$2$17            controleNivel
+C:   00000282  A$controleNivel$1253               controleNivel
+C:   00000285  A$controleNivel$1255               controleNivel
+C:   00000287  A$controleNivel$1258               controleNivel
+C:   00000287  C$uRTOS_2.21.h$215$2$17            controleNivel
+C:   00000287  XG$iniLCD4$0$0                     controleNivel
+C:   00000288  A$controleNivel$1272               controleNivel
+C:   00000288  C$uRTOS_2.21.h$219$2$17            controleNivel
+C:   00000288  C$uRTOS_2.21.h$220$1$20            controleNivel
+C:   00000288  G$inic$0$0                         controleNivel
+C:   00000288  _inic                              controleNivel
+C:   0000028A  A$controleNivel$1275               controleNivel
+C:   0000028A  C$uRTOS_2.21.h$221$1$20            controleNivel
+C:   0000028D  A$controleNivel$1278               controleNivel
+C:   0000028D  C$uRTOS_2.21.h$222$1$20            controleNivel
+C:   00000290  A$controleNivel$1281               controleNivel
+C:   00000290  C$uRTOS_2.21.h$223$1$20            controleNivel
+C:   00000293  A$controleNivel$1284               controleNivel
+C:   00000293  C$uRTOS_2.21.h$224$1$20            controleNivel
+C:   00000296  A$controleNivel$1287               controleNivel
+C:   00000296  C$uRTOS_2.21.h$225$1$20            controleNivel
+C:   00000299  A$controleNivel$1290               controleNivel
+C:   00000299  C$uRTOS_2.21.h$226$1$20            controleNivel
+C:   0000029C  A$controleNivel$1293               controleNivel
+C:   0000029C  C$uRTOS_2.21.h$227$1$20            controleNivel
+C:   0000029F  A$controleNivel$1296               controleNivel
+C:   0000029F  C$uRTOS_2.21.h$228$1$20            controleNivel
+C:   000002A2  A$controleNivel$1300               controleNivel
+C:   000002A2  C$uRTOS_2.21.h$229$1$20            controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000002A4  A$controleNivel$1304               controleNivel
+C:   000002A4  C$uRTOS_2.21.h$230$1$20            controleNivel
+C:   000002A6  A$controleNivel$1307               controleNivel
+C:   000002A6  C$uRTOS_2.21.h$231$1$20            controleNivel
+C:   000002A9  A$controleNivel$1310               controleNivel
+C:   000002A9  C$uRTOS_2.21.h$232$1$20            controleNivel
+C:   000002A9  XG$inic$0$0                        controleNivel
+C:   000002AA  A$controleNivel$1326               controleNivel
+C:   000002AA  C$serialInt_1.2.h$10$2$23          controleNivel
+C:   000002AA  C$serialInt_1.2.h$8$1$20           controleNivel
+C:   000002AA  C$serialInt_1.2.h$9$1$22           controleNivel
+C:   000002AA  G$serial$0$0                       controleNivel
+C:   000002AA  _serial                            controleNivel
+C:   000002AD  A$controleNivel$1327               controleNivel
+C:   000002AF  A$controleNivel$1331               controleNivel
+C:   000002AF  C$serialInt_1.2.h$11$2$23          controleNivel
+C:   000002B2  A$controleNivel$1335               controleNivel
+C:   000002B2  C$serialInt_1.2.h$12$2$23          controleNivel
+C:   000002B4  A$controleNivel$1336               controleNivel
+C:   000002B6  A$controleNivel$1341               controleNivel
+C:   000002B6  C$serialInt_1.2.h$15$2$24          controleNivel
+C:   000002B8  A$controleNivel$1345               controleNivel
+C:   000002B8  C$serialInt_1.2.h$16$2$24          controleNivel
+C:   000002BA  A$controleNivel$1349               controleNivel
+C:   000002BA  C$serialInt_1.2.h$18$1$22          controleNivel
+C:   000002BA  XG$serial$0$0                      controleNivel
+C:   000002BB  A$controleNivel$1371               controleNivel
+C:   000002BB  C$serialInt_1.2.h$22$1$22          controleNivel
+C:   000002BB  G$algs2ser$0$0                     controleNivel
+C:   000002BB  _algs2ser                          controleNivel
+C:   000002BD  A$controleNivel$1374               controleNivel
+C:   000002BD  C$serialInt_1.2.h$23$1$22          controleNivel
+C:   000002BF  A$controleNivel$1378               controleNivel
+C:   000002BF  C$serialInt_1.2.h$24$1$26          controleNivel
+C:   000002C0  A$controleNivel$1379               controleNivel
+C:   000002C1  A$controleNivel$1380               controleNivel
+C:   000002C2  A$controleNivel$1381               controleNivel
+C:   000002C4  A$controleNivel$1386               controleNivel
+C:   000002C4  C$serialInt_1.2.h$25$2$27          controleNivel
+C:   000002C7  A$controleNivel$1387               controleNivel
+C:   000002C9  A$controleNivel$1391               controleNivel
+C:   000002C9  C$serialInt_1.2.h$26$2$27          controleNivel
+C:   000002CC  A$controleNivel$1392               controleNivel
+C:   000002CD  A$controleNivel$1393               controleNivel
+C:   000002CF  A$controleNivel$1397               controleNivel
+C:   000002D1  A$controleNivel$1399               controleNivel
+C:   000002D4  A$controleNivel$1401               controleNivel
+C:   000002D6  A$controleNivel$1404               controleNivel
+C:   000002D6  C$serialInt_1.2.h$29$3$29          controleNivel
+C:   000002D7  A$controleNivel$1405               controleNivel
+C:   000002DA  A$controleNivel$1410               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000002DA  C$serialInt_1.2.h$30$4$30          controleNivel
+C:   000002DD  A$controleNivel$1411               controleNivel
+C:   000002DF  A$controleNivel$1415               controleNivel
+C:   000002DF  C$serialInt_1.2.h$31$4$30          controleNivel
+C:   000002E2  A$controleNivel$1420               controleNivel
+C:   000002E2  C$serialInt_1.2.h$33$3$29          controleNivel
+C:   000002E5  A$controleNivel$1421               controleNivel
+C:   000002E7  A$controleNivel$1425               controleNivel
+C:   000002E7  C$serialInt_1.2.h$34$3$29          controleNivel
+C:   000002E8  A$controleNivel$1426               controleNivel
+C:   000002EA  A$controleNivel$1427               controleNivel
+C:   000002EB  A$controleNivel$1428               controleNivel
+C:   000002ED  A$controleNivel$1431               controleNivel
+C:   000002ED  C$serialInt_1.2.h$28$2$28          controleNivel
+C:   000002EE  A$controleNivel$1432               controleNivel
+C:   000002F0  A$controleNivel$1436               controleNivel
+C:   000002F0  C$serialInt_1.2.h$36$2$28          controleNivel
+C:   000002F0  XG$algs2ser$0$0                    controleNivel
+C:   000002F1  A$controleNivel$1449               controleNivel
+C:   000002F1  C$serialInt_1.2.h$40$2$28          controleNivel
+C:   000002F1  G$int2ascii$0$0                    controleNivel
+C:   000002F1  _int2ascii                         controleNivel
+C:   000002F3  A$controleNivel$1450               controleNivel
+C:   000002F5  A$controleNivel$1453               controleNivel
+C:   000002F5  C$serialInt_1.2.h$41$1$32          controleNivel
+C:   000002F8  A$controleNivel$1454               controleNivel
+C:   000002FB  A$controleNivel$1457               controleNivel
+C:   000002FB  C$serialInt_1.2.h$42$1$32          controleNivel
+C:   000002FC  A$controleNivel$1458               controleNivel
+C:   000002FE  A$controleNivel$1459               controleNivel
+C:   000002FF  A$controleNivel$1460               controleNivel
+C:   00000301  A$controleNivel$1461               controleNivel
+C:   00000302  A$controleNivel$1462               controleNivel
+C:   00000304  A$controleNivel$1465               controleNivel
+C:   00000304  C$serialInt_1.2.h$43$1$32          controleNivel
+C:   00000307  A$controleNivel$1466               controleNivel
+C:   0000030A  A$controleNivel$1467               controleNivel
+C:   0000030C  A$controleNivel$1468               controleNivel
+C:   0000030E  A$controleNivel$1469               controleNivel
+C:   00000310  A$controleNivel$1470               controleNivel
+C:   00000312  A$controleNivel$1471               controleNivel
+C:   00000315  A$controleNivel$1472               controleNivel
+C:   00000317  A$controleNivel$1473               controleNivel
+C:   00000319  A$controleNivel$1474               controleNivel
+C:   0000031B  A$controleNivel$1475               controleNivel
+C:   0000031D  A$controleNivel$1476               controleNivel
+C:   0000031E  A$controleNivel$1477               controleNivel
+C:   00000320  A$controleNivel$1480               controleNivel
+C:   00000320  C$serialInt_1.2.h$44$1$32          controleNivel
+C:   00000323  A$controleNivel$1481               controleNivel
+C:   00000326  A$controleNivel$1482               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000328  A$controleNivel$1483               controleNivel
+C:   0000032A  A$controleNivel$1484               controleNivel
+C:   0000032D  A$controleNivel$1487               controleNivel
+C:   0000032D  C$serialInt_1.2.h$45$1$32          controleNivel
+C:   0000032F  A$controleNivel$1488               controleNivel
+C:   00000331  A$controleNivel$1489               controleNivel
+C:   00000334  A$controleNivel$1490               controleNivel
+C:   00000337  A$controleNivel$1491               controleNivel
+C:   00000339  A$controleNivel$1492               controleNivel
+C:   0000033B  A$controleNivel$1493               controleNivel
+C:   0000033E  A$controleNivel$1494               controleNivel
+C:   00000340  A$controleNivel$1495               controleNivel
+C:   00000342  A$controleNivel$1496               controleNivel
+C:   00000344  A$controleNivel$1497               controleNivel
+C:   00000346  A$controleNivel$1498               controleNivel
+C:   00000347  A$controleNivel$1499               controleNivel
+C:   00000349  A$controleNivel$1502               controleNivel
+C:   00000349  C$serialInt_1.2.h$46$1$32          controleNivel
+C:   0000034C  A$controleNivel$1503               controleNivel
+C:   0000034F  A$controleNivel$1504               controleNivel
+C:   00000351  A$controleNivel$1505               controleNivel
+C:   00000353  A$controleNivel$1506               controleNivel
+C:   00000356  A$controleNivel$1507               controleNivel
+C:   00000358  A$controleNivel$1508               controleNivel
+C:   0000035A  A$controleNivel$1512               controleNivel
+C:   0000035A  C$serialInt_1.2.h$48$1$32          controleNivel
+C:   0000035D  A$controleNivel$1513               controleNivel
+C:   00000360  A$controleNivel$1514               controleNivel
+C:   00000362  A$controleNivel$1515               controleNivel
+C:   00000364  A$controleNivel$1516               controleNivel
+C:   00000366  A$controleNivel$1517               controleNivel
+C:   00000368  A$controleNivel$1518               controleNivel
+C:   0000036B  A$controleNivel$1519               controleNivel
+C:   0000036D  A$controleNivel$1520               controleNivel
+C:   0000036F  A$controleNivel$1521               controleNivel
+C:   00000371  A$controleNivel$1522               controleNivel
+C:   00000373  A$controleNivel$1523               controleNivel
+C:   00000374  A$controleNivel$1524               controleNivel
+C:   00000376  A$controleNivel$1527               controleNivel
+C:   00000376  C$serialInt_1.2.h$49$1$32          controleNivel
+C:   00000379  A$controleNivel$1528               controleNivel
+C:   0000037C  A$controleNivel$1529               controleNivel
+C:   0000037E  A$controleNivel$1530               controleNivel
+C:   00000380  A$controleNivel$1531               controleNivel
+C:   00000383  A$controleNivel$1534               controleNivel
+C:   00000383  C$serialInt_1.2.h$50$1$32          controleNivel
+C:   00000385  A$controleNivel$1535               controleNivel
+C:   00000387  A$controleNivel$1536               controleNivel
+C:   0000038A  A$controleNivel$1537               controleNivel
+C:   0000038D  A$controleNivel$1538               controleNivel
+C:   0000038F  A$controleNivel$1539               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000391  A$controleNivel$1540               controleNivel
+C:   00000394  A$controleNivel$1541               controleNivel
+C:   00000396  A$controleNivel$1542               controleNivel
+C:   00000398  A$controleNivel$1543               controleNivel
+C:   0000039A  A$controleNivel$1544               controleNivel
+C:   0000039C  A$controleNivel$1545               controleNivel
+C:   0000039D  A$controleNivel$1546               controleNivel
+C:   0000039F  A$controleNivel$1549               controleNivel
+C:   0000039F  C$serialInt_1.2.h$51$1$32          controleNivel
+C:   000003A2  A$controleNivel$1550               controleNivel
+C:   000003A5  A$controleNivel$1551               controleNivel
+C:   000003A7  A$controleNivel$1552               controleNivel
+C:   000003A9  A$controleNivel$1553               controleNivel
+C:   000003AC  A$controleNivel$1554               controleNivel
+C:   000003AE  A$controleNivel$1555               controleNivel
+C:   000003B0  A$controleNivel$1556               controleNivel
+C:   000003B1  A$controleNivel$1557               controleNivel
+C:   000003B3  A$controleNivel$1560               controleNivel
+C:   000003B3  C$serialInt_1.2.h$52$1$32          controleNivel
+C:   000003B3  XG$int2ascii$0$0                   controleNivel
+C:   000003B4  A$controleNivel$1575               controleNivel
+C:   000003B4  C$serialInt_1.2.h$57$1$32          controleNivel
+C:   000003B4  G$char2Ser$0$0                     controleNivel
+C:   000003B4  _char2Ser                          controleNivel
+C:   000003B6  A$controleNivel$1578               controleNivel
+C:   000003B6  C$serialInt_1.2.h$58$1$35          controleNivel
+C:   000003B8  A$controleNivel$1579               controleNivel
+C:   000003BA  A$controleNivel$1580               controleNivel
+C:   000003BC  A$controleNivel$1581               controleNivel
+C:   000003BE  A$controleNivel$1582               controleNivel
+C:   000003C0  A$controleNivel$1583               controleNivel
+C:   000003C3  A$controleNivel$1584               controleNivel
+C:   000003C5  A$controleNivel$1587               controleNivel
+C:   000003C5  C$serialInt_1.2.h$59$1$35          controleNivel
+C:   000003C7  A$controleNivel$1588               controleNivel
+C:   000003C9  A$controleNivel$1591               controleNivel
+C:   000003C9  C$serialInt_1.2.h$60$1$35          controleNivel
+C:   000003CC  A$controleNivel$1592               controleNivel
+C:   000003CF  A$controleNivel$1593               controleNivel
+C:   000003D2  A$controleNivel$1594               controleNivel
+C:   000003D4  A$controleNivel$1595               controleNivel
+C:   000003D7  A$controleNivel$1598               controleNivel
+C:   000003D7  C$serialInt_1.2.h$61$1$35          controleNivel
+C:   000003D7  XG$char2Ser$0$0                    controleNivel
+C:   000003D8  A$controleNivel$1613               controleNivel
+C:   000003D8  C$serialInt_1.2.h$65$1$35          controleNivel
+C:   000003D8  G$int2Ser$0$0                      controleNivel
+C:   000003D8  _int2Ser                           controleNivel
+C:   000003DA  A$controleNivel$1616               controleNivel
+C:   000003DA  C$serialInt_1.2.h$66$1$37          controleNivel
+C:   000003DD  A$controleNivel$1617               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000003E0  A$controleNivel$1618               controleNivel
+C:   000003E2  A$controleNivel$1619               controleNivel
+C:   000003E5  A$controleNivel$1620               controleNivel
+C:   000003E7  A$controleNivel$1623               controleNivel
+C:   000003E7  C$serialInt_1.2.h$67$1$37          controleNivel
+C:   000003E8  A$controleNivel$1624               controleNivel
+C:   000003EA  A$controleNivel$1625               controleNivel
+C:   000003EC  A$controleNivel$1626               controleNivel
+C:   000003EF  A$controleNivel$1627               controleNivel
+C:   000003F1  A$controleNivel$1628               controleNivel
+C:   000003F4  A$controleNivel$1631               controleNivel
+C:   000003F4  C$serialInt_1.2.h$68$1$37          controleNivel
+C:   000003F4  XG$int2Ser$0$0                     controleNivel
+C:   000003F5  A$controleNivel$1644               controleNivel
+C:   000003F5  C$controleNivel.c$17$1$37          controleNivel
+C:   000003F5  C$controleNivel.c$18$1$38          controleNivel
+C:   000003F5  G$RTproc_1$0$0                     controleNivel
+C:   000003F5  _RTproc_1                          controleNivel
+C:   000003F7  A$controleNivel$1645               controleNivel
+C:   000003FA  A$controleNivel$1647               controleNivel
+C:   000003FC  A$controleNivel$1651               controleNivel
+C:   000003FC  C$controleNivel.c$19$1$38          controleNivel
+C:   000003FC  XG$RTproc_1$0$0                    controleNivel
+C:   000003FD  A$controleNivel$1665               controleNivel
+C:   000003FD  C$controleNivel.c$20$1$38          controleNivel
+C:   000003FD  C$controleNivel.c$21$1$39          controleNivel
+C:   000003FD  G$RTproc_2$0$0                     controleNivel
+C:   000003FD  _RTproc_2                          controleNivel
+C:   000003FF  A$controleNivel$1668               controleNivel
+C:   000003FF  C$controleNivel.c$22$1$39          controleNivel
+C:   00000401  A$controleNivel$1669               controleNivel
+C:   00000404  A$controleNivel$1673               controleNivel
+C:   00000404  C$controleNivel.c$23$2$40          controleNivel
+C:   00000406  A$controleNivel$1677               controleNivel
+C:   00000406  C$controleNivel.c$24$2$40          controleNivel
+C:   00000408  A$controleNivel$1680               controleNivel
+C:   00000408  C$controleNivel.c$25$2$40          controleNivel
+C:   0000040B  A$controleNivel$1684               controleNivel
+C:   0000040B  C$controleNivel.c$26$2$40          controleNivel
+C:   0000040D  A$controleNivel$1688               controleNivel
+C:   0000040D  C$controleNivel.c$27$2$40          controleNivel
+C:   0000040F  A$controleNivel$1691               controleNivel
+C:   0000040F  C$controleNivel.c$28$2$40          controleNivel
+C:   00000412  A$controleNivel$1694               controleNivel
+C:   00000412  C$controleNivel.c$29$2$40          controleNivel
+C:   00000415  A$controleNivel$1698               controleNivel
+C:   00000415  C$controleNivel.c$31$2$40          controleNivel
+C:   00000417  A$controleNivel$1701               controleNivel
+C:   00000417  C$controleNivel.c$32$2$40          controleNivel
+C:   0000041A  A$controleNivel$1705               controleNivel
+C:   0000041A  C$controleNivel.c$33$2$40          controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000041C  A$controleNivel$1706               controleNivel
+C:   0000041E  A$controleNivel$1707               controleNivel
+C:   00000420  A$controleNivel$1708               controleNivel
+C:   00000422  A$controleNivel$1713               controleNivel
+C:   00000422  C$controleNivel.c$34$2$40          controleNivel
+C:   00000424  A$controleNivel$1717               controleNivel
+C:   00000424  C$controleNivel.c$35$2$40          controleNivel
+C:   00000426  A$controleNivel$1721               controleNivel
+C:   00000426  C$controleNivel.c$39$1$39          controleNivel
+C:   00000426  XG$RTproc_2$0$0                    controleNivel
+C:   00000427  A$controleNivel$1732               controleNivel
+C:   00000427  C$controleNivel.c$41$1$39          controleNivel
+C:   00000427  G$ext_1$0$0                        controleNivel
+C:   00000427  _ext_1                             controleNivel
+C:   00000429  A$controleNivel$1733               controleNivel
+C:   0000042B  A$controleNivel$1734               controleNivel
+C:   0000042D  A$controleNivel$1735               controleNivel
+C:   0000042F  A$controleNivel$1736               controleNivel
+C:   00000432  A$controleNivel$1739               controleNivel
+C:   00000432  C$controleNivel.c$43$1$42          controleNivel
+C:   00000434  A$controleNivel$1740               controleNivel
+C:   00000436  A$controleNivel$1741               controleNivel
+C:   00000438  A$controleNivel$1743               controleNivel
+C:   0000043A  A$controleNivel$1746               controleNivel
+C:   0000043A  C$controleNivel.c$44$1$42          controleNivel
+C:   0000043C  A$controleNivel$1747               controleNivel
+C:   0000043E  A$controleNivel$1748               controleNivel
+C:   0000043F  A$controleNivel$1749               controleNivel
+C:   00000441  A$controleNivel$1750               controleNivel
+C:   00000443  A$controleNivel$1751               controleNivel
+C:   00000444  A$controleNivel$1752               controleNivel
+C:   00000446  A$controleNivel$1753               controleNivel
+C:   00000448  A$controleNivel$1757               controleNivel
+C:   00000448  C$controleNivel.c$46$1$42          controleNivel
+C:   0000044A  A$controleNivel$1760               controleNivel
+C:   0000044A  C$controleNivel.c$47$1$42          controleNivel
+C:   0000044D  A$controleNivel$1763               controleNivel
+C:   0000044D  C$controleNivel.c$48$1$42          controleNivel
+C:   00000450  A$controleNivel$1766               controleNivel
+C:   00000450  C$controleNivel.c$49$1$42          controleNivel
+C:   00000453  A$controleNivel$1769               controleNivel
+C:   00000453  C$controleNivel.c$50$1$42          controleNivel
+C:   00000456  A$controleNivel$1772               controleNivel
+C:   00000456  C$controleNivel.c$51$1$42          controleNivel
+C:   00000459  A$controleNivel$1776               controleNivel
+C:   00000459  C$controleNivel.c$52$1$42          controleNivel
+C:   0000045B  A$controleNivel$1780               controleNivel
+C:   0000045B  C$controleNivel.c$53$1$42          controleNivel
+C:   0000045D  A$controleNivel$1784               controleNivel
+C:   0000045D  C$controleNivel.c$54$1$42          controleNivel
+C:   0000045F  A$controleNivel$1785               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000461  A$controleNivel$1786               controleNivel
+C:   00000463  A$controleNivel$1787               controleNivel
+C:   00000465  A$controleNivel$1788               controleNivel
+C:   00000467  A$controleNivel$1791               controleNivel
+C:   00000467  C$controleNivel.c$56$1$42          controleNivel
+C:   00000467  XG$ext_1$0$0                       controleNivel
+C:   00000468  A$controleNivel$1809               controleNivel
+C:   00000468  C$controleNivel.c$57$1$42          controleNivel
+C:   00000468  C$controleNivel.c$58$1$42          controleNivel
+C:   00000468  G$ajustPID$0$0                     controleNivel
+C:   00000468  _ajustPID                          controleNivel
+C:   0000046A  A$controleNivel$1813               controleNivel
+C:   0000046A  C$controleNivel.c$59$1$42          controleNivel
+C:   0000046C  A$controleNivel$1816               controleNivel
+C:   0000046C  C$controleNivel.c$60$1$43          controleNivel
+C:   0000046F  A$controleNivel$1820               controleNivel
+C:   0000046F  C$controleNivel.c$61$3$45          controleNivel
+C:   00000472  A$controleNivel$1821               controleNivel
+C:   00000475  A$controleNivel$1825               controleNivel
+C:   00000475  C$controleNivel.c$62$2$44          controleNivel
+C:   00000477  A$controleNivel$1826               controleNivel
+C:   0000047A  A$controleNivel$1829               controleNivel
+C:   0000047A  C$controleNivel.c$63$3$45          controleNivel
+C:   0000047D  A$controleNivel$1832               controleNivel
+C:   0000047D  C$controleNivel.c$64$3$45          controleNivel
+C:   0000047E  A$controleNivel$1833               controleNivel
+C:   00000480  A$controleNivel$1834               controleNivel
+C:   00000481  A$controleNivel$1835               controleNivel
+C:   00000482  A$controleNivel$1836               controleNivel
+C:   00000483  A$controleNivel$1837               controleNivel
+C:   00000484  A$controleNivel$1838               controleNivel
+C:   00000485  A$controleNivel$1842               controleNivel
+C:   00000485  C$controleNivel.c$66$2$44          controleNivel
+C:   00000487  A$controleNivel$1843               controleNivel
+C:   0000048A  A$controleNivel$1846               controleNivel
+C:   0000048A  C$controleNivel.c$67$3$46          controleNivel
+C:   0000048D  A$controleNivel$1849               controleNivel
+C:   0000048D  C$controleNivel.c$68$3$46          controleNivel
+C:   0000048E  A$controleNivel$1850               controleNivel
+C:   00000490  A$controleNivel$1851               controleNivel
+C:   00000491  A$controleNivel$1852               controleNivel
+C:   00000492  A$controleNivel$1853               controleNivel
+C:   00000493  A$controleNivel$1854               controleNivel
+C:   00000494  A$controleNivel$1855               controleNivel
+C:   00000495  A$controleNivel$1859               controleNivel
+C:   00000495  C$controleNivel.c$70$2$44          controleNivel
+C:   00000496  A$controleNivel$1860               controleNivel
+C:   00000498  A$controleNivel$1861               controleNivel
+C:   0000049B  A$controleNivel$1862               controleNivel
+C:   0000049E  A$controleNivel$1863               controleNivel
+C:   000004A1  A$controleNivel$1864               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000004A3  A$controleNivel$1865               controleNivel
+C:   000004A6  A$controleNivel$1866               controleNivel
+C:   000004A8  A$controleNivel$1870               controleNivel
+C:   000004A8  C$controleNivel.c$71$2$44          controleNivel
+C:   000004AB  A$controleNivel$1871               controleNivel
+C:   000004AE  A$controleNivel$1872               controleNivel
+C:   000004B1  A$controleNivel$1873               controleNivel
+C:   000004B4  A$controleNivel$1874               controleNivel
+C:   000004B6  A$controleNivel$1875               controleNivel
+C:   000004B9  A$controleNivel$1876               controleNivel
+C:   000004BB  A$controleNivel$1880               controleNivel
+C:   000004BB  C$controleNivel.c$72$2$44          controleNivel
+C:   000004BE  A$controleNivel$1881               controleNivel
+C:   000004C1  A$controleNivel$1882               controleNivel
+C:   000004C4  A$controleNivel$1883               controleNivel
+C:   000004C7  A$controleNivel$1884               controleNivel
+C:   000004C9  A$controleNivel$1885               controleNivel
+C:   000004CC  A$controleNivel$1886               controleNivel
+C:   000004CE  A$controleNivel$1891               controleNivel
+C:   000004CE  C$controleNivel.c$73$2$44          controleNivel
+C:   000004D0  A$controleNivel$1892               controleNivel
+C:   000004D3  A$controleNivel$1896               controleNivel
+C:   000004D3  C$controleNivel.c$74$2$44          controleNivel
+C:   000004D5  A$controleNivel$1897               controleNivel
+C:   000004D8  A$controleNivel$1898               controleNivel
+C:   000004DA  A$controleNivel$1902               controleNivel
+C:   000004DA  C$controleNivel.c$75$2$44          controleNivel
+C:   000004DD  A$controleNivel$1903               controleNivel
+C:   000004E0  A$controleNivel$1907               controleNivel
+C:   000004E0  C$controleNivel.c$76$3$47          controleNivel
+C:   000004E2  A$controleNivel$1908               controleNivel
+C:   000004E3  A$controleNivel$1911               controleNivel
+C:   000004E3  C$controleNivel.c$77$3$47          controleNivel
+C:   000004E6  A$controleNivel$1912               controleNivel
+C:   000004E8  A$controleNivel$1917               controleNivel
+C:   000004E8  C$controleNivel.c$79$2$44          controleNivel
+C:   000004EA  A$controleNivel$1918               controleNivel
+C:   000004ED  A$controleNivel$1922               controleNivel
+C:   000004ED  C$controleNivel.c$80$2$44          controleNivel
+C:   000004EF  A$controleNivel$1923               controleNivel
+C:   000004F2  A$controleNivel$1924               controleNivel
+C:   000004F4  A$controleNivel$1928               controleNivel
+C:   000004F4  C$controleNivel.c$81$2$44          controleNivel
+C:   000004F7  A$controleNivel$1929               controleNivel
+C:   000004FA  A$controleNivel$1931               controleNivel
+C:   000004FD  A$controleNivel$1935               controleNivel
+C:   000004FD  C$controleNivel.c$82$3$48          controleNivel
+C:   000004FF  A$controleNivel$1937               controleNivel
+C:   00000501  A$controleNivel$1938               controleNivel
+C:   00000504  A$controleNivel$1942               controleNivel
+C:   00000504  C$controleNivel.c$84$1$43          controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000504  XG$ajustPID$0$0                    controleNivel
+C:   00000505  A$controleNivel$1971               controleNivel
+C:   00000505  C$controleNivel.c$86$1$43          controleNivel
+C:   00000505  C$controleNivel.c$87$1$43          controleNivel
+C:   00000505  G$main$0$0                         controleNivel
+C:   00000505  _main                              controleNivel
+C:   00000508  A$controleNivel$1978               controleNivel
+C:   00000508  C$controleNivel.c$88$1$43          controleNivel
+C:   00000508  C$controleNivel.c$90$1$43          controleNivel
+C:   00000508  C$controleNivel.c$92$1$43          controleNivel
+C:   00000509  A$controleNivel$1979               controleNivel
+C:   0000050B  A$controleNivel$1980               controleNivel
+C:   0000050D  A$controleNivel$1981               controleNivel
+C:   0000050F  A$controleNivel$1982               controleNivel
+C:   00000511  A$controleNivel$1985               controleNivel
+C:   00000511  C$controleNivel.c$95$1$43          controleNivel
+C:   00000513  A$controleNivel$1986               controleNivel
+C:   00000515  A$controleNivel$1990               controleNivel
+C:   00000515  C$controleNivel.c$97$1$43          controleNivel
+C:   00000517  A$controleNivel$1994               controleNivel
+C:   00000517  C$controleNivel.c$98$1$43          controleNivel
+C:   00000519  A$controleNivel$1996               controleNivel
+C:   0000051B  A$controleNivel$1998               controleNivel
+C:   0000051D  A$controleNivel$2002               controleNivel
+C:   0000051D  C$controleNivel.c$99$1$43          controleNivel
+C:   0000051F  A$controleNivel$2006               controleNivel
+C:   0000051F  C$controleNivel.c$101$1$49         controleNivel
+C:   00000521  A$controleNivel$2009               controleNivel
+C:   00000521  C$controleNivel.c$103$1$49         controleNivel
+C:   00000524  A$controleNivel$2012               controleNivel
+C:   00000524  C$controleNivel.c$104$1$49         controleNivel
+C:   00000527  A$controleNivel$2016               controleNivel
+C:   00000527  C$controleNivel.c$105$1$49         controleNivel
+C:   00000529  A$controleNivel$2020               controleNivel
+C:   00000529  C$controleNivel.c$106$1$49         controleNivel
+C:   0000052B  A$controleNivel$2024               controleNivel
+C:   0000052B  C$controleNivel.c$107$1$49         controleNivel
+C:   0000052D  A$controleNivel$2028               controleNivel
+C:   0000052D  C$controleNivel.c$109$1$49         controleNivel
+C:   0000052F  A$controleNivel$2029               controleNivel
+C:   00000532  A$controleNivel$2030               controleNivel
+C:   00000535  A$controleNivel$2033               controleNivel
+C:   00000537  A$controleNivel$2037               controleNivel
+C:   00000537  C$controleNivel.c$111$3$51         controleNivel
+C:   00000538  A$controleNivel$2038               controleNivel
+C:   0000053B  A$controleNivel$2039               controleNivel
+C:   0000053C  A$controleNivel$2040               controleNivel
+C:   0000053D  A$controleNivel$2042               controleNivel
+C:   0000053F  A$controleNivel$2043               controleNivel
+C:   00000541  A$controleNivel$2044               controleNivel
+C:   00000543  A$controleNivel$2045               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000546  A$controleNivel$2046               controleNivel
+C:   00000548  A$controleNivel$2049               controleNivel
+C:   00000548  C$controleNivel.c$110$2$50         controleNivel
+C:   00000549  A$controleNivel$2050               controleNivel
+C:   0000054C  A$controleNivel$2052               controleNivel
+C:   0000054E  A$controleNivel$2056               controleNivel
+C:   0000054E  C$controleNivel.c$113$1$49         controleNivel
+C:   00000550  A$controleNivel$2057               controleNivel
+C:   00000553  A$controleNivel$2058               controleNivel
+C:   00000556  A$controleNivel$2061               controleNivel
+C:   00000558  A$controleNivel$2065               controleNivel
+C:   00000558  C$controleNivel.c$115$3$53         controleNivel
+C:   00000559  A$controleNivel$2066               controleNivel
+C:   0000055C  A$controleNivel$2067               controleNivel
+C:   0000055D  A$controleNivel$2068               controleNivel
+C:   0000055E  A$controleNivel$2070               controleNivel
+C:   00000560  A$controleNivel$2071               controleNivel
+C:   00000562  A$controleNivel$2072               controleNivel
+C:   00000564  A$controleNivel$2073               controleNivel
+C:   00000567  A$controleNivel$2074               controleNivel
+C:   00000569  A$controleNivel$2077               controleNivel
+C:   00000569  C$controleNivel.c$114$2$52         controleNivel
+C:   0000056A  A$controleNivel$2078               controleNivel
+C:   0000056D  A$controleNivel$2080               controleNivel
+C:   0000056F  A$controleNivel$2084               controleNivel
+C:   0000056F  C$controleNivel.c$117$1$49         controleNivel
+C:   00000571  A$controleNivel$2085               controleNivel
+C:   00000574  A$controleNivel$2086               controleNivel
+C:   00000577  A$controleNivel$2090               controleNivel
+C:   00000577  C$controleNivel.c$118$1$49         controleNivel
+C:   00000579  A$controleNivel$2091               controleNivel
+C:   0000057C  A$controleNivel$2092               controleNivel
+C:   0000057F  A$controleNivel$2095               controleNivel
+C:   0000057F  C$controleNivel.c$119$1$49         controleNivel
+C:   00000582  A$controleNivel$2101               controleNivel
+C:   00000582  C$controleNivel.c$120$1$49         controleNivel
+C:   00000582  C$controleNivel.c$122$2$54         controleNivel
+C:   00000584  A$controleNivel$2102               controleNivel
+C:   00000587  A$controleNivel$2105               controleNivel
+C:   00000587  C$controleNivel.c$123$3$55         controleNivel
+C:   0000058A  A$controleNivel$2106               controleNivel
+C:   0000058C  A$controleNivel$2110               controleNivel
+C:   0000058C  C$controleNivel.c$125$2$54         controleNivel
+C:   0000058E  A$controleNivel$2111               controleNivel
+C:   00000591  A$controleNivel$2114               controleNivel
+C:   00000591  C$controleNivel.c$126$3$56         controleNivel
+C:   00000594  A$controleNivel$2115               controleNivel
+C:   00000596  A$controleNivel$2119               controleNivel
+C:   00000596  C$controleNivel.c$128$2$54         controleNivel
+C:   00000598  A$controleNivel$2120               controleNivel
+C:   0000059B  A$controleNivel$2121               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000059D  A$controleNivel$2122               controleNivel
+C:   000005A0  A$controleNivel$2125               controleNivel
+C:   000005A0  C$controleNivel.c$129$3$57         controleNivel
+C:   000005A1  A$controleNivel$2126               controleNivel
+C:   000005A3  A$controleNivel$2127               controleNivel
+C:   000005A5  A$controleNivel$2128               controleNivel
+C:   000005A7  A$controleNivel$2129               controleNivel
+C:   000005A9  A$controleNivel$2132               controleNivel
+C:   000005A9  C$controleNivel.c$130$3$57         controleNivel
+C:   000005AC  A$controleNivel$2136               controleNivel
+C:   000005AC  C$controleNivel.c$133$2$54         controleNivel
+C:   000005AF  A$controleNivel$2137               controleNivel
+C:   000005B2  A$controleNivel$2138               controleNivel
+C:   000005B5  A$controleNivel$2139               controleNivel
+C:   000005B8  A$controleNivel$2142               controleNivel
+C:   000005B8  C$controleNivel.c$135$2$54         controleNivel
+C:   000005BB  A$controleNivel$2143               controleNivel
+C:   000005BE  A$controleNivel$2148               controleNivel
+C:   000005BE  C$controleNivel.c$136$3$58         controleNivel
+C:   000005C1  A$controleNivel$2149               controleNivel
+C:   000005C3  A$controleNivel$2153               controleNivel
+C:   000005C3  C$controleNivel.c$137$4$59         controleNivel
+C:   000005C5  A$controleNivel$2157               controleNivel
+C:   000005C5  C$controleNivel.c$140$3$58         controleNivel
+C:   000005C8  A$controleNivel$2158               controleNivel
+C:   000005CB  A$controleNivel$2162               controleNivel
+C:   000005CB  C$controleNivel.c$142$4$60         controleNivel
+C:   000005CD  A$controleNivel$2163               controleNivel
+C:   000005D0  A$controleNivel$2167               controleNivel
+C:   000005D0  C$controleNivel.c$143$5$61         controleNivel
+C:   000005D2  A$controleNivel$2168               controleNivel
+C:   000005D5  A$controleNivel$2169               controleNivel
+C:   000005D8  A$controleNivel$2173               controleNivel
+C:   000005D8  C$controleNivel.c$144$5$61         controleNivel
+C:   000005DA  A$controleNivel$2174               controleNivel
+C:   000005DD  A$controleNivel$2175               controleNivel
+C:   000005E0  A$controleNivel$2178               controleNivel
+C:   000005E0  C$controleNivel.c$145$5$61         controleNivel
+C:   000005E3  A$controleNivel$2181               controleNivel
+C:   000005E3  C$controleNivel.c$146$5$61         controleNivel
+C:   000005E6  A$controleNivel$2185               controleNivel
+C:   000005E6  C$controleNivel.c$148$4$60         controleNivel
+C:   000005E8  A$controleNivel$2186               controleNivel
+C:   000005EB  A$controleNivel$2190               controleNivel
+C:   000005EB  C$controleNivel.c$149$5$62         controleNivel
+C:   000005ED  A$controleNivel$2191               controleNivel
+C:   000005F0  A$controleNivel$2192               controleNivel
+C:   000005F3  A$controleNivel$2196               controleNivel
+C:   000005F3  C$controleNivel.c$150$5$62         controleNivel
+C:   000005F5  A$controleNivel$2197               controleNivel
+C:   000005F8  A$controleNivel$2198               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000005FB  A$controleNivel$2201               controleNivel
+C:   000005FB  C$controleNivel.c$151$5$62         controleNivel
+C:   000005FE  A$controleNivel$2204               controleNivel
+C:   000005FE  C$controleNivel.c$152$5$62         controleNivel
+C:   00000601  A$controleNivel$2208               controleNivel
+C:   00000601  C$controleNivel.c$156$4$60         controleNivel
+C:   00000603  A$controleNivel$2209               controleNivel
+C:   00000606  A$controleNivel$2210               controleNivel
+C:   00000608  A$controleNivel$2212               controleNivel
+C:   0000060A  A$controleNivel$2213               controleNivel
+C:   0000060D  A$controleNivel$2214               controleNivel
+C:   0000060F  A$controleNivel$2216               controleNivel
+C:   00000611  A$controleNivel$2217               controleNivel
+C:   00000614  A$controleNivel$2218               controleNivel
+C:   00000616  A$controleNivel$2220               controleNivel
+C:   00000618  A$controleNivel$2221               controleNivel
+C:   0000061B  A$controleNivel$2222               controleNivel
+C:   0000061D  A$controleNivel$2224               controleNivel
+C:   0000061F  A$controleNivel$2225               controleNivel
+C:   00000622  A$controleNivel$2226               controleNivel
+C:   00000624  A$controleNivel$2228               controleNivel
+C:   00000627  A$controleNivel$2233               controleNivel
+C:   00000627  C$controleNivel.c$158$5$63         controleNivel
+C:   00000629  A$controleNivel$2234               controleNivel
+C:   0000062B  A$controleNivel$2235               controleNivel
+C:   0000062C  A$controleNivel$2236               controleNivel
+C:   0000062E  A$controleNivel$2237               controleNivel
+C:   0000062F  A$controleNivel$2238               controleNivel
+C:   00000630  A$controleNivel$2239               controleNivel
+C:   00000632  A$controleNivel$2240               controleNivel
+C:   00000633  A$controleNivel$2241               controleNivel
+C:   00000636  A$controleNivel$2242               controleNivel
+C:   00000639  A$controleNivel$2245               controleNivel
+C:   00000639  C$controleNivel.c$159$6$64         controleNivel
+C:   0000063B  A$controleNivel$2246               controleNivel
+C:   0000063D  A$controleNivel$2247               controleNivel
+C:   0000063F  A$controleNivel$2248               controleNivel
+C:   00000641  A$controleNivel$2252               controleNivel
+C:   00000641  C$controleNivel.c$160$5$63         controleNivel
+C:   00000642  A$controleNivel$2253               controleNivel
+C:   00000644  A$controleNivel$2254               controleNivel
+C:   00000645  A$controleNivel$2255               controleNivel
+C:   00000646  A$controleNivel$2256               controleNivel
+C:   00000648  A$controleNivel$2257               controleNivel
+C:   00000649  A$controleNivel$2258               controleNivel
+C:   0000064C  A$controleNivel$2259               controleNivel
+C:   0000064F  A$controleNivel$2262               controleNivel
+C:   0000064F  C$controleNivel.c$161$6$65         controleNivel
+C:   00000651  A$controleNivel$2263               controleNivel
+C:   00000653  A$controleNivel$2264               controleNivel
+C:   00000656  A$controleNivel$2265               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000657  A$controleNivel$2266               controleNivel
+C:   00000658  A$controleNivel$2267               controleNivel
+C:   0000065A  A$controleNivel$2268               controleNivel
+C:   0000065C  A$controleNivel$2269               controleNivel
+C:   0000065D  A$controleNivel$2270               controleNivel
+C:   0000065F  A$controleNivel$2271               controleNivel
+C:   00000661  A$controleNivel$2275               controleNivel
+C:   00000661  C$controleNivel.c$163$5$63         controleNivel
+C:   00000662  A$controleNivel$2276               controleNivel
+C:   00000665  A$controleNivel$2277               controleNivel
+C:   00000666  A$controleNivel$2279               controleNivel
+C:   00000669  A$controleNivel$2280               controleNivel
+C:   0000066C  A$controleNivel$2283               controleNivel
+C:   0000066C  C$controleNivel.c$164$6$66         controleNivel
+C:   0000066E  A$controleNivel$2284               controleNivel
+C:   00000670  A$controleNivel$2285               controleNivel
+C:   00000673  A$controleNivel$2286               controleNivel
+C:   00000674  A$controleNivel$2287               controleNivel
+C:   00000675  A$controleNivel$2288               controleNivel
+C:   00000677  A$controleNivel$2289               controleNivel
+C:   00000679  A$controleNivel$2290               controleNivel
+C:   0000067C  A$controleNivel$2291               controleNivel
+C:   0000067D  A$controleNivel$2292               controleNivel
+C:   0000067E  A$controleNivel$2293               controleNivel
+C:   0000067F  A$controleNivel$2294               controleNivel
+C:   00000681  A$controleNivel$2295               controleNivel
+C:   00000683  A$controleNivel$2296               controleNivel
+C:   00000684  A$controleNivel$2297               controleNivel
+C:   00000686  A$controleNivel$2301               controleNivel
+C:   00000686  C$controleNivel.c$166$5$63         controleNivel
+C:   00000688  A$controleNivel$2302               controleNivel
+C:   0000068B  A$controleNivel$2305               controleNivel
+C:   0000068B  C$controleNivel.c$167$6$67         controleNivel
+C:   0000068E  A$controleNivel$2308               controleNivel
+C:   0000068E  C$controleNivel.c$168$6$67         controleNivel
+C:   00000691  A$controleNivel$2312               controleNivel
+C:   00000691  C$controleNivel.c$170$5$63         controleNivel
+C:   00000693  A$controleNivel$2313               controleNivel
+C:   00000696  A$controleNivel$2316               controleNivel
+C:   00000696  C$controleNivel.c$171$6$68         controleNivel
+C:   00000699  A$controleNivel$2319               controleNivel
+C:   00000699  C$controleNivel.c$172$6$68         controleNivel
+C:   0000069C  A$controleNivel$2322               controleNivel
+C:   0000069C  C$controleNivel.c$173$6$68         controleNivel
+C:   0000069F  A$controleNivel$2323               controleNivel
+C:   000006A2  A$controleNivel$2324               controleNivel
+C:   000006A5  A$controleNivel$2325               controleNivel
+C:   000006A8  A$controleNivel$2329               controleNivel
+C:   000006A8  C$controleNivel.c$175$5$63         controleNivel
+C:   000006AA  A$controleNivel$2330               controleNivel
+C:   000006AD  A$controleNivel$2333               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 42.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000006AD  C$controleNivel.c$176$6$69         controleNivel
+C:   000006B0  A$controleNivel$2336               controleNivel
+C:   000006B0  C$controleNivel.c$177$6$69         controleNivel
+C:   000006B3  A$controleNivel$2339               controleNivel
+C:   000006B3  C$controleNivel.c$178$6$69         controleNivel
+C:   000006B6  A$controleNivel$2340               controleNivel
+C:   000006B9  A$controleNivel$2341               controleNivel
+C:   000006BC  A$controleNivel$2342               controleNivel
+C:   000006BF  A$controleNivel$2346               controleNivel
+C:   000006BF  C$controleNivel.c$180$5$63         controleNivel
+C:   000006C1  A$controleNivel$2347               controleNivel
+C:   000006C4  A$controleNivel$2350               controleNivel
+C:   000006C4  C$controleNivel.c$181$6$70         controleNivel
+C:   000006C7  A$controleNivel$2353               controleNivel
+C:   000006C7  C$controleNivel.c$182$6$70         controleNivel
+C:   000006CA  A$controleNivel$2356               controleNivel
+C:   000006CA  C$controleNivel.c$183$6$70         controleNivel
+C:   000006CD  A$controleNivel$2357               controleNivel
+C:   000006D0  A$controleNivel$2358               controleNivel
+C:   000006D3  A$controleNivel$2359               controleNivel
+C:   000006D6  A$controleNivel$2363               controleNivel
+C:   000006D6  C$controleNivel.c$185$5$63         controleNivel
+C:   000006D8  A$controleNivel$2364               controleNivel
+C:   000006DB  A$controleNivel$2367               controleNivel
+C:   000006DB  C$controleNivel.c$186$6$71         controleNivel
+C:   000006DE  A$controleNivel$2370               controleNivel
+C:   000006DE  C$controleNivel.c$187$6$71         controleNivel
+C:   000006E1  A$controleNivel$2373               controleNivel
+C:   000006E1  C$controleNivel.c$188$6$71         controleNivel
+C:   000006E4  A$controleNivel$2374               controleNivel
+C:   000006E7  A$controleNivel$2375               controleNivel
+C:   000006EA  A$controleNivel$2376               controleNivel
+C:   000006ED  A$controleNivel$2377               controleNivel
+C:   000006EF  A$controleNivel$2381               controleNivel
+C:   000006EF  C$controleNivel.c$191$5$72         controleNivel
+C:   000006F1  A$controleNivel$2382               controleNivel
+C:   000006F2  A$controleNivel$2383               controleNivel
+C:   000006F4  A$controleNivel$2384               controleNivel
+C:   000006F5  A$controleNivel$2385               controleNivel
+C:   000006F7  A$controleNivel$2389               controleNivel
+C:   000006F7  C$controleNivel.c$196$2$54         controleNivel
+C:   000006F9  A$controleNivel$2392               controleNivel
+C:   000006F9  C$controleNivel.c$197$3$73         controleNivel
+C:   000006FB  A$controleNivel$2393               controleNivel
+C:   000006FE  A$controleNivel$2394               controleNivel
+C:   00000701  A$controleNivel$2395               controleNivel
+C:   00000703  A$controleNivel$2396               controleNivel
+C:   00000706  A$controleNivel$2399               controleNivel
+C:   00000706  C$controleNivel.c$198$3$73         controleNivel
+C:   00000709  A$controleNivel$2400               controleNivel
+C:   0000070C  A$controleNivel$2401               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 43.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000070F  A$controleNivel$2402               controleNivel
+C:   00000712  A$controleNivel$2405               controleNivel
+C:   00000712  C$controleNivel.c$199$3$73         controleNivel
+C:   00000715  A$controleNivel$2406               controleNivel
+C:   00000718  A$controleNivel$2407               controleNivel
+C:   0000071B  A$controleNivel$2408               controleNivel
+C:   0000071E  A$controleNivel$2409               controleNivel
+C:   00000721  A$controleNivel$2413               controleNivel
+C:   00000721  C$controleNivel.c$201$2$54         controleNivel
+C:   00000723  A$controleNivel$2414               controleNivel
+C:   00000726  A$controleNivel$2417               controleNivel
+C:   00000726  C$controleNivel.c$202$3$74         controleNivel
+C:   00000729  A$controleNivel$2418               controleNivel
+C:   0000072C  A$controleNivel$2419               controleNivel
+C:   0000072F  A$controleNivel$2420               controleNivel
+C:   00000732  A$controleNivel$2423               controleNivel
+C:   00000732  C$controleNivel.c$203$3$74         controleNivel
+C:   00000735  A$controleNivel$2424               controleNivel
+C:   00000738  A$controleNivel$2425               controleNivel
+C:   0000073B  A$controleNivel$2426               controleNivel
+C:   0000073E  A$controleNivel$2427               controleNivel
+C:   00000741  A$controleNivel$2430               controleNivel
+C:   00000741  C$controleNivel.c$204$3$74         controleNivel
+C:   00000744  A$controleNivel$2431               controleNivel
+C:   00000747  A$controleNivel$2432               controleNivel
+C:   0000074A  A$controleNivel$2433               controleNivel
+C:   0000074D  A$controleNivel$2436               controleNivel
+C:   0000074D  C$controleNivel.c$205$3$74         controleNivel
+C:   00000750  A$controleNivel$2437               controleNivel
+C:   00000753  A$controleNivel$2438               controleNivel
+C:   00000756  A$controleNivel$2439               controleNivel
+C:   00000759  A$controleNivel$2442               controleNivel
+C:   00000759  C$controleNivel.c$206$3$74         controleNivel
+C:   0000075C  A$controleNivel$2443               controleNivel
+C:   0000075F  A$controleNivel$2444               controleNivel
+C:   00000762  A$controleNivel$2445               controleNivel
+C:   00000765  A$controleNivel$2446               controleNivel
+C:   00000768  A$controleNivel$2451               controleNivel
+C:   00000768  C$controleNivel.c$208$2$54         controleNivel
+C:   0000076B  A$controleNivel$2452               controleNivel
+C:   0000076D  A$controleNivel$2456               controleNivel
+C:   0000076D  C$controleNivel.c$209$2$54         controleNivel
+C:   00000770  A$controleNivel$2460               controleNivel
+C:   00000770  C$controleNivel.c$210$2$54         controleNivel
+C:   00000772  A$controleNivel$2463               controleNivel
+C:   00000772  C$controleNivel.c$211$1$49         controleNivel
+C:   00000775  A$controleNivel$2464               controleNivel
+C:   00000778  A$controleNivel$2465               controleNivel
+C:   0000077B  A$controleNivel$2466               controleNivel
+C:   0000077E  A$controleNivel$2467               controleNivel
+C:   00000781  A$controleNivel$2468               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 44.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000783  A$controleNivel$2469               controleNivel
+C:   00000785  A$controleNivel$2472               controleNivel
+C:   00000785  C$controleNivel.c$213$2$54         controleNivel
+C:   00000787  A$controleNivel$2473               controleNivel
+C:   00000788  A$controleNivel$2474               controleNivel
+C:   0000078A  A$controleNivel$2475               controleNivel
+C:   0000078B  A$controleNivel$2478               controleNivel
+C:   0000078B  C$controleNivel.c$215$2$54         controleNivel
+C:   0000078D  A$controleNivel$2479               controleNivel
+C:   00000790  A$controleNivel$2480               controleNivel
+C:   00000792  A$controleNivel$2482               controleNivel
+C:   00000795  A$controleNivel$2486               controleNivel
+C:   00000795  C$controleNivel.c$217$3$75         controleNivel
+C:   00000797  A$controleNivel$2489               controleNivel
+C:   00000797  C$controleNivel.c$218$3$75         controleNivel
+C:   00000799  A$controleNivel$2490               controleNivel
+C:   0000079A  A$controleNivel$2491               controleNivel
+C:   0000079B  A$controleNivel$2494               controleNivel
+C:   0000079B  C$controleNivel.c$220$3$75         controleNivel
+C:   0000079D  A$controleNivel$2495               controleNivel
+C:   000007A0  A$controleNivel$2496               controleNivel
+C:   000007A1  A$controleNivel$2497               controleNivel
+C:   000007A3  A$controleNivel$2498               controleNivel
+C:   000007A5  A$controleNivel$2499               controleNivel
+C:   000007A7  A$controleNivel$2500               controleNivel
+C:   000007A9  A$controleNivel$2501               controleNivel
+C:   000007AA  A$controleNivel$2502               controleNivel
+C:   000007AC  A$controleNivel$2503               controleNivel
+C:   000007AD  A$controleNivel$2504               controleNivel
+C:   000007AF  A$controleNivel$2505               controleNivel
+C:   000007B1  A$controleNivel$2506               controleNivel
+C:   000007B3  A$controleNivel$2507               controleNivel
+C:   000007B5  A$controleNivel$2508               controleNivel
+C:   000007B7  A$controleNivel$2509               controleNivel
+C:   000007B8  A$controleNivel$2510               controleNivel
+C:   000007BA  A$controleNivel$2511               controleNivel
+C:   000007BB  A$controleNivel$2512               controleNivel
+C:   000007BD  A$controleNivel$2513               controleNivel
+C:   000007BF  A$controleNivel$2514               controleNivel
+C:   000007C0  A$controleNivel$2517               controleNivel
+C:   000007C0  C$controleNivel.c$221$3$75         controleNivel
+C:   000007C3  A$controleNivel$2518               controleNivel
+C:   000007C6  A$controleNivel$2519               controleNivel
+C:   000007C8  A$controleNivel$2520               controleNivel
+C:   000007CA  A$controleNivel$2521               controleNivel
+C:   000007CC  A$controleNivel$2522               controleNivel
+C:   000007CE  A$controleNivel$2523               controleNivel
+C:   000007D0  A$controleNivel$2524               controleNivel
+C:   000007D2  A$controleNivel$2525               controleNivel
+C:   000007D5  A$controleNivel$2526               controleNivel
+C:   000007D8  A$controleNivel$2527               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 45.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000007DB  A$controleNivel$2528               controleNivel
+C:   000007DE  A$controleNivel$2529               controleNivel
+C:   000007E0  A$controleNivel$2530               controleNivel
+C:   000007E2  A$controleNivel$2531               controleNivel
+C:   000007E4  A$controleNivel$2532               controleNivel
+C:   000007E6  A$controleNivel$2533               controleNivel
+C:   000007E8  A$controleNivel$2534               controleNivel
+C:   000007EB  A$controleNivel$2535               controleNivel
+C:   000007EE  A$controleNivel$2536               controleNivel
+C:   000007F0  A$controleNivel$2537               controleNivel
+C:   000007F2  A$controleNivel$2538               controleNivel
+C:   000007F4  A$controleNivel$2539               controleNivel
+C:   000007F6  A$controleNivel$2540               controleNivel
+C:   000007F8  A$controleNivel$2541               controleNivel
+C:   000007FB  A$controleNivel$2542               controleNivel
+C:   000007FE  A$controleNivel$2543               controleNivel
+C:   00000801  A$controleNivel$2544               controleNivel
+C:   00000804  A$controleNivel$2545               controleNivel
+C:   00000806  A$controleNivel$2546               controleNivel
+C:   00000808  A$controleNivel$2547               controleNivel
+C:   0000080A  A$controleNivel$2548               controleNivel
+C:   0000080C  A$controleNivel$2549               controleNivel
+C:   0000080E  A$controleNivel$2550               controleNivel
+C:   00000810  A$controleNivel$2551               controleNivel
+C:   00000813  A$controleNivel$2552               controleNivel
+C:   00000816  A$controleNivel$2553               controleNivel
+C:   00000818  A$controleNivel$2554               controleNivel
+C:   0000081A  A$controleNivel$2555               controleNivel
+C:   0000081C  A$controleNivel$2556               controleNivel
+C:   0000081E  A$controleNivel$2557               controleNivel
+C:   00000820  A$controleNivel$2558               controleNivel
+C:   00000822  A$controleNivel$2559               controleNivel
+C:   00000825  A$controleNivel$2560               controleNivel
+C:   00000828  A$controleNivel$2561               controleNivel
+C:   0000082B  A$controleNivel$2562               controleNivel
+C:   0000082E  A$controleNivel$2563               controleNivel
+C:   00000830  A$controleNivel$2564               controleNivel
+C:   00000832  A$controleNivel$2565               controleNivel
+C:   00000834  A$controleNivel$2566               controleNivel
+C:   00000836  A$controleNivel$2567               controleNivel
+C:   00000838  A$controleNivel$2568               controleNivel
+C:   0000083A  A$controleNivel$2571               controleNivel
+C:   0000083A  C$controleNivel.c$223$3$75         controleNivel
+C:   0000083B  A$controleNivel$2572               controleNivel
+C:   0000083D  A$controleNivel$2573               controleNivel
+C:   0000083E  A$controleNivel$2574               controleNivel
+C:   0000083F  A$controleNivel$2575               controleNivel
+C:   00000841  A$controleNivel$2576               controleNivel
+C:   00000842  A$controleNivel$2577               controleNivel
+C:   00000843  A$controleNivel$2578               controleNivel
+C:   00000844  A$controleNivel$2579               controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 46.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   00000845  A$controleNivel$2580               controleNivel
+C:   00000846  A$controleNivel$2581               controleNivel
+C:   00000847  A$controleNivel$2582               controleNivel
+C:   00000848  A$controleNivel$2583               controleNivel
+C:   00000849  A$controleNivel$2584               controleNivel
+C:   0000084A  A$controleNivel$2585               controleNivel
+C:   0000084C  A$controleNivel$2586               controleNivel
+C:   0000084D  A$controleNivel$2587               controleNivel
+C:   0000084E  A$controleNivel$2588               controleNivel
+C:   00000850  A$controleNivel$2591               controleNivel
+C:   00000850  C$controleNivel.c$224$3$75         controleNivel
+C:   00000851  A$controleNivel$2592               controleNivel
+C:   00000853  A$controleNivel$2593               controleNivel
+C:   00000855  A$controleNivel$2594               controleNivel
+C:   00000857  A$controleNivel$2595               controleNivel
+C:   0000085A  A$controleNivel$2596               controleNivel
+C:   0000085D  A$controleNivel$2597               controleNivel
+C:   0000085F  A$controleNivel$2598               controleNivel
+C:   00000861  A$controleNivel$2599               controleNivel
+C:   00000864  A$controleNivel$2600               controleNivel
+C:   00000867  A$controleNivel$2604               controleNivel
+C:   00000867  C$controleNivel.c$225$3$75         controleNivel
+C:   00000869  A$controleNivel$2605               controleNivel
+C:   0000086C  A$controleNivel$2606               controleNivel
+C:   0000086D  A$controleNivel$2607               controleNivel
+C:   0000086F  A$controleNivel$2608               controleNivel
+C:   00000871  A$controleNivel$2612               controleNivel
+C:   00000871  C$controleNivel.c$226$1$49         controleNivel
+C:   00000874  A$controleNivel$2613               controleNivel
+C:   00000877  A$controleNivel$2614               controleNivel
+C:   0000087A  A$controleNivel$2615               controleNivel
+C:   0000087D  A$controleNivel$2616               controleNivel
+C:   00000880  A$controleNivel$2617               controleNivel
+C:   00000883  A$controleNivel$2618               controleNivel
+C:   00000886  A$controleNivel$2619               controleNivel
+C:   00000888  A$controleNivel$2620               controleNivel
+C:   0000088A  A$controleNivel$2621               controleNivel
+C:   0000088C  A$controleNivel$2626               controleNivel
+C:   0000088C  C$controleNivel.c$229$2$54         controleNivel
+C:   0000088F  A$controleNivel$2627               controleNivel
+C:   00000891  A$controleNivel$2629               controleNivel
+C:   00000893  A$controleNivel$2630               controleNivel
+C:   00000894  A$controleNivel$2631               controleNivel
+C:   00000897  A$controleNivel$2632               controleNivel
+C:   00000899  A$controleNivel$2634               controleNivel
+C:   0000089C  A$controleNivel$2637               controleNivel
+C:   0000089C  C$controleNivel.c$233$1$49         controleNivel
+C:   0000089C  XG$main$0$0                        controleNivel
+C:   0000089D  __divuint                          _divuint
+C:   000008C6  __mulint                           _mulint
+C:   000008C6  __mulint_dummy                     _mulint
+ASxxxx Linker V03.00 + NoICE + sdld,  page 47.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CSEG                                000000D4    00000898 =        2200. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   000008E3  __moduint                          _moduint
+C:   00000930  __divsint                          _divsint
+C:   00000968  __sdcc_external_startup            _startup
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 48.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+CONST                               0000096C    0000001E =          30. bytes (REL,CON,CODE)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+C:   0000096C  G$setLCD4$0$0                      controleNivel
+C:   0000096C  _setLCD4                           controleNivel
+C:   00000970  G$Tit1$0$0                         controleNivel
+C:   00000970  _Tit1                              controleNivel
+C:   0000097D  G$Tit2$0$0                         controleNivel
+C:   0000097D  _Tit2                              controleNivel
+ASxxxx Linker V03.00 + NoICE + sdld,  page 49.
+
+Files Linked                              [ module(s) ]
+
+controleNivel.rel                         [  ]
+
+
+Libraries Linked                          [ object file ]
+
+C:\Program Files\SDCC\bin\..\lib\small/libint.lib
+                                          [ _divuint.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxinit.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libint.lib
+                                          [ _mulint.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libint.lib
+                                          [ _moduint.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtxclear.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtpagesfr.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/mcs51.lib
+                                          [ crtstart.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libint.lib
+                                          [ _divsint.rel ]
+C:\Program Files\SDCC\bin\..\lib\small/libsdcc.lib
+                                          [ _startup.rel ]
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 50.
+
+User Base Address Definitions
+
+HOME = 0x0000
+XSEG = 0x0001
+PSEG = 0x0001
+ISEG = 0x0000
+BSEG = 0x0000
+
+

@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\qcustomplot.o
+./debug\comunicacao.o
+./debug\callout.o
+./debug\plot.o
+./debug\setpwmvalues.o
+./debug\moc_mainwindow.o
+./debug\moc_qcustomplot.o
+./debug\moc_plot.o
+./debug\moc_setpwmvalues.o
+);

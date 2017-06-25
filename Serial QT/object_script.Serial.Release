@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\qcustomplot.o
+./release\comunicacao.o
+./release\callout.o
+./release\plot.o
+./release\setpwmvalues.o
+./release\moc_mainwindow.o
+./release\moc_qcustomplot.o
+./release\moc_plot.o
+./release\moc_setpwmvalues.o
+);

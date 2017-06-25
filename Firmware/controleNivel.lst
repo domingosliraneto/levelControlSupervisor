@@ -1,0 +1,2657 @@
+                                      1 ;--------------------------------------------------------
+                                      2 ; File Created by SDCC : free open source ANSI-C Compiler
+                                      3 ; Version 3.6.6 #9917 (MINGW64)
+                                      4 ;--------------------------------------------------------
+                                      5 	.module controleNivel
+                                      6 	.optsdcc -mmcs51 --model-small
+                                      7 	
+                                      8 ;--------------------------------------------------------
+                                      9 ; Public variables in this module
+                                     10 ;--------------------------------------------------------
+                                     11 	.globl _Tit2
+                                     12 	.globl _Tit1
+                                     13 	.globl _setLCD4
+                                     14 	.globl _main
+                                     15 	.globl _ajustPID
+                                     16 	.globl _ext_1
+                                     17 	.globl _int2Ser
+                                     18 	.globl _char2Ser
+                                     19 	.globl _int2ascii
+                                     20 	.globl _algs2ser
+                                     21 	.globl _serial
+                                     22 	.globl _inic
+                                     23 	.globl _iniLCD4
+                                     24 	.globl _char2LCD
+                                     25 	.globl _wrLCD4
+                                     26 	.globl _wrLCD8
+                                     27 	.globl _timer_0
+                                     28 	.globl _ext_0
+                                     29 	.globl _TrigPin
+                                     30 	.globl _RW
+                                     31 	.globl _DC
+                                     32 	.globl _adcDt
+                                     33 	.globl _adcCk
+                                     34 	.globl _adcCS
+                                     35 	.globl _lcdCS
+                                     36 	.globl _S2D2
+                                     37 	.globl _S1D1
+                                     38 	.globl _SwInt
+                                     39 	.globl _TxBip
+                                     40 	.globl _RxLed
+                                     41 	.globl _CY
+                                     42 	.globl _AC
+                                     43 	.globl _F0
+                                     44 	.globl _RS1
+                                     45 	.globl _RS0
+                                     46 	.globl _OV
+                                     47 	.globl _F1
+                                     48 	.globl _P
+                                     49 	.globl _PS
+                                     50 	.globl _PT1
+                                     51 	.globl _PX1
+                                     52 	.globl _PT0
+                                     53 	.globl _PX0
+                                     54 	.globl _RD
+                                     55 	.globl _WR
+                                     56 	.globl _T1
+                                     57 	.globl _T0
+                                     58 	.globl _INT1
+                                     59 	.globl _INT0
+                                     60 	.globl _TXD
+                                     61 	.globl _RXD
+                                     62 	.globl _P3_7
+                                     63 	.globl _P3_6
+                                     64 	.globl _P3_5
+                                     65 	.globl _P3_4
+                                     66 	.globl _P3_3
+                                     67 	.globl _P3_2
+                                     68 	.globl _P3_1
+                                     69 	.globl _P3_0
+                                     70 	.globl _EA
+                                     71 	.globl _ES
+                                     72 	.globl _ET1
+                                     73 	.globl _EX1
+                                     74 	.globl _ET0
+                                     75 	.globl _EX0
+                                     76 	.globl _P2_7
+                                     77 	.globl _P2_6
+                                     78 	.globl _P2_5
+                                     79 	.globl _P2_4
+                                     80 	.globl _P2_3
+                                     81 	.globl _P2_2
+                                     82 	.globl _P2_1
+                                     83 	.globl _P2_0
+                                     84 	.globl _SM0
+                                     85 	.globl _SM1
+                                     86 	.globl _SM2
+                                     87 	.globl _REN
+                                     88 	.globl _TB8
+                                     89 	.globl _RB8
+                                     90 	.globl _TI
+                                     91 	.globl _RI
+                                     92 	.globl _P1_7
+                                     93 	.globl _P1_6
+                                     94 	.globl _P1_5
+                                     95 	.globl _P1_4
+                                     96 	.globl _P1_3
+                                     97 	.globl _P1_2
+                                     98 	.globl _P1_1
+                                     99 	.globl _P1_0
+                                    100 	.globl _TF1
+                                    101 	.globl _TR1
+                                    102 	.globl _TF0
+                                    103 	.globl _TR0
+                                    104 	.globl _IE1
+                                    105 	.globl _IT1
+                                    106 	.globl _IE0
+                                    107 	.globl _IT0
+                                    108 	.globl _P0_7
+                                    109 	.globl _P0_6
+                                    110 	.globl _P0_5
+                                    111 	.globl _P0_4
+                                    112 	.globl _P0_3
+                                    113 	.globl _P0_2
+                                    114 	.globl _P0_1
+                                    115 	.globl _P0_0
+                                    116 	.globl _LCD
+                                    117 	.globl _CLKREG
+                                    118 	.globl _B
+                                    119 	.globl _ACC
+                                    120 	.globl _PSW
+                                    121 	.globl _IP
+                                    122 	.globl _P3
+                                    123 	.globl _IE
+                                    124 	.globl _P2
+                                    125 	.globl _SBUF
+                                    126 	.globl _SCON
+                                    127 	.globl _P1
+                                    128 	.globl _TH1
+                                    129 	.globl _TH0
+                                    130 	.globl _TL1
+                                    131 	.globl _TL0
+                                    132 	.globl _TMOD
+                                    133 	.globl _TCON
+                                    134 	.globl _PCON
+                                    135 	.globl _DPH
+                                    136 	.globl _DPL
+                                    137 	.globl _SP
+                                    138 	.globl _P0
+                                    139 	.globl _sensor
+                                    140 	.globl _wrLCD4_PARM_1
+                                    141 	.globl _wrLCD8_PARM_1
+                                    142 	.globl _useBuf
+                                    143 	.globl _Ch01
+                                    144 	.globl _ad2On
+                                    145 	.globl _ad1On
+                                    146 	.globl _Txing
+                                    147 	.globl _TxFlag
+                                    148 	.globl _RxFlag
+                                    149 	.globl _tip
+                                    150 	.globl _bip
+                                    151 	.globl _som
+                                    152 	.globl _umSeg
+                                    153 	.globl _malha
+                                    154 	.globl _pwm
+                                    155 	.globl _pid
+                                    156 	.globl _TrigCont
+                                    157 	.globl _Echo
+                                    158 	.globl _int2Ser_PARM_3
+                                    159 	.globl _int2Ser_PARM_2
+                                    160 	.globl _char2Ser_PARM_3
+                                    161 	.globl _char2Ser_PARM_2
+                                    162 	.globl _algs2ser_PARM_3
+                                    163 	.globl _algs2ser_PARM_2
+                                    164 	.globl _char2LCD_PARM_3
+                                    165 	.globl _char2LCD_PARM_2
+                                    166 	.globl _algs
+                                    167 	.globl _TxB
+                                    168 	.globl _RxB
+                                    169 	.globl _wTxB
+                                    170 	.globl _rTxB
+                                    171 	.globl _wRxB
+                                    172 	.globl _rRxB
+                                    173 	.globl _TxByte
+                                    174 	.globl _RxByte
+                                    175 	.globl _freq
+                                    176 	.globl _x50us
+                                    177 	.globl _cnt200
+                                    178 	.globl _cnt100
+                                    179 	.globl _disp2
+                                    180 	.globl _disp1
+                                    181 	.globl _cont
+                                    182 	.globl _S2
+                                    183 	.globl _S1
+                                    184 	.globl _delay50
+                                    185 	.globl _RTproc_1
+                                    186 	.globl _RTproc_2
+                                    187 ;--------------------------------------------------------
+                                    188 ; special function registers
+                                    189 ;--------------------------------------------------------
+                                    190 	.area RSEG    (ABS,DATA)
+      000000                        191 	.org 0x0000
+                           000080   192 G$P0$0$0 == 0x0080
+                           000080   193 _P0	=	0x0080
+                           000081   194 G$SP$0$0 == 0x0081
+                           000081   195 _SP	=	0x0081
+                           000082   196 G$DPL$0$0 == 0x0082
+                           000082   197 _DPL	=	0x0082
+                           000083   198 G$DPH$0$0 == 0x0083
+                           000083   199 _DPH	=	0x0083
+                           000087   200 G$PCON$0$0 == 0x0087
+                           000087   201 _PCON	=	0x0087
+                           000088   202 G$TCON$0$0 == 0x0088
+                           000088   203 _TCON	=	0x0088
+                           000089   204 G$TMOD$0$0 == 0x0089
+                           000089   205 _TMOD	=	0x0089
+                           00008A   206 G$TL0$0$0 == 0x008a
+                           00008A   207 _TL0	=	0x008a
+                           00008B   208 G$TL1$0$0 == 0x008b
+                           00008B   209 _TL1	=	0x008b
+                           00008C   210 G$TH0$0$0 == 0x008c
+                           00008C   211 _TH0	=	0x008c
+                           00008D   212 G$TH1$0$0 == 0x008d
+                           00008D   213 _TH1	=	0x008d
+                           000090   214 G$P1$0$0 == 0x0090
+                           000090   215 _P1	=	0x0090
+                           000098   216 G$SCON$0$0 == 0x0098
+                           000098   217 _SCON	=	0x0098
+                           000099   218 G$SBUF$0$0 == 0x0099
+                           000099   219 _SBUF	=	0x0099
+                           0000A0   220 G$P2$0$0 == 0x00a0
+                           0000A0   221 _P2	=	0x00a0
+                           0000A8   222 G$IE$0$0 == 0x00a8
+                           0000A8   223 _IE	=	0x00a8
+                           0000B0   224 G$P3$0$0 == 0x00b0
+                           0000B0   225 _P3	=	0x00b0
+                           0000B8   226 G$IP$0$0 == 0x00b8
+                           0000B8   227 _IP	=	0x00b8
+                           0000D0   228 G$PSW$0$0 == 0x00d0
+                           0000D0   229 _PSW	=	0x00d0
+                           0000E0   230 G$ACC$0$0 == 0x00e0
+                           0000E0   231 _ACC	=	0x00e0
+                           0000F0   232 G$B$0$0 == 0x00f0
+                           0000F0   233 _B	=	0x00f0
+                           00008F   234 G$CLKREG$0$0 == 0x008f
+                           00008F   235 _CLKREG	=	0x008f
+                           000090   236 G$LCD$0$0 == 0x0090
+                           000090   237 _LCD	=	0x0090
+                                    238 ;--------------------------------------------------------
+                                    239 ; special function bits
+                                    240 ;--------------------------------------------------------
+                                    241 	.area RSEG    (ABS,DATA)
+      000000                        242 	.org 0x0000
+                           000080   243 G$P0_0$0$0 == 0x0080
+                           000080   244 _P0_0	=	0x0080
+                           000081   245 G$P0_1$0$0 == 0x0081
+                           000081   246 _P0_1	=	0x0081
+                           000082   247 G$P0_2$0$0 == 0x0082
+                           000082   248 _P0_2	=	0x0082
+                           000083   249 G$P0_3$0$0 == 0x0083
+                           000083   250 _P0_3	=	0x0083
+                           000084   251 G$P0_4$0$0 == 0x0084
+                           000084   252 _P0_4	=	0x0084
+                           000085   253 G$P0_5$0$0 == 0x0085
+                           000085   254 _P0_5	=	0x0085
+                           000086   255 G$P0_6$0$0 == 0x0086
+                           000086   256 _P0_6	=	0x0086
+                           000087   257 G$P0_7$0$0 == 0x0087
+                           000087   258 _P0_7	=	0x0087
+                           000088   259 G$IT0$0$0 == 0x0088
+                           000088   260 _IT0	=	0x0088
+                           000089   261 G$IE0$0$0 == 0x0089
+                           000089   262 _IE0	=	0x0089
+                           00008A   263 G$IT1$0$0 == 0x008a
+                           00008A   264 _IT1	=	0x008a
+                           00008B   265 G$IE1$0$0 == 0x008b
+                           00008B   266 _IE1	=	0x008b
+                           00008C   267 G$TR0$0$0 == 0x008c
+                           00008C   268 _TR0	=	0x008c
+                           00008D   269 G$TF0$0$0 == 0x008d
+                           00008D   270 _TF0	=	0x008d
+                           00008E   271 G$TR1$0$0 == 0x008e
+                           00008E   272 _TR1	=	0x008e
+                           00008F   273 G$TF1$0$0 == 0x008f
+                           00008F   274 _TF1	=	0x008f
+                           000090   275 G$P1_0$0$0 == 0x0090
+                           000090   276 _P1_0	=	0x0090
+                           000091   277 G$P1_1$0$0 == 0x0091
+                           000091   278 _P1_1	=	0x0091
+                           000092   279 G$P1_2$0$0 == 0x0092
+                           000092   280 _P1_2	=	0x0092
+                           000093   281 G$P1_3$0$0 == 0x0093
+                           000093   282 _P1_3	=	0x0093
+                           000094   283 G$P1_4$0$0 == 0x0094
+                           000094   284 _P1_4	=	0x0094
+                           000095   285 G$P1_5$0$0 == 0x0095
+                           000095   286 _P1_5	=	0x0095
+                           000096   287 G$P1_6$0$0 == 0x0096
+                           000096   288 _P1_6	=	0x0096
+                           000097   289 G$P1_7$0$0 == 0x0097
+                           000097   290 _P1_7	=	0x0097
+                           000098   291 G$RI$0$0 == 0x0098
+                           000098   292 _RI	=	0x0098
+                           000099   293 G$TI$0$0 == 0x0099
+                           000099   294 _TI	=	0x0099
+                           00009A   295 G$RB8$0$0 == 0x009a
+                           00009A   296 _RB8	=	0x009a
+                           00009B   297 G$TB8$0$0 == 0x009b
+                           00009B   298 _TB8	=	0x009b
+                           00009C   299 G$REN$0$0 == 0x009c
+                           00009C   300 _REN	=	0x009c
+                           00009D   301 G$SM2$0$0 == 0x009d
+                           00009D   302 _SM2	=	0x009d
+                           00009E   303 G$SM1$0$0 == 0x009e
+                           00009E   304 _SM1	=	0x009e
+                           00009F   305 G$SM0$0$0 == 0x009f
+                           00009F   306 _SM0	=	0x009f
+                           0000A0   307 G$P2_0$0$0 == 0x00a0
+                           0000A0   308 _P2_0	=	0x00a0
+                           0000A1   309 G$P2_1$0$0 == 0x00a1
+                           0000A1   310 _P2_1	=	0x00a1
+                           0000A2   311 G$P2_2$0$0 == 0x00a2
+                           0000A2   312 _P2_2	=	0x00a2
+                           0000A3   313 G$P2_3$0$0 == 0x00a3
+                           0000A3   314 _P2_3	=	0x00a3
+                           0000A4   315 G$P2_4$0$0 == 0x00a4
+                           0000A4   316 _P2_4	=	0x00a4
+                           0000A5   317 G$P2_5$0$0 == 0x00a5
+                           0000A5   318 _P2_5	=	0x00a5
+                           0000A6   319 G$P2_6$0$0 == 0x00a6
+                           0000A6   320 _P2_6	=	0x00a6
+                           0000A7   321 G$P2_7$0$0 == 0x00a7
+                           0000A7   322 _P2_7	=	0x00a7
+                           0000A8   323 G$EX0$0$0 == 0x00a8
+                           0000A8   324 _EX0	=	0x00a8
+                           0000A9   325 G$ET0$0$0 == 0x00a9
+                           0000A9   326 _ET0	=	0x00a9
+                           0000AA   327 G$EX1$0$0 == 0x00aa
+                           0000AA   328 _EX1	=	0x00aa
+                           0000AB   329 G$ET1$0$0 == 0x00ab
+                           0000AB   330 _ET1	=	0x00ab
+                           0000AC   331 G$ES$0$0 == 0x00ac
+                           0000AC   332 _ES	=	0x00ac
+                           0000AF   333 G$EA$0$0 == 0x00af
+                           0000AF   334 _EA	=	0x00af
+                           0000B0   335 G$P3_0$0$0 == 0x00b0
+                           0000B0   336 _P3_0	=	0x00b0
+                           0000B1   337 G$P3_1$0$0 == 0x00b1
+                           0000B1   338 _P3_1	=	0x00b1
+                           0000B2   339 G$P3_2$0$0 == 0x00b2
+                           0000B2   340 _P3_2	=	0x00b2
+                           0000B3   341 G$P3_3$0$0 == 0x00b3
+                           0000B3   342 _P3_3	=	0x00b3
+                           0000B4   343 G$P3_4$0$0 == 0x00b4
+                           0000B4   344 _P3_4	=	0x00b4
+                           0000B5   345 G$P3_5$0$0 == 0x00b5
+                           0000B5   346 _P3_5	=	0x00b5
+                           0000B6   347 G$P3_6$0$0 == 0x00b6
+                           0000B6   348 _P3_6	=	0x00b6
+                           0000B7   349 G$P3_7$0$0 == 0x00b7
+                           0000B7   350 _P3_7	=	0x00b7
+                           0000B0   351 G$RXD$0$0 == 0x00b0
+                           0000B0   352 _RXD	=	0x00b0
+                           0000B1   353 G$TXD$0$0 == 0x00b1
+                           0000B1   354 _TXD	=	0x00b1
+                           0000B2   355 G$INT0$0$0 == 0x00b2
+                           0000B2   356 _INT0	=	0x00b2
+                           0000B3   357 G$INT1$0$0 == 0x00b3
+                           0000B3   358 _INT1	=	0x00b3
+                           0000B4   359 G$T0$0$0 == 0x00b4
+                           0000B4   360 _T0	=	0x00b4
+                           0000B5   361 G$T1$0$0 == 0x00b5
+                           0000B5   362 _T1	=	0x00b5
+                           0000B6   363 G$WR$0$0 == 0x00b6
+                           0000B6   364 _WR	=	0x00b6
+                           0000B7   365 G$RD$0$0 == 0x00b7
+                           0000B7   366 _RD	=	0x00b7
+                           0000B8   367 G$PX0$0$0 == 0x00b8
+                           0000B8   368 _PX0	=	0x00b8
+                           0000B9   369 G$PT0$0$0 == 0x00b9
+                           0000B9   370 _PT0	=	0x00b9
+                           0000BA   371 G$PX1$0$0 == 0x00ba
+                           0000BA   372 _PX1	=	0x00ba
+                           0000BB   373 G$PT1$0$0 == 0x00bb
+                           0000BB   374 _PT1	=	0x00bb
+                           0000BC   375 G$PS$0$0 == 0x00bc
+                           0000BC   376 _PS	=	0x00bc
+                           0000D0   377 G$P$0$0 == 0x00d0
+                           0000D0   378 _P	=	0x00d0
+                           0000D1   379 G$F1$0$0 == 0x00d1
+                           0000D1   380 _F1	=	0x00d1
+                           0000D2   381 G$OV$0$0 == 0x00d2
+                           0000D2   382 _OV	=	0x00d2
+                           0000D3   383 G$RS0$0$0 == 0x00d3
+                           0000D3   384 _RS0	=	0x00d3
+                           0000D4   385 G$RS1$0$0 == 0x00d4
+                           0000D4   386 _RS1	=	0x00d4
+                           0000D5   387 G$F0$0$0 == 0x00d5
+                           0000D5   388 _F0	=	0x00d5
+                           0000D6   389 G$AC$0$0 == 0x00d6
+                           0000D6   390 _AC	=	0x00d6
+                           0000D7   391 G$CY$0$0 == 0x00d7
+                           0000D7   392 _CY	=	0x00d7
+                           0000B0   393 G$RxLed$0$0 == 0x00b0
+                           0000B0   394 _RxLed	=	0x00b0
+                           0000B1   395 G$TxBip$0$0 == 0x00b1
+                           0000B1   396 _TxBip	=	0x00b1
+                           0000B2   397 G$SwInt$0$0 == 0x00b2
+                           0000B2   398 _SwInt	=	0x00b2
+                           000090   399 G$S1D1$0$0 == 0x0090
+                           000090   400 _S1D1	=	0x0090
+                           000091   401 G$S2D2$0$0 == 0x0091
+                           000091   402 _S2D2	=	0x0091
+      0000B7                        403 	.org 0x00B7
+                           0000B7   404 G$lcdCS$0$0==.
+      0000B7                        405 _lcdCS::
+      0000B7                        406 	.ds 1
+                           000093   407 G$adcCS$0$0 == 0x0093
+                           000093   408 _adcCS	=	0x0093
+                           0000B4   409 G$adcCk$0$0 == 0x00b4
+                           0000B4   410 _adcCk	=	0x00b4
+                           0000B5   411 G$adcDt$0$0 == 0x00b5
+                           0000B5   412 _adcDt	=	0x00b5
+                           0000B4   413 G$DC$0$0 == 0x00b4
+                           0000B4   414 _DC	=	0x00b4
+                           0000B5   415 G$RW$0$0 == 0x00b5
+                           0000B5   416 _RW	=	0x00b5
+                           000092   417 G$TrigPin$0$0 == 0x0092
+                           000092   418 _TrigPin	=	0x0092
+                                    419 ;--------------------------------------------------------
+                                    420 ; overlayable register banks
+                                    421 ;--------------------------------------------------------
+                                    422 	.area REG_BANK_0	(REL,OVR,DATA)
+      000000                        423 	.ds 8
+                                    424 ;--------------------------------------------------------
+                                    425 ; internal ram data
+                                    426 ;--------------------------------------------------------
+                                    427 	.area DSEG    (DATA)
+                           000000   428 G$S1$0$0==.
+      000000                        429 _S1::
+      000000                        430 	.ds 1
+                           000001   431 G$S2$0$0==.
+      000001                        432 _S2::
+      000001                        433 	.ds 1
+                           000002   434 G$cont$0$0==.
+      000002                        435 _cont::
+      000002                        436 	.ds 1
+                           000003   437 G$disp1$0$0==.
+      000003                        438 _disp1::
+      000003                        439 	.ds 1
+                           000004   440 G$disp2$0$0==.
+      000004                        441 _disp2::
+      000004                        442 	.ds 1
+                           000005   443 G$cnt100$0$0==.
+      000005                        444 _cnt100::
+      000005                        445 	.ds 1
+                           000006   446 G$cnt200$0$0==.
+      000006                        447 _cnt200::
+      000006                        448 	.ds 1
+                           000007   449 G$x50us$0$0==.
+      000007                        450 _x50us::
+      000007                        451 	.ds 1
+                           000008   452 G$freq$0$0==.
+      000008                        453 _freq::
+      000008                        454 	.ds 1
+                           000009   455 G$RxByte$0$0==.
+      000009                        456 _RxByte::
+      000009                        457 	.ds 1
+                           00000A   458 G$TxByte$0$0==.
+      00000A                        459 _TxByte::
+      00000A                        460 	.ds 1
+                           00000B   461 G$rRxB$0$0==.
+      00000B                        462 _rRxB::
+      00000B                        463 	.ds 1
+                           00000C   464 G$wRxB$0$0==.
+      00000C                        465 _wRxB::
+      00000C                        466 	.ds 1
+                           00000D   467 G$rTxB$0$0==.
+      00000D                        468 _rTxB::
+      00000D                        469 	.ds 1
+                           00000E   470 G$wTxB$0$0==.
+      00000E                        471 _wTxB::
+      00000E                        472 	.ds 1
+                           00000F   473 G$RxB$0$0==.
+      00000F                        474 _RxB::
+      00000F                        475 	.ds 16
+                           00001F   476 G$TxB$0$0==.
+      00001F                        477 _TxB::
+      00001F                        478 	.ds 16
+                           00002F   479 G$algs$0$0==.
+      00002F                        480 _algs::
+      00002F                        481 	.ds 5
+                           000034   482 LcontroleNivel.char2LCD$val$1$12==.
+      000034                        483 _char2LCD_PARM_2:
+      000034                        484 	.ds 1
+                           000035   485 LcontroleNivel.char2LCD$dot$1$12==.
+      000035                        486 _char2LCD_PARM_3:
+      000035                        487 	.ds 1
+                           000036   488 LcontroleNivel.algs2ser$asc0$1$25==.
+      000036                        489 _algs2ser_PARM_2:
+      000036                        490 	.ds 2
+                           000038   491 LcontroleNivel.algs2ser$dot$1$25==.
+      000038                        492 _algs2ser_PARM_3:
+      000038                        493 	.ds 1
+                           000039   494 LcontroleNivel.char2Ser$val$1$34==.
+      000039                        495 _char2Ser_PARM_2:
+      000039                        496 	.ds 1
+                           00003A   497 LcontroleNivel.char2Ser$dot$1$34==.
+      00003A                        498 _char2Ser_PARM_3:
+      00003A                        499 	.ds 1
+                           00003B   500 LcontroleNivel.int2Ser$val$1$36==.
+      00003B                        501 _int2Ser_PARM_2:
+      00003B                        502 	.ds 2
+                           00003D   503 LcontroleNivel.int2Ser$dot$1$36==.
+      00003D                        504 _int2Ser_PARM_3:
+      00003D                        505 	.ds 1
+                           00003E   506 G$Echo$0$0==.
+      00003E                        507 _Echo::
+      00003E                        508 	.ds 2
+                           000040   509 G$TrigCont$0$0==.
+      000040                        510 _TrigCont::
+      000040                        511 	.ds 1
+                           000041   512 G$pid$0$0==.
+      000041                        513 _pid::
+      000041                        514 	.ds 3
+                           000044   515 G$pwm$0$0==.
+      000044                        516 _pwm::
+      000044                        517 	.ds 1
+                           000045   518 G$malha$0$0==.
+      000045                        519 _malha::
+      000045                        520 	.ds 1
+                           000046   521 LcontroleNivel.main$setup$1$49==.
+      000046                        522 _main_setup_1_49:
+      000046                        523 	.ds 1
+                           000047   524 LcontroleNivel.main$tempC$1$49==.
+      000047                        525 _main_tempC_1_49:
+      000047                        526 	.ds 1
+                           000048   527 LcontroleNivel.main$errAt$1$49==.
+      000048                        528 _main_errAt_1_49:
+      000048                        529 	.ds 1
+                           000049   530 LcontroleNivel.main$ctrlAt$1$49==.
+      000049                        531 _main_ctrlAt_1_49:
+      000049                        532 	.ds 2
+                           00004B   533 LcontroleNivel.main$P$1$49==.
+      00004B                        534 _main_P_1_49:
+      00004B                        535 	.ds 2
+                           00004D   536 LcontroleNivel.main$I$1$49==.
+      00004D                        537 _main_I_1_49:
+      00004D                        538 	.ds 2
+                           00004F   539 LcontroleNivel.main$tempo$1$49==.
+      00004F                        540 _main_tempo_1_49:
+      00004F                        541 	.ds 2
+                           000051   542 LcontroleNivel.main$contSetup$1$49==.
+      000051                        543 _main_contSetup_1_49:
+      000051                        544 	.ds 1
+                           000052   545 LcontroleNivel.main$setupR$1$49==.
+      000052                        546 _main_setupR_1_49:
+      000052                        547 	.ds 3
+                           000055   548 LcontroleNivel.main$number$1$49==.
+      000055                        549 _main_number_1_49:
+      000055                        550 	.ds 1
+                                    551 ;--------------------------------------------------------
+                                    552 ; overlayable items in internal ram 
+                                    553 ;--------------------------------------------------------
+                                    554 ;--------------------------------------------------------
+                                    555 ; Stack segment in internal ram 
+                                    556 ;--------------------------------------------------------
+                                    557 	.area	SSEG
+      000000                        558 __start__stack:
+      000000                        559 	.ds	1
+                                    560 
+                                    561 ;--------------------------------------------------------
+                                    562 ; indirectly addressable internal ram data
+                                    563 ;--------------------------------------------------------
+                                    564 	.area ISEG    (DATA)
+                                    565 ;--------------------------------------------------------
+                                    566 ; absolute internal ram data
+                                    567 ;--------------------------------------------------------
+                                    568 	.area IABS    (ABS,DATA)
+                                    569 	.area IABS    (ABS,DATA)
+                                    570 ;--------------------------------------------------------
+                                    571 ; bit data
+                                    572 ;--------------------------------------------------------
+                                    573 	.area BSEG    (BIT)
+                           000000   574 G$umSeg$0$0==.
+      000000                        575 _umSeg::
+      000000                        576 	.ds 1
+                           000001   577 G$som$0$0==.
+      000001                        578 _som::
+      000001                        579 	.ds 1
+                           000002   580 G$bip$0$0==.
+      000002                        581 _bip::
+      000002                        582 	.ds 1
+                           000003   583 G$tip$0$0==.
+      000003                        584 _tip::
+      000003                        585 	.ds 1
+                           000004   586 G$RxFlag$0$0==.
+      000004                        587 _RxFlag::
+      000004                        588 	.ds 1
+                           000005   589 G$TxFlag$0$0==.
+      000005                        590 _TxFlag::
+      000005                        591 	.ds 1
+                           000006   592 G$Txing$0$0==.
+      000006                        593 _Txing::
+      000006                        594 	.ds 1
+                           000007   595 G$ad1On$0$0==.
+      000007                        596 _ad1On::
+      000007                        597 	.ds 1
+                           000008   598 G$ad2On$0$0==.
+      000008                        599 _ad2On::
+      000008                        600 	.ds 1
+                           000009   601 G$Ch01$0$0==.
+      000009                        602 _Ch01::
+      000009                        603 	.ds 1
+                           00000A   604 G$useBuf$0$0==.
+      00000A                        605 _useBuf::
+      00000A                        606 	.ds 1
+                           00000B   607 LcontroleNivel.wrLCD8$rs$1$8==.
+      00000B                        608 _wrLCD8_PARM_1:
+      00000B                        609 	.ds 1
+                           00000C   610 LcontroleNivel.wrLCD8$sloc0$1$0==.
+      00000C                        611 _wrLCD8_sloc0_1_0:
+      00000C                        612 	.ds 1
+                           00000D   613 LcontroleNivel.wrLCD4$rs$1$10==.
+      00000D                        614 _wrLCD4_PARM_1:
+      00000D                        615 	.ds 1
+                           00000E   616 G$sensor$0$0==.
+      00000E                        617 _sensor::
+      00000E                        618 	.ds 1
+                           00000F   619 LcontroleNivel.ajustPID$ajust$1$43==.
+      00000F                        620 _ajustPID_ajust_1_43:
+      00000F                        621 	.ds 1
+                                    622 ;--------------------------------------------------------
+                                    623 ; paged external ram data
+                                    624 ;--------------------------------------------------------
+                                    625 	.area PSEG    (PAG,XDATA)
+                                    626 ;--------------------------------------------------------
+                                    627 ; external ram data
+                                    628 ;--------------------------------------------------------
+                                    629 	.area XSEG    (XDATA)
+                                    630 ;--------------------------------------------------------
+                                    631 ; absolute external ram data
+                                    632 ;--------------------------------------------------------
+                                    633 	.area XABS    (ABS,XDATA)
+                                    634 ;--------------------------------------------------------
+                                    635 ; external initialized ram data
+                                    636 ;--------------------------------------------------------
+                                    637 	.area XISEG   (XDATA)
+                                    638 	.area HOME    (CODE)
+                                    639 	.area GSINIT0 (CODE)
+                                    640 	.area GSINIT1 (CODE)
+                                    641 	.area GSINIT2 (CODE)
+                                    642 	.area GSINIT3 (CODE)
+                                    643 	.area GSINIT4 (CODE)
+                                    644 	.area GSINIT5 (CODE)
+                                    645 	.area GSINIT  (CODE)
+                                    646 	.area GSFINAL (CODE)
+                                    647 	.area CSEG    (CODE)
+                                    648 ;--------------------------------------------------------
+                                    649 ; interrupt vector 
+                                    650 ;--------------------------------------------------------
+                                    651 	.area HOME    (CODE)
+      000000                        652 __interrupt_vect:
+      000000 02r00r00         [24]  653 	ljmp	__sdcc_gsinit_startup
+      000003 02r00r00         [24]  654 	ljmp	_ext_0
+      000006                        655 	.ds	5
+      00000B 02r00r20         [24]  656 	ljmp	_timer_0
+      00000E                        657 	.ds	5
+      000013 02r03r53         [24]  658 	ljmp	_ext_1
+      000016                        659 	.ds	5
+      00001B 32               [24]  660 	reti
+      00001C                        661 	.ds	7
+      000023 02r01rD6         [24]  662 	ljmp	_serial
+                                    663 ;--------------------------------------------------------
+                                    664 ; global & static initialisations
+                                    665 ;--------------------------------------------------------
+                                    666 	.area HOME    (CODE)
+                                    667 	.area GSINIT  (CODE)
+                                    668 	.area GSFINAL (CODE)
+                                    669 	.area GSINIT  (CODE)
+                                    670 	.globl __sdcc_gsinit_startup
+                                    671 	.globl __sdcc_program_startup
+                                    672 	.globl __start__stack
+                                    673 	.globl __mcs51_genXINIT
+                                    674 	.globl __mcs51_genXRAMCLEAR
+                                    675 	.globl __mcs51_genRAMCLEAR
+                           000000   676 	C$uRTOS_2.21.h$38$1$49 ==.
+                                    677 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:38: unsigned char S1=0;             //R1 estado de S1
+      000000 75*00 00         [24]  678 	mov	_S1,#0x00
+                           000003   679 	C$uRTOS_2.21.h$39$1$49 ==.
+                                    680 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:39: unsigned char S2=0;             //R2 estado de S2
+      000003 75*01 00         [24]  681 	mov	_S2,#0x00
+                           000006   682 	C$uRTOS_2.21.h$40$1$49 ==.
+                                    683 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:40: unsigned char cont=0;           //R3 N x 50µs
+      000006 75*02 00         [24]  684 	mov	_cont,#0x00
+                           000009   685 	C$uRTOS_2.21.h$41$1$49 ==.
+                                    686 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:41: unsigned char disp1=0xFF;       //R4 7seg MSD
+      000009 75*03 FF         [24]  687 	mov	_disp1,#0xff
+                           00000C   688 	C$uRTOS_2.21.h$42$1$49 ==.
+                                    689 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:42: unsigned char disp2=0xFF;       //R5 7seg LSD
+      00000C 75*04 FF         [24]  690 	mov	_disp2,#0xff
+                           00000F   691 	C$uRTOS_2.21.h$43$1$49 ==.
+                                    692 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:43: unsigned char cnt100=100;       //R6 100x10ms=1s
+      00000F 75*05 64         [24]  693 	mov	_cnt100,#0x64
+                           000012   694 	C$uRTOS_2.21.h$44$1$49 ==.
+                                    695 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:44: unsigned char cnt200=200;       //R7 200 int's
+      000012 75*06 C8         [24]  696 	mov	_cnt200,#0xc8
+                           000015   697 	C$uRTOS_2.21.h$46$1$49 ==.
+                                    698 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:46: unsigned char freq=8;           //R9 fBip=1/(2*50*freq)
+      000015 75*08 08         [24]  699 	mov	_freq,#0x08
+                           000018   700 	C$uRTOS_2.21.h$49$1$49 ==.
+                                    701 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:49: unsigned char rRxB=0;           //tag leitura RxB
+      000018 75*0B 00         [24]  702 	mov	_rRxB,#0x00
+                           00001B   703 	C$uRTOS_2.21.h$50$1$49 ==.
+                                    704 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:50: unsigned char wRxB=0;           //tag escrita RxB
+      00001B 75*0C 00         [24]  705 	mov	_wRxB,#0x00
+                           00001E   706 	C$uRTOS_2.21.h$51$1$49 ==.
+                                    707 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:51: unsigned char rTxB=0;           //tag leitura TxB
+      00001E 75*0D 00         [24]  708 	mov	_rTxB,#0x00
+                           000021   709 	C$uRTOS_2.21.h$52$1$49 ==.
+                                    710 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:52: unsigned char wTxB=0;           //tag escrita TxB
+      000021 75*0E 00         [24]  711 	mov	_wTxB,#0x00
+                           000024   712 	C$controleNivel.c$10$1$49 ==.
+                                    713 ;	controleNivel.c:10: unsigned int Echo=0x00;
+      000024 E4               [12]  714 	clr	a
+      000025 F5*3E            [12]  715 	mov	_Echo,a
+      000027 F5*3F            [12]  716 	mov	(_Echo + 1),a
+                           000029   717 	C$controleNivel.c$11$1$49 ==.
+                                    718 ;	controleNivel.c:11: unsigned char TrigCont=100;
+      000029 75*40 64         [24]  719 	mov	_TrigCont,#0x64
+                           00002C   720 	C$controleNivel.c$12$1$49 ==.
+                                    721 ;	controleNivel.c:12: unsigned char pid[3]={0,0,0};
+                                    722 ;	1-genFromRTrack replaced	mov	_pid,#0x00
+      00002C F5*41            [12]  723 	mov	_pid,a
+                                    724 ;	1-genFromRTrack replaced	mov	(_pid + 0x0001),#0x00
+      00002E F5*42            [12]  725 	mov	(_pid + 0x0001),a
+                                    726 ;	1-genFromRTrack replaced	mov	(_pid + 0x0002),#0x00
+      000030 F5*43            [12]  727 	mov	(_pid + 0x0002),a
+                           000032   728 	C$controleNivel.c$13$1$49 ==.
+                                    729 ;	controleNivel.c:13: unsigned char pwm=0;
+                                    730 ;	1-genFromRTrack replaced	mov	_pwm,#0x00
+      000032 F5*44            [12]  731 	mov	_pwm,a
+                           000034   732 	C$controleNivel.c$14$1$49 ==.
+                                    733 ;	controleNivel.c:14: unsigned char malha = 1;
+      000034 75*45 01         [24]  734 	mov	_malha,#0x01
+                           000037   735 	C$uRTOS_2.21.h$27$1$49 ==.
+                                    736 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:27: volatile __bit umSeg=0;         //1seg completo
+                                    737 ;	assignBit
+      000037 C2*00            [12]  738 	clr	_umSeg
+                           000039   739 	C$uRTOS_2.21.h$28$1$49 ==.
+                                    740 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:28: __bit som=0;                    //som ligado
+                                    741 ;	assignBit
+      000039 C2*01            [12]  742 	clr	_som
+                           00003B   743 	C$uRTOS_2.21.h$29$1$49 ==.
+                                    744 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:29: __bit bip=0;                    //bip ligado
+                                    745 ;	assignBit
+      00003B C2*02            [12]  746 	clr	_bip
+                           00003D   747 	C$uRTOS_2.21.h$30$1$49 ==.
+                                    748 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:30: __bit tip=0;                    //trava do bip1
+                                    749 ;	assignBit
+      00003D C2*03            [12]  750 	clr	_tip
+                           00003F   751 	C$uRTOS_2.21.h$31$1$49 ==.
+                                    752 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:31: __bit RxFlag=0;                 //rxBuff vazio
+                                    753 ;	assignBit
+      00003F C2*04            [12]  754 	clr	_RxFlag
+                           000041   755 	C$uRTOS_2.21.h$32$1$49 ==.
+                                    756 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:32: __bit TxFlag=1;                 //txBuff vazio
+                                    757 ;	assignBit
+      000041 D2*05            [12]  758 	setb	_TxFlag
+                           000043   759 	C$uRTOS_2.21.h$33$1$49 ==.
+                                    760 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:33: __bit Txing=0;                  //enviando do buffer
+                                    761 ;	assignBit
+      000043 C2*06            [12]  762 	clr	_Txing
+                           000045   763 	C$uRTOS_2.21.h$34$1$49 ==.
+                                    764 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:34: __bit ad1On=0;                  //ADC1 habilitado
+                                    765 ;	assignBit
+      000045 C2*07            [12]  766 	clr	_ad1On
+                           000047   767 	C$uRTOS_2.21.h$35$1$49 ==.
+                                    768 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:35: __bit ad2On=0;                  //ADC2 habilitado
+                                    769 ;	assignBit
+      000047 C2*08            [12]  770 	clr	_ad2On
+                           000049   771 	C$uRTOS_2.21.h$37$1$49 ==.
+                                    772 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:37: __bit useBuf=0;                 //=1 usa RxB
+                                    773 ;	assignBit
+      000049 C2*0A            [12]  774 	clr	_useBuf
+                           00004B   775 	C$controleNivel.c$15$1$49 ==.
+                                    776 ;	controleNivel.c:15: __bit sensor=1;
+                                    777 ;	assignBit
+      00004B D2*0E            [12]  778 	setb	_sensor
+                           00004D   779 	C$uRTOS_2.21.h$20$1$49 ==.
+                                    780 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:20: volatile __sbit __at (0xB7) lcdCS=0;//P3.7 CS   LCD
+                                    781 ;	assignBit
+      00004D C2*B7            [12]  782 	clr	_lcdCS
+                                    783 	.area GSFINAL (CODE)
+      000000 02r00r26         [24]  784 	ljmp	__sdcc_program_startup
+                                    785 ;--------------------------------------------------------
+                                    786 ; Home
+                                    787 ;--------------------------------------------------------
+                                    788 	.area HOME    (CODE)
+                                    789 	.area HOME    (CODE)
+      000026                        790 __sdcc_program_startup:
+      000026 02r04r31         [24]  791 	ljmp	_main
+                                    792 ;	return from main will return to caller
+                                    793 ;--------------------------------------------------------
+                                    794 ; code
+                                    795 ;--------------------------------------------------------
+                                    796 	.area CSEG    (CODE)
+                                    797 ;------------------------------------------------------------
+                                    798 ;Allocation info for local variables in function 'ext_0'
+                                    799 ;------------------------------------------------------------
+                           000000   800 	G$ext_0$0$0 ==.
+                           000000   801 	C$uRTOS_2.21.h$76$0$0 ==.
+                                    802 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:76: void ext_0 (void) __interrupt(0){
+                                    803 ;	-----------------------------------------
+                                    804 ;	 function ext_0
+                                    805 ;	-----------------------------------------
+      000000                        806 _ext_0:
+                           000007   807 	ar7 = 0x07
+                           000006   808 	ar6 = 0x06
+                           000005   809 	ar5 = 0x05
+                           000004   810 	ar4 = 0x04
+                           000003   811 	ar3 = 0x03
+                           000002   812 	ar2 = 0x02
+                           000001   813 	ar1 = 0x01
+                           000000   814 	ar0 = 0x00
+      000000 C0 E0            [24]  815 	push	acc
+      000002 C0 D0            [24]  816 	push	psw
+                           000004   817 	C$uRTOS_2.21.h$77$1$2 ==.
+                                    818 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:77: EX0=0;
+                                    819 ;	assignBit
+      000004 C2 A8            [12]  820 	clr	_EX0
+                           000006   821 	C$uRTOS_2.21.h$78$1$2 ==.
+                                    822 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:78: if(!S1D1){
+      000006 20 90 0A         [24]  823 	jb	_S1D1,00106$
+                           000009   824 	C$uRTOS_2.21.h$79$2$3 ==.
+                                    825 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:79: if (S1<2) S1++;
+      000009 74 FE            [12]  826 	mov	a,#0x100 - 0x02
+      00000B 25*00            [12]  827 	add	a,_S1
+      00000D 40 0C            [24]  828 	jc	00108$
+      00000F 05*00            [12]  829 	inc	_S1
+      000011 80 08            [24]  830 	sjmp	00108$
+      000013                        831 00106$:
+                           000013   832 	C$uRTOS_2.21.h$82$2$4 ==.
+                                    833 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:82: if (S2<2) S2++;
+      000013 74 FE            [12]  834 	mov	a,#0x100 - 0x02
+      000015 25*01            [12]  835 	add	a,_S2
+      000017 40 02            [24]  836 	jc	00108$
+      000019 05*01            [12]  837 	inc	_S2
+      00001B                        838 00108$:
+      00001B D0 D0            [24]  839 	pop	psw
+      00001D D0 E0            [24]  840 	pop	acc
+                           00001F   841 	C$uRTOS_2.21.h$84$1$2 ==.
+                           00001F   842 	XG$ext_0$0$0 ==.
+      00001F 32               [24]  843 	reti
+                                    844 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                    845 ;	eliminated unneeded push/pop dpl
+                                    846 ;	eliminated unneeded push/pop dph
+                                    847 ;	eliminated unneeded push/pop b
+                                    848 ;------------------------------------------------------------
+                                    849 ;Allocation info for local variables in function 'timer_0'
+                                    850 ;------------------------------------------------------------
+                           000020   851 	G$timer_0$0$0 ==.
+                           000020   852 	C$uRTOS_2.21.h$89$1$2 ==.
+                                    853 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:89: void timer_0(void) __interrupt(1) __naked{
+                                    854 ;	-----------------------------------------
+                                    855 ;	 function timer_0
+                                    856 ;	-----------------------------------------
+      000020                        857 _timer_0:
+                                    858 ;	naked function: no prologue.
+                           000020   859 	C$uRTOS_2.21.h$129$1$6 ==.
+                                    860 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:129: __endasm;
+      000020 C0 E0            [24]  861 	push	acc ;salva contexto
+      000022 C0 D0            [24]  862 	push	PSW ;
+      000024 D5*02 0B         [24]  863 	djnz	_cont, Cala ;gerar audio?
+      000027 20*01 03         [24]  864 	jb	_som, Bipa ;tem som?
+      00002A 30*02 05         [24]  865 	jnb	_bip, Cala ;tem bip?
+      00002D                        866 	Bipa:
+      00002D 85*08*02         [24]  867 	mov _cont, _freq ;tempo ½ ciclo
+      000030 B2 B1            [12]  868 	cpl	_TxBip ;½ ciclo som
+      000032                        869 	Cala:
+      000032 D5*06 3F         [24]  870 	djnz _cnt200, RT1 ;10mS completo?
+      000035 75*06 C8         [24]  871 	mov	_cnt200, #200 ;200*50us
+      000038 D5*05 05         [24]  872 	djnz	_cnt100, Bip1 ;1 seg?
+      00003B 75*05 64         [24]  873 	mov	_cnt100, #100 ;recarga 100
+      00003E D2*00            [12]  874 	setb	_umSeg ;sim, cmpl 1s
+      000040                        875 	Bip1:
+      000040 30*02 07         [24]  876 	jnb _bip, Mux ;se bip ligado
+      000043 B2*03            [12]  877 	cpl	_tip ;|gera de 10ms|
+      000045 20*03 02         [24]  878 	jb	_tip, Mux ;|a 19.95ms de|
+      000048 C2*02            [12]  879 	clr	_bip ;|2*freq*50us.|
+      00004A                        880 	Mux:
+      00004A 20 90 11         [24]  881 	jb _S1D1, D2 ;disp1 ligado?
+      00004D                        882 	D1:
+      00004D 74 02            [12]  883 	mov a, #0x02 ;2=filtrada
+      00004F B5*00 06         [24]  884 	cjne	a, _S1, D1a ;filtrada?
+      000052 30 B2 03         [24]  885 	jnb	_SwInt, D1a ;liberada?
+      000055 75*00 03         [24]  886 	mov	_S1, #0x03 ;sim,sobe flag
+      000058                        887 	D1a:
+      000058 D2 90            [12]  888 	setb _S1D1 ;S1 deshab
+      00005A C2 91            [12]  889 	clr	_S2D2 ;S2 hab
+      00005C 80 0F            [24]  890 	sjmp	RT2 ;recarga/sai
+      00005E                        891 	D2:
+      00005E 74 02            [12]  892 	mov a, #0x02
+      000060 B5*01 06         [24]  893 	cjne	a, _S2, D2a ;filtrada?
+      000063 30 B2 03         [24]  894 	jnb	_SwInt, D2a ;liberada?
+      000066 75*01 03         [24]  895 	mov	_S2, #0x03 ;sim,sobe flag
+      000069                        896 	D2a:
+      000069 D2 91            [12]  897 	setb _S2D2 ;S2 deshab
+      00006B C2 90            [12]  898 	clr	_S1D1 ;S1 hab
+                                    899 ;
+      00006D                        900 	RT2:
+      00006D D2 A8            [12]  901 	setb _EX0 ;hab. chaves
+      00006F 12r03r29         [24]  902 	lcall	_RTproc_2 ;a cada 10ms
+      000072 80 03            [24]  903 	sjmp	SAI
+      000074                        904 	RT1:
+      000074 12r03r21         [24]  905 	lcall _RTproc_1 ;a cada 50µs
+      000077                        906 	SAI:
+      000077 D0 D0            [24]  907 	pop PSW ;recup. contexto
+      000079 D0 E0            [24]  908 	pop	acc ;
+      00007B 32               [24]  909 	reti
+                                    910 ;	naked function: no epilogue.
+                           00007C   911 	C$uRTOS_2.21.h$130$1$6 ==.
+                           00007C   912 	XG$timer_0$0$0 ==.
+                                    913 ;------------------------------------------------------------
+                                    914 ;Allocation info for local variables in function 'delay50'
+                                    915 ;------------------------------------------------------------
+                           00007C   916 	G$delay50$0$0 ==.
+                           00007C   917 	C$uRTOS_2.21.h$134$1$6 ==.
+                                    918 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:134: void delay50() __naked{
+                                    919 ;	-----------------------------------------
+                                    920 ;	 function delay50
+                                    921 ;	-----------------------------------------
+      00007C                        922 _delay50:
+                                    923 ;	naked function: no prologue.
+                           00007C   924 	C$uRTOS_2.21.h$148$1$7 ==.
+                                    925 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:148: __endasm;
+      00007C C0 E0            [24]  926 	push	acc ;salva contexto
+      00007E C0 D0            [24]  927 	push	PSW ;
+      000080 E5*06            [12]  928 	mov	a, _cnt200 ;tempo atual
+      000082 C3               [12]  929 	clr	c
+      000083 95*07            [12]  930 	subb	a, _x50us ;prox tempo
+      000085 50 02            [24]  931 	jnc	Po ;negativo?
+      000087 24 C8            [12]  932 	add	a, #200 ;soma 200
+      000089                        933 	Po:
+      000089 04               [12]  934 	inc a ;nunca zero
+      00008A                        935 	Ps:
+      00008A B5*06 FD         [24]  936 	cjne a, _cnt200, Ps ;espera chegar
+      00008D D0 D0            [24]  937 	pop	PSW ;recup. contexto
+      00008F D0 E0            [24]  938 	pop	acc ;
+      000091 22               [24]  939 	ret
+                                    940 ;	naked function: no epilogue.
+                           000092   941 	C$uRTOS_2.21.h$149$1$7 ==.
+                           000092   942 	XG$delay50$0$0 ==.
+                                    943 ;------------------------------------------------------------
+                                    944 ;Allocation info for local variables in function 'wrLCD8'
+                                    945 ;------------------------------------------------------------
+                                    946 ;val                       Allocated to registers r7 
+                                    947 ;------------------------------------------------------------
+                           000092   948 	G$wrLCD8$0$0 ==.
+                           000092   949 	C$uRTOS_2.21.h$153$1$7 ==.
+                                    950 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:153: void wrLCD8(__bit rs, char val){//comando p/ LCD
+                                    951 ;	-----------------------------------------
+                                    952 ;	 function wrLCD8
+                                    953 ;	-----------------------------------------
+      000092                        954 _wrLCD8:
+      000092 AF 82            [24]  955 	mov	r7,dpl
+                           000094   956 	C$uRTOS_2.21.h$154$1$9 ==.
+                                    957 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:154: DC=rs; RW=0;                //1dado 0cmd, escrever
+                                    958 ;	assignBit
+      000094 A2*0B            [12]  959 	mov	c,_wrLCD8_PARM_1
+      000096 92 B4            [24]  960 	mov	_DC,c
+                                    961 ;	assignBit
+      000098 C2 B5            [12]  962 	clr	_RW
+                           00009A   963 	C$uRTOS_2.21.h$155$1$9 ==.
+                                    964 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:155: P1_4=(val&0x10); P1_5=(val&0x20);
+      00009A EF               [12]  965 	mov	a,r7
+      00009B A2 E4            [12]  966 	mov	c,acc[4]
+                                    967 ;	assignBit
+      00009D 92*0C            [24]  968 	mov  _wrLCD8_sloc0_1_0,c
+      00009F 92 94            [24]  969 	mov	_P1_4,c
+      0000A1 EF               [12]  970 	mov	a,r7
+      0000A2 A2 E5            [12]  971 	mov	c,acc[5]
+                                    972 ;	assignBit
+      0000A4 92*0C            [24]  973 	mov  _wrLCD8_sloc0_1_0,c
+      0000A6 92 95            [24]  974 	mov	_P1_5,c
+                           0000A8   975 	C$uRTOS_2.21.h$156$1$9 ==.
+                                    976 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:156: P1_6=(val&0x40); P1_7=(val&0x80);
+      0000A8 EF               [12]  977 	mov	a,r7
+      0000A9 A2 E6            [12]  978 	mov	c,acc[6]
+                                    979 ;	assignBit
+      0000AB 92*0C            [24]  980 	mov  _wrLCD8_sloc0_1_0,c
+      0000AD 92 96            [24]  981 	mov	_P1_6,c
+      0000AF EF               [12]  982 	mov	a,r7
+      0000B0 33               [12]  983 	rlc	a
+                                    984 ;	assignBit
+      0000B1 92*0C            [24]  985 	mov  _wrLCD8_sloc0_1_0,c
+      0000B3 92 97            [24]  986 	mov	_P1_7,c
+                           0000B5   987 	C$uRTOS_2.21.h$157$1$9 ==.
+                                    988 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:157: x50us=2; delay50();         //Tas=100us
+      0000B5 75*07 02         [24]  989 	mov	_x50us,#0x02
+      0000B8 12r00r7C         [24]  990 	lcall	_delay50
+                           0000BB   991 	C$uRTOS_2.21.h$158$1$9 ==.
+                                    992 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:158: lcdCS=1;                    //para gravar
+                                    993 ;	assignBit
+      0000BB D2*B7            [12]  994 	setb	_lcdCS
+                           0000BD   995 	C$uRTOS_2.21.h$159$1$9 ==.
+                                    996 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:159: x50us=8; delay50();         //PWeh=400us
+      0000BD 75*07 08         [24]  997 	mov	_x50us,#0x08
+      0000C0 12r00r7C         [24]  998 	lcall	_delay50
+                           0000C3   999 	C$uRTOS_2.21.h$160$1$9 ==.
+                                   1000 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:160: lcdCS=0;                    //grava
+                                   1001 ;	assignBit
+      0000C3 C2*B7            [12] 1002 	clr	_lcdCS
+                           0000C5  1003 	C$uRTOS_2.21.h$161$1$9 ==.
+                                   1004 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:161: x50us=4; delay50();         //Tah=200us
+      0000C5 75*07 04         [24] 1005 	mov	_x50us,#0x04
+      0000C8 12r00r7C         [24] 1006 	lcall	_delay50
+                           0000CB  1007 	C$uRTOS_2.21.h$162$1$9 ==.
+                                   1008 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:162: RW=1; DC=1;                 //linhas ADC em 1
+                                   1009 ;	assignBit
+      0000CB D2 B5            [12] 1010 	setb	_RW
+                                   1011 ;	assignBit
+      0000CD D2 B4            [12] 1012 	setb	_DC
+                           0000CF  1013 	C$uRTOS_2.21.h$163$1$9 ==.
+                           0000CF  1014 	XG$wrLCD8$0$0 ==.
+      0000CF 22               [24] 1015 	ret
+                                   1016 ;------------------------------------------------------------
+                                   1017 ;Allocation info for local variables in function 'wrLCD4'
+                                   1018 ;------------------------------------------------------------
+                                   1019 ;val                       Allocated to registers r7 
+                                   1020 ;temp                      Allocated to registers r6 
+                                   1021 ;------------------------------------------------------------
+                           0000D0  1022 	G$wrLCD4$0$0 ==.
+                           0000D0  1023 	C$uRTOS_2.21.h$167$1$9 ==.
+                                   1024 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:167: void wrLCD4(__bit rs, char val){//comando p/ LCD
+                                   1025 ;	-----------------------------------------
+                                   1026 ;	 function wrLCD4
+                                   1027 ;	-----------------------------------------
+      0000D0                       1028 _wrLCD4:
+      0000D0 AF 82            [24] 1029 	mov	r7,dpl
+                           0000D2  1030 	C$uRTOS_2.21.h$169$1$11 ==.
+                                   1031 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:169: temp=(val&0xF0);
+      0000D2 74 F0            [12] 1032 	mov	a,#0xf0
+      0000D4 5F               [12] 1033 	anl	a,r7
+      0000D5 FE               [12] 1034 	mov	r6,a
+                           0000D6  1035 	C$uRTOS_2.21.h$170$1$11 ==.
+                                   1036 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:170: wrLCD8(rs, temp);           //repassa p wrLCD8
+                                   1037 ;	assignBit
+      0000D6 A2*0D            [12] 1038 	mov	c,_wrLCD4_PARM_1
+      0000D8 92*0B            [24] 1039 	mov	_wrLCD8_PARM_1,c
+      0000DA 8E 82            [24] 1040 	mov	dpl,r6
+      0000DC C0 07            [24] 1041 	push	ar7
+      0000DE 12r00r92         [24] 1042 	lcall	_wrLCD8
+      0000E1 D0 07            [24] 1043 	pop	ar7
+                           0000E3  1044 	C$uRTOS_2.21.h$171$1$11 ==.
+                                   1045 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:171: temp=((val<<4)&0xF0);       //pega low nible
+      0000E3 EF               [12] 1046 	mov	a,r7
+      0000E4 C4               [12] 1047 	swap	a
+      0000E5 54 F0            [12] 1048 	anl	a,#0xf0
+      0000E7 FF               [12] 1049 	mov	r7,a
+      0000E8 74 F0            [12] 1050 	mov	a,#0xf0
+      0000EA 5F               [12] 1051 	anl	a,r7
+      0000EB FE               [12] 1052 	mov	r6,a
+                           0000EC  1053 	C$uRTOS_2.21.h$172$1$11 ==.
+                                   1054 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:172: wrLCD8(rs, temp);           //repassa p wrLCD8
+                                   1055 ;	assignBit
+      0000EC A2*0D            [12] 1056 	mov	c,_wrLCD4_PARM_1
+      0000EE 92*0B            [24] 1057 	mov	_wrLCD8_PARM_1,c
+      0000F0 8E 82            [24] 1058 	mov	dpl,r6
+      0000F2 12r00r92         [24] 1059 	lcall	_wrLCD8
+                           0000F5  1060 	C$uRTOS_2.21.h$173$1$11 ==.
+                           0000F5  1061 	XG$wrLCD4$0$0 ==.
+      0000F5 22               [24] 1062 	ret
+                                   1063 ;------------------------------------------------------------
+                                   1064 ;Allocation info for local variables in function 'char2LCD'
+                                   1065 ;------------------------------------------------------------
+                                   1066 ;val                       Allocated with name '_char2LCD_PARM_2'
+                                   1067 ;dot                       Allocated with name '_char2LCD_PARM_3'
+                                   1068 ;ddRam                     Allocated to registers r7 
+                                   1069 ;i                         Allocated to registers r7 
+                                   1070 ;------------------------------------------------------------
+                           0000F6  1071 	G$char2LCD$0$0 ==.
+                           0000F6  1072 	C$uRTOS_2.21.h$178$1$11 ==.
+                                   1073 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:178: void char2LCD(char ddRam, unsigned char val, char dot){
+                                   1074 ;	-----------------------------------------
+                                   1075 ;	 function char2LCD
+                                   1076 ;	-----------------------------------------
+      0000F6                       1077 _char2LCD:
+      0000F6 AF 82            [24] 1078 	mov	r7,dpl
+                           0000F8  1079 	C$uRTOS_2.21.h$180$1$13 ==.
+                                   1080 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:180: wrLCD4(comand,ddRam);           //posição número
+                                   1081 ;	assignBit
+      0000F8 C2*0D            [12] 1082 	clr	_wrLCD4_PARM_1
+      0000FA 8F 82            [24] 1083 	mov	dpl,r7
+      0000FC 12r00rD0         [24] 1084 	lcall	_wrLCD4
+                           0000FF  1085 	C$uRTOS_2.21.h$181$1$13 ==.
+                                   1086 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:181: algs[0]=0x30+(val/100);
+      0000FF 75 F0 64         [24] 1087 	mov	b,#0x64
+      000102 E5*34            [12] 1088 	mov	a,_char2LCD_PARM_2
+      000104 84               [48] 1089 	div	ab
+      000105 24 30            [12] 1090 	add	a,#0x30
+      000107 F5*2F            [12] 1091 	mov	_algs,a
+                           000109  1092 	C$uRTOS_2.21.h$182$1$13 ==.
+                                   1093 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:182: val=val%100;
+      000109 75 F0 64         [24] 1094 	mov	b,#0x64
+      00010C E5*34            [12] 1095 	mov	a,_char2LCD_PARM_2
+      00010E 84               [48] 1096 	div	ab
+      00010F 85 F0*34         [24] 1097 	mov	_char2LCD_PARM_2,b
+                           000112  1098 	C$uRTOS_2.21.h$183$1$13 ==.
+                                   1099 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:183: algs[1]=0x30+(val/10);
+      000112 75 F0 0A         [24] 1100 	mov	b,#0x0a
+      000115 E5*34            [12] 1101 	mov	a,_char2LCD_PARM_2
+      000117 84               [48] 1102 	div	ab
+      000118 24 30            [12] 1103 	add	a,#0x30
+      00011A F5*30            [12] 1104 	mov	(_algs + 0x0001),a
+                           00011C  1105 	C$uRTOS_2.21.h$184$1$13 ==.
+                                   1106 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:184: algs[2]=0x30+(val%10);
+      00011C 75 F0 0A         [24] 1107 	mov	b,#0x0a
+      00011F E5*34            [12] 1108 	mov	a,_char2LCD_PARM_2
+      000121 84               [48] 1109 	div	ab
+      000122 E5 F0            [12] 1110 	mov	a,b
+      000124 24 30            [12] 1111 	add	a,#0x30
+      000126 F5*31            [12] 1112 	mov	(_algs + 0x0002),a
+                           000128  1113 	C$uRTOS_2.21.h$185$2$14 ==.
+                                   1114 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:185: for(i=0;i<3;i++){
+      000128 7F 00            [12] 1115 	mov	r7,#0x00
+      00012A                       1116 00104$:
+                           00012A  1117 	C$uRTOS_2.21.h$186$3$15 ==.
+                                   1118 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:186: if(i==dot)wrLCD4(letra, 46);
+      00012A EF               [12] 1119 	mov	a,r7
+      00012B B5*35 0C         [24] 1120 	cjne	a,_char2LCD_PARM_3,00102$
+                                   1121 ;	assignBit
+      00012E D2*0D            [12] 1122 	setb	_wrLCD4_PARM_1
+      000130 75 82 2E         [24] 1123 	mov	dpl,#0x2e
+      000133 C0 07            [24] 1124 	push	ar7
+      000135 12r00rD0         [24] 1125 	lcall	_wrLCD4
+      000138 D0 07            [24] 1126 	pop	ar7
+      00013A                       1127 00102$:
+                           00013A  1128 	C$uRTOS_2.21.h$187$3$15 ==.
+                                   1129 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:187: wrLCD4(letra, algs[i]);     //coloca número
+      00013A EF               [12] 1130 	mov	a,r7
+      00013B 24r2F            [12] 1131 	add	a,#_algs
+      00013D F9               [12] 1132 	mov	r1,a
+      00013E 87 82            [24] 1133 	mov	dpl,@r1
+                                   1134 ;	assignBit
+      000140 D2*0D            [12] 1135 	setb	_wrLCD4_PARM_1
+      000142 C0 07            [24] 1136 	push	ar7
+      000144 12r00rD0         [24] 1137 	lcall	_wrLCD4
+      000147 D0 07            [24] 1138 	pop	ar7
+                           000149  1139 	C$uRTOS_2.21.h$185$2$14 ==.
+                                   1140 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:185: for(i=0;i<3;i++){
+      000149 0F               [12] 1141 	inc	r7
+      00014A BF 03 00         [24] 1142 	cjne	r7,#0x03,00116$
+      00014D                       1143 00116$:
+      00014D 40 DB            [24] 1144 	jc	00104$
+                           00014F  1145 	C$uRTOS_2.21.h$189$2$14 ==.
+                           00014F  1146 	XG$char2LCD$0$0 ==.
+      00014F 22               [24] 1147 	ret
+                                   1148 ;------------------------------------------------------------
+                                   1149 ;Allocation info for local variables in function 'iniLCD4'
+                                   1150 ;------------------------------------------------------------
+                                   1151 ;i                         Allocated to registers r7 
+                                   1152 ;cmD                       Allocated to registers r6 
+                                   1153 ;BF                        Allocated to registers 
+                                   1154 ;------------------------------------------------------------
+                           000150  1155 	G$iniLCD4$0$0 ==.
+                           000150  1156 	C$uRTOS_2.21.h$193$2$14 ==.
+                                   1157 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:193: void iniLCD4(){                 //inicializa LCD
+                                   1158 ;	-----------------------------------------
+                                   1159 ;	 function iniLCD4
+                                   1160 ;	-----------------------------------------
+      000150                       1161 _iniLCD4:
+                           000150  1162 	C$uRTOS_2.21.h$197$1$16 ==.
+                                   1163 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:197: lcdCS=0;                    //seleciona LCD
+                                   1164 ;	assignBit
+      000150 C2*B7            [12] 1165 	clr	_lcdCS
+                           000152  1166 	C$uRTOS_2.21.h$198$1$16 ==.
+                                   1167 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:198: umSeg=0; cnt100=100;        //reinicia umSeg
+                                   1168 ;	assignBit
+      000152 C2*00            [12] 1169 	clr	_umSeg
+      000154 75*05 64         [24] 1170 	mov	_cnt100,#0x64
+                           000157  1171 	C$uRTOS_2.21.h$199$1$16 ==.
+                                   1172 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:199: while(!umSeg);              //para acomodar LCD
+      000157                       1173 00101$:
+                           000157  1174 	C$uRTOS_2.21.h$200$1$16 ==.
+                                   1175 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:200: umSeg=0;
+                                   1176 ;	assignBit
+      000157 10*00 02         [24] 1177 	jbc	_umSeg,00163$
+      00015A 80 FB            [24] 1178 	sjmp	00101$
+      00015C                       1179 00163$:
+                           00015C  1180 	C$uRTOS_2.21.h$201$1$16 ==.
+                                   1181 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:201: wrLCD8(comand, 0x30);       //inicia em 8 bits
+                                   1182 ;	assignBit
+      00015C C2*0B            [12] 1183 	clr	_wrLCD8_PARM_1
+      00015E 75 82 30         [24] 1184 	mov	dpl,#0x30
+      000161 12r00r92         [24] 1185 	lcall	_wrLCD8
+                           000164  1186 	C$uRTOS_2.21.h$202$1$16 ==.
+                                   1187 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:202: while(S1D1); while(S2D2);	//garante 10ms
+      000164                       1188 00104$:
+      000164 20 90 FD         [24] 1189 	jb	_S1D1,00104$
+      000167                       1190 00107$:
+      000167 20 91 FD         [24] 1191 	jb	_S2D2,00107$
+                           00016A  1192 	C$uRTOS_2.21.h$203$1$16 ==.
+                                   1193 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:203: wrLCD8(comand, 0x30);       //inicia em 8 bits
+                                   1194 ;	assignBit
+      00016A C2*0B            [12] 1195 	clr	_wrLCD8_PARM_1
+      00016C 75 82 30         [24] 1196 	mov	dpl,#0x30
+      00016F 12r00r92         [24] 1197 	lcall	_wrLCD8
+                           000172  1198 	C$uRTOS_2.21.h$204$1$16 ==.
+                                   1199 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:204: while(S1D1); while(S2D2);	//garante 10ms
+      000172                       1200 00110$:
+      000172 20 90 FD         [24] 1201 	jb	_S1D1,00110$
+      000175                       1202 00113$:
+      000175 20 91 FD         [24] 1203 	jb	_S2D2,00113$
+                           000178  1204 	C$uRTOS_2.21.h$205$1$16 ==.
+                                   1205 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:205: wrLCD8(comand, 0x30);       //inicia em 8 bits
+                                   1206 ;	assignBit
+      000178 C2*0B            [12] 1207 	clr	_wrLCD8_PARM_1
+      00017A 75 82 30         [24] 1208 	mov	dpl,#0x30
+      00017D 12r00r92         [24] 1209 	lcall	_wrLCD8
+                           000180  1210 	C$uRTOS_2.21.h$206$1$16 ==.
+                                   1211 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:206: x50us=4; delay50();         //delay 200us
+      000180 75*07 04         [24] 1212 	mov	_x50us,#0x04
+      000183 12r00r7C         [24] 1213 	lcall	_delay50
+                           000186  1214 	C$uRTOS_2.21.h$207$1$16 ==.
+                                   1215 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:207: wrLCD8(comand, 0x20);       //inicia em 8 bits
+                                   1216 ;	assignBit
+      000186 C2*0B            [12] 1217 	clr	_wrLCD8_PARM_1
+      000188 75 82 20         [24] 1218 	mov	dpl,#0x20
+      00018B 12r00r92         [24] 1219 	lcall	_wrLCD8
+                           00018E  1220 	C$uRTOS_2.21.h$208$1$16 ==.
+                                   1221 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:208: x50us=4; delay50();         //delay 200us
+      00018E 75*07 04         [24] 1222 	mov	_x50us,#0x04
+      000191 12r00r7C         [24] 1223 	lcall	_delay50
+                           000194  1224 	C$uRTOS_2.21.h$209$2$17 ==.
+                                   1225 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:209: for(i=0;i<4;i++){           //cmd's 0 a 8'
+      000194 7F 00            [12] 1226 	mov	r7,#0x00
+      000196                       1227 00123$:
+                           000196  1228 	C$uRTOS_2.21.h$210$3$18 ==.
+                                   1229 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:210: cmD=setLCD4[i];         // seleciona comando
+      000196 EF               [12] 1230 	mov	a,r7
+      000197 90r00r00         [24] 1231 	mov	dptr,#_setLCD4
+      00019A 93               [24] 1232 	movc	a,@a+dptr
+      00019B FE               [12] 1233 	mov	r6,a
+                           00019C  1234 	C$uRTOS_2.21.h$211$3$18 ==.
+                                   1235 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:211: wrLCD4(comand, cmD);
+                                   1236 ;	assignBit
+      00019C C2*0D            [12] 1237 	clr	_wrLCD4_PARM_1
+      00019E 8E 82            [24] 1238 	mov	dpl,r6
+      0001A0 C0 07            [24] 1239 	push	ar7
+      0001A2 12r00rD0         [24] 1240 	lcall	_wrLCD4
+      0001A5 D0 07            [24] 1241 	pop	ar7
+                           0001A7  1242 	C$uRTOS_2.21.h$212$3$18 ==.
+                                   1243 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:212: while(S1D1);
+      0001A7                       1244 00116$:
+      0001A7 20 90 FD         [24] 1245 	jb	_S1D1,00116$
+                           0001AA  1246 	C$uRTOS_2.21.h$213$3$18 ==.
+                                   1247 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:213: while(S2D2);            //garante 10ms
+      0001AA                       1248 00119$:
+      0001AA 20 91 FD         [24] 1249 	jb	_S2D2,00119$
+                           0001AD  1250 	C$uRTOS_2.21.h$209$2$17 ==.
+                                   1251 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:209: for(i=0;i<4;i++){           //cmd's 0 a 8'
+      0001AD 0F               [12] 1252 	inc	r7
+      0001AE BF 04 00         [24] 1253 	cjne	r7,#0x04,00170$
+      0001B1                       1254 00170$:
+      0001B1 40 E3            [24] 1255 	jc	00123$
+                           0001B3  1256 	C$uRTOS_2.21.h$215$2$17 ==.
+                           0001B3  1257 	XG$iniLCD4$0$0 ==.
+      0001B3 22               [24] 1258 	ret
+                                   1259 ;------------------------------------------------------------
+                                   1260 ;Allocation info for local variables in function 'inic'
+                                   1261 ;------------------------------------------------------------
+                           0001B4  1262 	G$inic$0$0 ==.
+                           0001B4  1263 	C$uRTOS_2.21.h$219$2$17 ==.
+                                   1264 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:219: void inic(void){
+                                   1265 ;	-----------------------------------------
+                                   1266 ;	 function inic
+                                   1267 ;	-----------------------------------------
+      0001B4                       1268 _inic:
+                           0001B4  1269 	C$uRTOS_2.21.h$220$1$20 ==.
+                                   1270 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:220: PT0=1;                  //prioridade TC0
+                                   1271 ;	assignBit
+      0001B4 D2 B9            [12] 1272 	setb	_PT0
+                           0001B6  1273 	C$uRTOS_2.21.h$221$1$20 ==.
+                                   1274 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:221: IE=0x93;                //EA+ES+ET0+EX0
+      0001B6 75 A8 93         [24] 1275 	mov	_IE,#0x93
+                           0001B9  1276 	C$uRTOS_2.21.h$222$1$20 ==.
+                                   1277 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:222: TMOD=0x22;              //TC0=TC1=modo2
+      0001B9 75 89 22         [24] 1278 	mov	_TMOD,#0x22
+                           0001BC  1279 	C$uRTOS_2.21.h$223$1$20 ==.
+                                   1280 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:223: TL0=206;                //conta 50
+      0001BC 75 8A CE         [24] 1281 	mov	_TL0,#0xce
+                           0001BF  1282 	C$uRTOS_2.21.h$224$1$20 ==.
+                                   1283 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:224: TH0=206;                //recarrega
+      0001BF 75 8C CE         [24] 1284 	mov	_TH0,#0xce
+                           0001C2  1285 	C$uRTOS_2.21.h$225$1$20 ==.
+                                   1286 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:225: TL1=243;                //conta 13
+      0001C2 75 8B F3         [24] 1287 	mov	_TL1,#0xf3
+                           0001C5  1288 	C$uRTOS_2.21.h$226$1$20 ==.
+                                   1289 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:226: TH1=243;                //recarrega
+      0001C5 75 8D F3         [24] 1290 	mov	_TH1,#0xf3
+                           0001C8  1291 	C$uRTOS_2.21.h$227$1$20 ==.
+                                   1292 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:227: PCON=0x80;              //serial x2 (/16)
+      0001C8 75 87 80         [24] 1293 	mov	_PCON,#0x80
+                           0001CB  1294 	C$uRTOS_2.21.h$228$1$20 ==.
+                                   1295 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:228: SCON=0xC8;              //serial modo 3
+      0001CB 75 98 C8         [24] 1296 	mov	_SCON,#0xc8
+                           0001CE  1297 	C$uRTOS_2.21.h$229$1$20 ==.
+                                   1298 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:229: TR0=1;                  //liga tc0
+                                   1299 ;	assignBit
+      0001CE D2 8C            [12] 1300 	setb	_TR0
+                           0001D0  1301 	C$uRTOS_2.21.h$230$1$20 ==.
+                                   1302 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:230: TR1=1;                  //liga tc1
+                                   1303 ;	assignBit
+      0001D0 D2 8E            [12] 1304 	setb	_TR1
+                           0001D2  1305 	C$uRTOS_2.21.h$231$1$20 ==.
+                                   1306 ;	C:/Program Files/SDCC/bin/../include/uRTOS_2.21.h:231: iniLCD4();              //inicializa LCD
+      0001D2 12r01r50         [24] 1307 	lcall	_iniLCD4
+                           0001D5  1308 	C$uRTOS_2.21.h$232$1$20 ==.
+                           0001D5  1309 	XG$inic$0$0 ==.
+      0001D5 22               [24] 1310 	ret
+                                   1311 ;------------------------------------------------------------
+                                   1312 ;Allocation info for local variables in function 'serial'
+                                   1313 ;------------------------------------------------------------
+                           0001D6  1314 	G$serial$0$0 ==.
+                           0001D6  1315 	C$serialInt_1.2.h$8$1$20 ==.
+                                   1316 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:8: void serial (void) __interrupt(4){
+                                   1317 ;	-----------------------------------------
+                                   1318 ;	 function serial
+                                   1319 ;	-----------------------------------------
+      0001D6                       1320 _serial:
+                           0001D6  1321 	C$serialInt_1.2.h$9$1$22 ==.
+                                   1322 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:9: if(RI){
+                           0001D6  1323 	C$serialInt_1.2.h$10$2$23 ==.
+                                   1324 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:10: RI=0;			//zera flag rx
+                                   1325 ;	assignBit
+      0001D6 10 98 02         [24] 1326 	jbc	_RI,00109$
+      0001D9 80 07            [24] 1327 	sjmp	00102$
+      0001DB                       1328 00109$:
+                           0001DB  1329 	C$serialInt_1.2.h$11$2$23 ==.
+                                   1330 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:11: RxByte=SBUF;            //recebe do buffer
+      0001DB 85 99*09         [24] 1331 	mov	_RxByte,_SBUF
+                           0001DE  1332 	C$serialInt_1.2.h$12$2$23 ==.
+                                   1333 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:12: RxFlag=1;               //sinaliza recebido
+                                   1334 ;	assignBit
+      0001DE D2*04            [12] 1335 	setb	_RxFlag
+      0001E0 80 04            [24] 1336 	sjmp	00104$
+      0001E2                       1337 00102$:
+                           0001E2  1338 	C$serialInt_1.2.h$15$2$24 ==.
+                                   1339 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:15: TI=0;
+                                   1340 ;	assignBit
+      0001E2 C2 99            [12] 1341 	clr	_TI
+                           0001E4  1342 	C$serialInt_1.2.h$16$2$24 ==.
+                                   1343 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:16: TxFlag=1;
+                                   1344 ;	assignBit
+      0001E4 D2*05            [12] 1345 	setb	_TxFlag
+      0001E6                       1346 00104$:
+                           0001E6  1347 	C$serialInt_1.2.h$18$1$22 ==.
+                           0001E6  1348 	XG$serial$0$0 ==.
+      0001E6 32               [24] 1349 	reti
+                                   1350 ;	eliminated unneeded mov psw,# (no regs used in bank)
+                                   1351 ;	eliminated unneeded push/pop psw
+                                   1352 ;	eliminated unneeded push/pop dpl
+                                   1353 ;	eliminated unneeded push/pop dph
+                                   1354 ;	eliminated unneeded push/pop b
+                                   1355 ;	eliminated unneeded push/pop acc
+                                   1356 ;------------------------------------------------------------
+                                   1357 ;Allocation info for local variables in function 'algs2ser'
+                                   1358 ;------------------------------------------------------------
+                                   1359 ;asc0                      Allocated with name '_algs2ser_PARM_2'
+                                   1360 ;dot                       Allocated with name '_algs2ser_PARM_3'
+                                   1361 ;spc                       Allocated to registers r7 
+                                   1362 ;i                         Allocated to registers r6 
+                                   1363 ;------------------------------------------------------------
+                           0001E7  1364 	G$algs2ser$0$0 ==.
+                           0001E7  1365 	C$serialInt_1.2.h$22$1$22 ==.
+                                   1366 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:22: void algs2ser(char spc, int asc0, char dot){
+                                   1367 ;	-----------------------------------------
+                                   1368 ;	 function algs2ser
+                                   1369 ;	-----------------------------------------
+      0001E7                       1370 _algs2ser:
+      0001E7 AF 82            [24] 1371 	mov	r7,dpl
+                           0001E9  1372 	C$serialInt_1.2.h$23$1$22 ==.
+                                   1373 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:23: char i=0;
+      0001E9 7E 00            [12] 1374 	mov	r6,#0x00
+                           0001EB  1375 	C$serialInt_1.2.h$24$1$26 ==.
+                                   1376 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:24: while(i<spc){
+      0001EB                       1377 00104$:
+      0001EB C3               [12] 1378 	clr	c
+      0001EC EE               [12] 1379 	mov	a,r6
+      0001ED 9F               [12] 1380 	subb	a,r7
+      0001EE 50 0B            [24] 1381 	jnc	00106$
+                           0001F0  1382 	C$serialInt_1.2.h$25$2$27 ==.
+                                   1383 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:25: while(!TxFlag); TxFlag=0;   //aguarda serial
+      0001F0                       1384 00101$:
+                                   1385 ;	assignBit
+      0001F0 10*05 02         [24] 1386 	jbc	_TxFlag,00149$
+      0001F3 80 FB            [24] 1387 	sjmp	00101$
+      0001F5                       1388 00149$:
+                           0001F5  1389 	C$serialInt_1.2.h$26$2$27 ==.
+                                   1390 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:26: SBUF=32; i++;               //envia espa�os
+      0001F5 75 99 20         [24] 1391 	mov	_SBUF,#0x20
+      0001F8 0E               [12] 1392 	inc	r6
+      0001F9 80 F0            [24] 1393 	sjmp	00104$
+      0001FB                       1394 00106$:
+                           0001FB  1395 	C$serialInt_1.2.h$28$2$28 ==.
+                                   1396 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:28: for(i=asc0;i<5;i++){
+      0001FB AE*36            [24] 1397 	mov	r6,_algs2ser_PARM_2
+      0001FD                       1398 00117$:
+      0001FD BE 05 00         [24] 1399 	cjne	r6,#0x05,00150$
+      000200                       1400 00150$:
+      000200 50 1A            [24] 1401 	jnc	00119$
+                           000202  1402 	C$serialInt_1.2.h$29$3$29 ==.
+                                   1403 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:29: if(i==dot){
+      000202 EE               [12] 1404 	mov	a,r6
+      000203 B5*38 08         [24] 1405 	cjne	a,_algs2ser_PARM_3,00112$
+                           000206  1406 	C$serialInt_1.2.h$30$4$30 ==.
+                                   1407 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:30: while(!TxFlag);TxFlag=0;//aguarda serial
+      000206                       1408 00107$:
+                                   1409 ;	assignBit
+      000206 10*05 02         [24] 1410 	jbc	_TxFlag,00154$
+      000209 80 FB            [24] 1411 	sjmp	00107$
+      00020B                       1412 00154$:
+                           00020B  1413 	C$serialInt_1.2.h$31$4$30 ==.
+                                   1414 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:31: SBUF=46;                //envia '.'
+      00020B 75 99 2E         [24] 1415 	mov	_SBUF,#0x2e
+                           00020E  1416 	C$serialInt_1.2.h$33$3$29 ==.
+                                   1417 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:33: while(!TxFlag); TxFlag=0;   //aguarda serial
+      00020E                       1418 00112$:
+                                   1419 ;	assignBit
+      00020E 10*05 02         [24] 1420 	jbc	_TxFlag,00155$
+      000211 80 FB            [24] 1421 	sjmp	00112$
+      000213                       1422 00155$:
+                           000213  1423 	C$serialInt_1.2.h$34$3$29 ==.
+                                   1424 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:34: SBUF=(algs[i]);             //envia n�mero
+      000213 EE               [12] 1425 	mov	a,r6
+      000214 24r2F            [12] 1426 	add	a,#_algs
+      000216 F9               [12] 1427 	mov	r1,a
+      000217 87 99            [24] 1428 	mov	_SBUF,@r1
+                           000219  1429 	C$serialInt_1.2.h$28$2$28 ==.
+                                   1430 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:28: for(i=asc0;i<5;i++){
+      000219 0E               [12] 1431 	inc	r6
+      00021A 80 E1            [24] 1432 	sjmp	00117$
+      00021C                       1433 00119$:
+                           00021C  1434 	C$serialInt_1.2.h$36$2$28 ==.
+                           00021C  1435 	XG$algs2ser$0$0 ==.
+      00021C 22               [24] 1436 	ret
+                                   1437 ;------------------------------------------------------------
+                                   1438 ;Allocation info for local variables in function 'int2ascii'
+                                   1439 ;------------------------------------------------------------
+                                   1440 ;val                       Allocated to registers r6 r7 
+                                   1441 ;------------------------------------------------------------
+                           00021D  1442 	G$int2ascii$0$0 ==.
+                           00021D  1443 	C$serialInt_1.2.h$40$2$28 ==.
+                                   1444 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:40: void int2ascii(unsigned int val){
+                                   1445 ;	-----------------------------------------
+                                   1446 ;	 function int2ascii
+                                   1447 ;	-----------------------------------------
+      00021D                       1448 _int2ascii:
+      00021D AE 82            [24] 1449 	mov	r6,dpl
+      00021F AF 83            [24] 1450 	mov	r7,dph
+                           000221  1451 	C$serialInt_1.2.h$41$1$32 ==.
+                                   1452 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:41: algs[0]=32; algs[1]=32;
+      000221 75*2F 20         [24] 1453 	mov	_algs,#0x20
+      000224 75*30 20         [24] 1454 	mov	(_algs + 0x0001),#0x20
+                           000227  1455 	C$serialInt_1.2.h$42$1$32 ==.
+                                   1456 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:42: if(val>999){
+      000227 C3               [12] 1457 	clr	c
+      000228 74 E7            [12] 1458 	mov	a,#0xe7
+      00022A 9E               [12] 1459 	subb	a,r6
+      00022B 74 03            [12] 1460 	mov	a,#0x03
+      00022D 9F               [12] 1461 	subb	a,r7
+      00022E 50 56            [24] 1462 	jnc	00102$
+                           000230  1463 	C$serialInt_1.2.h$43$1$32 ==.
+                                   1464 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:43: algs[0]=0x30+(val/10000);
+      000230 75*00 10         [24] 1465 	mov	__divuint_PARM_2,#0x10
+      000233 75*01 27         [24] 1466 	mov	(__divuint_PARM_2 + 1),#0x27
+      000236 8E 82            [24] 1467 	mov	dpl,r6
+      000238 8F 83            [24] 1468 	mov	dph,r7
+      00023A C0 07            [24] 1469 	push	ar7
+      00023C C0 06            [24] 1470 	push	ar6
+      00023E 12r00r00         [24] 1471 	lcall	__divuint
+      000241 AC 82            [24] 1472 	mov	r4,dpl
+      000243 D0 06            [24] 1473 	pop	ar6
+      000245 D0 07            [24] 1474 	pop	ar7
+      000247 74 30            [12] 1475 	mov	a,#0x30
+      000249 2C               [12] 1476 	add	a,r4
+      00024A F5*2F            [12] 1477 	mov	_algs,a
+                           00024C  1478 	C$serialInt_1.2.h$44$1$32 ==.
+                                   1479 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:44: val=val%10000;
+      00024C 75*00 10         [24] 1480 	mov	__moduint_PARM_2,#0x10
+      00024F 75*01 27         [24] 1481 	mov	(__moduint_PARM_2 + 1),#0x27
+      000252 8E 82            [24] 1482 	mov	dpl,r6
+      000254 8F 83            [24] 1483 	mov	dph,r7
+      000256 12r00r00         [24] 1484 	lcall	__moduint
+                           000259  1485 	C$serialInt_1.2.h$45$1$32 ==.
+                                   1486 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:45: algs[1]=0x30+(val/1000);
+      000259 AE 82            [24] 1487 	mov	r6,dpl
+      00025B AF 83            [24] 1488 	mov	r7,dph
+      00025D 75*00 E8         [24] 1489 	mov	__divuint_PARM_2,#0xe8
+      000260 75*01 03         [24] 1490 	mov	(__divuint_PARM_2 + 1),#0x03
+      000263 C0 07            [24] 1491 	push	ar7
+      000265 C0 06            [24] 1492 	push	ar6
+      000267 12r00r00         [24] 1493 	lcall	__divuint
+      00026A AC 82            [24] 1494 	mov	r4,dpl
+      00026C D0 06            [24] 1495 	pop	ar6
+      00026E D0 07            [24] 1496 	pop	ar7
+      000270 74 30            [12] 1497 	mov	a,#0x30
+      000272 2C               [12] 1498 	add	a,r4
+      000273 F5*30            [12] 1499 	mov	(_algs + 0x0001),a
+                           000275  1500 	C$serialInt_1.2.h$46$1$32 ==.
+                                   1501 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:46: val=val%1000;
+      000275 75*00 E8         [24] 1502 	mov	__moduint_PARM_2,#0xe8
+      000278 75*01 03         [24] 1503 	mov	(__moduint_PARM_2 + 1),#0x03
+      00027B 8E 82            [24] 1504 	mov	dpl,r6
+      00027D 8F 83            [24] 1505 	mov	dph,r7
+      00027F 12r00r00         [24] 1506 	lcall	__moduint
+      000282 AE 82            [24] 1507 	mov	r6,dpl
+      000284 AF 83            [24] 1508 	mov	r7,dph
+      000286                       1509 00102$:
+                           000286  1510 	C$serialInt_1.2.h$48$1$32 ==.
+                                   1511 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:48: algs[2]=0x30+(val/100);
+      000286 75*00 64         [24] 1512 	mov	__divuint_PARM_2,#0x64
+      000289 75*01 00         [24] 1513 	mov	(__divuint_PARM_2 + 1),#0x00
+      00028C 8E 82            [24] 1514 	mov	dpl,r6
+      00028E 8F 83            [24] 1515 	mov	dph,r7
+      000290 C0 07            [24] 1516 	push	ar7
+      000292 C0 06            [24] 1517 	push	ar6
+      000294 12r00r00         [24] 1518 	lcall	__divuint
+      000297 AC 82            [24] 1519 	mov	r4,dpl
+      000299 D0 06            [24] 1520 	pop	ar6
+      00029B D0 07            [24] 1521 	pop	ar7
+      00029D 74 30            [12] 1522 	mov	a,#0x30
+      00029F 2C               [12] 1523 	add	a,r4
+      0002A0 F5*31            [12] 1524 	mov	(_algs + 0x0002),a
+                           0002A2  1525 	C$serialInt_1.2.h$49$1$32 ==.
+                                   1526 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:49: val=val%100;
+      0002A2 75*00 64         [24] 1527 	mov	__moduint_PARM_2,#0x64
+      0002A5 75*01 00         [24] 1528 	mov	(__moduint_PARM_2 + 1),#0x00
+      0002A8 8E 82            [24] 1529 	mov	dpl,r6
+      0002AA 8F 83            [24] 1530 	mov	dph,r7
+      0002AC 12r00r00         [24] 1531 	lcall	__moduint
+                           0002AF  1532 	C$serialInt_1.2.h$50$1$32 ==.
+                                   1533 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:50: algs[3]=0x30+(val/10);
+      0002AF AE 82            [24] 1534 	mov	r6,dpl
+      0002B1 AF 83            [24] 1535 	mov	r7,dph
+      0002B3 75*00 0A         [24] 1536 	mov	__divuint_PARM_2,#0x0a
+      0002B6 75*01 00         [24] 1537 	mov	(__divuint_PARM_2 + 1),#0x00
+      0002B9 C0 07            [24] 1538 	push	ar7
+      0002BB C0 06            [24] 1539 	push	ar6
+      0002BD 12r00r00         [24] 1540 	lcall	__divuint
+      0002C0 AC 82            [24] 1541 	mov	r4,dpl
+      0002C2 D0 06            [24] 1542 	pop	ar6
+      0002C4 D0 07            [24] 1543 	pop	ar7
+      0002C6 74 30            [12] 1544 	mov	a,#0x30
+      0002C8 2C               [12] 1545 	add	a,r4
+      0002C9 F5*32            [12] 1546 	mov	(_algs + 0x0003),a
+                           0002CB  1547 	C$serialInt_1.2.h$51$1$32 ==.
+                                   1548 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:51: algs[4]=0x30+(val%10);
+      0002CB 75*00 0A         [24] 1549 	mov	__moduint_PARM_2,#0x0a
+      0002CE 75*01 00         [24] 1550 	mov	(__moduint_PARM_2 + 1),#0x00
+      0002D1 8E 82            [24] 1551 	mov	dpl,r6
+      0002D3 8F 83            [24] 1552 	mov	dph,r7
+      0002D5 12r00r00         [24] 1553 	lcall	__moduint
+      0002D8 AE 82            [24] 1554 	mov	r6,dpl
+      0002DA 74 30            [12] 1555 	mov	a,#0x30
+      0002DC 2E               [12] 1556 	add	a,r6
+      0002DD F5*33            [12] 1557 	mov	(_algs + 0x0004),a
+                           0002DF  1558 	C$serialInt_1.2.h$52$1$32 ==.
+                           0002DF  1559 	XG$int2ascii$0$0 ==.
+      0002DF 22               [24] 1560 	ret
+                                   1561 ;------------------------------------------------------------
+                                   1562 ;Allocation info for local variables in function 'char2Ser'
+                                   1563 ;------------------------------------------------------------
+                                   1564 ;val                       Allocated with name '_char2Ser_PARM_2'
+                                   1565 ;dot                       Allocated with name '_char2Ser_PARM_3'
+                                   1566 ;spc                       Allocated to registers r7 
+                                   1567 ;------------------------------------------------------------
+                           0002E0  1568 	G$char2Ser$0$0 ==.
+                           0002E0  1569 	C$serialInt_1.2.h$57$1$32 ==.
+                                   1570 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:57: void char2Ser(char spc, unsigned char val, char dot){
+                                   1571 ;	-----------------------------------------
+                                   1572 ;	 function char2Ser
+                                   1573 ;	-----------------------------------------
+      0002E0                       1574 _char2Ser:
+      0002E0 AF 82            [24] 1575 	mov	r7,dpl
+                           0002E2  1576 	C$serialInt_1.2.h$58$1$35 ==.
+                                   1577 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:58: int2ascii(val);
+      0002E2 AD*39            [24] 1578 	mov	r5,_char2Ser_PARM_2
+      0002E4 7E 00            [12] 1579 	mov	r6,#0x00
+      0002E6 8D 82            [24] 1580 	mov	dpl,r5
+      0002E8 8E 83            [24] 1581 	mov	dph,r6
+      0002EA C0 07            [24] 1582 	push	ar7
+      0002EC 12r02r1D         [24] 1583 	lcall	_int2ascii
+      0002EF D0 07            [24] 1584 	pop	ar7
+                           0002F1  1585 	C$serialInt_1.2.h$59$1$35 ==.
+                                   1586 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:59: dot=dot+2;
+      0002F1 05*3A            [12] 1587 	inc	_char2Ser_PARM_3
+      0002F3 05*3A            [12] 1588 	inc	_char2Ser_PARM_3
+                           0002F5  1589 	C$serialInt_1.2.h$60$1$35 ==.
+                                   1590 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:60: algs2ser(spc, 2, dot);
+      0002F5 75*36 02         [24] 1591 	mov	_algs2ser_PARM_2,#0x02
+      0002F8 75*37 00         [24] 1592 	mov	(_algs2ser_PARM_2 + 1),#0x00
+      0002FB 85*3A*38         [24] 1593 	mov	_algs2ser_PARM_3,_char2Ser_PARM_3
+      0002FE 8F 82            [24] 1594 	mov	dpl,r7
+      000300 12r01rE7         [24] 1595 	lcall	_algs2ser
+                           000303  1596 	C$serialInt_1.2.h$61$1$35 ==.
+                           000303  1597 	XG$char2Ser$0$0 ==.
+      000303 22               [24] 1598 	ret
+                                   1599 ;------------------------------------------------------------
+                                   1600 ;Allocation info for local variables in function 'int2Ser'
+                                   1601 ;------------------------------------------------------------
+                                   1602 ;val                       Allocated with name '_int2Ser_PARM_2'
+                                   1603 ;dot                       Allocated with name '_int2Ser_PARM_3'
+                                   1604 ;spc                       Allocated to registers r7 
+                                   1605 ;------------------------------------------------------------
+                           000304  1606 	G$int2Ser$0$0 ==.
+                           000304  1607 	C$serialInt_1.2.h$65$1$35 ==.
+                                   1608 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:65: void int2Ser(char spc, unsigned int val, char dot){
+                                   1609 ;	-----------------------------------------
+                                   1610 ;	 function int2Ser
+                                   1611 ;	-----------------------------------------
+      000304                       1612 _int2Ser:
+      000304 AF 82            [24] 1613 	mov	r7,dpl
+                           000306  1614 	C$serialInt_1.2.h$66$1$37 ==.
+                                   1615 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:66: int2ascii(val);
+      000306 85*3B 82         [24] 1616 	mov	dpl,_int2Ser_PARM_2
+      000309 85*3C 83         [24] 1617 	mov	dph,(_int2Ser_PARM_2 + 1)
+      00030C C0 07            [24] 1618 	push	ar7
+      00030E 12r02r1D         [24] 1619 	lcall	_int2ascii
+      000311 D0 07            [24] 1620 	pop	ar7
+                           000313  1621 	C$serialInt_1.2.h$67$1$37 ==.
+                                   1622 ;	C:/Program Files/SDCC/bin/../include/serialInt_1.2.h:67: algs2ser(spc, 0, dot);
+      000313 E4               [12] 1623 	clr	a
+      000314 F5*36            [12] 1624 	mov	_algs2ser_PARM_2,a
+      000316 F5*37            [12] 1625 	mov	(_algs2ser_PARM_2 + 1),a
+      000318 85*3D*38         [24] 1626 	mov	_algs2ser_PARM_3,_int2Ser_PARM_3
+      00031B 8F 82            [24] 1627 	mov	dpl,r7
+      00031D 12r01rE7         [24] 1628 	lcall	_algs2ser
+                           000320  1629 	C$serialInt_1.2.h$68$1$37 ==.
+                           000320  1630 	XG$int2Ser$0$0 ==.
+      000320 22               [24] 1631 	ret
+                                   1632 ;------------------------------------------------------------
+                                   1633 ;Allocation info for local variables in function 'RTproc_1'
+                                   1634 ;------------------------------------------------------------
+                           000321  1635 	G$RTproc_1$0$0 ==.
+                           000321  1636 	C$controleNivel.c$17$1$37 ==.
+                                   1637 ;	controleNivel.c:17: void RTproc_1(){
+                                   1638 ;	-----------------------------------------
+                                   1639 ;	 function RTproc_1
+                                   1640 ;	-----------------------------------------
+      000321                       1641 _RTproc_1:
+                           000321  1642 	C$controleNivel.c$18$1$38 ==.
+                                   1643 ;	controleNivel.c:18: if(cnt200==pwm) P1_3=1;
+      000321 E5*44            [12] 1644 	mov	a,_pwm
+      000323 B5*06 02         [24] 1645 	cjne	a,_cnt200,00103$
+                                   1646 ;	assignBit
+      000326 D2 93            [12] 1647 	setb	_P1_3
+      000328                       1648 00103$:
+                           000328  1649 	C$controleNivel.c$19$1$38 ==.
+                           000328  1650 	XG$RTproc_1$0$0 ==.
+      000328 22               [24] 1651 	ret
+                                   1652 ;------------------------------------------------------------
+                                   1653 ;Allocation info for local variables in function 'RTproc_2'
+                                   1654 ;------------------------------------------------------------
+                           000329  1655 	G$RTproc_2$0$0 ==.
+                           000329  1656 	C$controleNivel.c$20$1$38 ==.
+                                   1657 ;	controleNivel.c:20: void RTproc_2(){
+                                   1658 ;	-----------------------------------------
+                                   1659 ;	 function RTproc_2
+                                   1660 ;	-----------------------------------------
+      000329                       1661 _RTproc_2:
+                           000329  1662 	C$controleNivel.c$21$1$39 ==.
+                                   1663 ;	controleNivel.c:21: P1_3=0;
+                                   1664 ;	assignBit
+      000329 C2 93            [12] 1665 	clr	_P1_3
+                           00032B  1666 	C$controleNivel.c$22$1$39 ==.
+                                   1667 ;	controleNivel.c:22: if(cnt100==99){
+      00032B 74 63            [12] 1668 	mov	a,#0x63
+      00032D B5*05 22         [24] 1669 	cjne	a,_cnt100,00106$
+                           000330  1670 	C$controleNivel.c$23$2$40 ==.
+                                   1671 ;	controleNivel.c:23: sensor=1;
+                                   1672 ;	assignBit
+      000330 D2*0E            [12] 1673 	setb	_sensor
+                           000332  1674 	C$controleNivel.c$24$2$40 ==.
+                                   1675 ;	controleNivel.c:24: REN=0;
+                                   1676 ;	assignBit
+      000332 C2 9C            [12] 1677 	clr	_REN
+                           000334  1678 	C$controleNivel.c$25$2$40 ==.
+                                   1679 ;	controleNivel.c:25: TMOD=0x92;
+      000334 75 89 92         [24] 1680 	mov	_TMOD,#0x92
+                           000337  1681 	C$controleNivel.c$26$2$40 ==.
+                                   1682 ;	controleNivel.c:26: IT1=1;
+                                   1683 ;	assignBit
+      000337 D2 8A            [12] 1684 	setb	_IT1
+                           000339  1685 	C$controleNivel.c$27$2$40 ==.
+                                   1686 ;	controleNivel.c:27: EX1=1;
+                                   1687 ;	assignBit
+      000339 D2 AA            [12] 1688 	setb	_EX1
+                           00033B  1689 	C$controleNivel.c$28$2$40 ==.
+                                   1690 ;	controleNivel.c:28: TL1=0x00;
+      00033B 75 8B 00         [24] 1691 	mov	_TL1,#0x00
+                           00033E  1692 	C$controleNivel.c$29$2$40 ==.
+                                   1693 ;	controleNivel.c:29: TH1=0x00;
+      00033E 75 8D 00         [24] 1694 	mov	_TH1,#0x00
+                           000341  1695 	C$controleNivel.c$31$2$40 ==.
+                                   1696 ;	controleNivel.c:31: TrigPin=1;
+                                   1697 ;	assignBit
+      000341 D2 92            [12] 1698 	setb	_TrigPin
+                           000343  1699 	C$controleNivel.c$32$2$40 ==.
+                                   1700 ;	controleNivel.c:32: TrigCont=4;
+      000343 75*40 04         [24] 1701 	mov	_TrigCont,#0x04
+                           000346  1702 	C$controleNivel.c$33$2$40 ==.
+                                   1703 ;	controleNivel.c:33: while(TrigCont)TrigCont--;
+      000346                       1704 00101$:
+      000346 E5*40            [12] 1705 	mov	a,_TrigCont
+      000348 60 04            [24] 1706 	jz	00103$
+      00034A 15*40            [12] 1707 	dec	_TrigCont
+      00034C 80 F8            [24] 1708 	sjmp	00101$
+      00034E                       1709 00103$:
+                           00034E  1710 	C$controleNivel.c$34$2$40 ==.
+                                   1711 ;	controleNivel.c:34: TrigPin=0;
+                                   1712 ;	assignBit
+      00034E C2 92            [12] 1713 	clr	_TrigPin
+                           000350  1714 	C$controleNivel.c$35$2$40 ==.
+                                   1715 ;	controleNivel.c:35: sensor=0;
+                                   1716 ;	assignBit
+      000350 C2*0E            [12] 1717 	clr	_sensor
+      000352                       1718 00106$:
+                           000352  1719 	C$controleNivel.c$39$1$39 ==.
+                           000352  1720 	XG$RTproc_2$0$0 ==.
+      000352 22               [24] 1721 	ret
+                                   1722 ;------------------------------------------------------------
+                                   1723 ;Allocation info for local variables in function 'ext_1'
+                                   1724 ;------------------------------------------------------------
+                           000353  1725 	G$ext_1$0$0 ==.
+                           000353  1726 	C$controleNivel.c$41$1$39 ==.
+                                   1727 ;	controleNivel.c:41: void ext_1 (void) __interrupt(2){
+                                   1728 ;	-----------------------------------------
+                                   1729 ;	 function ext_1
+                                   1730 ;	-----------------------------------------
+      000353                       1731 _ext_1:
+      000353 C0 E0            [24] 1732 	push	acc
+      000355 C0 07            [24] 1733 	push	ar7
+      000357 C0 06            [24] 1734 	push	ar6
+      000359 C0 D0            [24] 1735 	push	psw
+      00035B 75 D0 00         [24] 1736 	mov	psw,#0x00
+                           00035E  1737 	C$controleNivel.c$43$1$42 ==.
+                                   1738 ;	controleNivel.c:43: Echo=TH1<<8;
+      00035E AE 8D            [24] 1739 	mov	r6,_TH1
+      000360 7F 00            [12] 1740 	mov	r7,#0x00
+      000362 8E*3F            [24] 1741 	mov	(_Echo + 1),r6
+                                   1742 ;	1-genFromRTrack replaced	mov	_Echo,#0x00
+      000364 8F*3E            [24] 1743 	mov	_Echo,r7
+                           000366  1744 	C$controleNivel.c$44$1$42 ==.
+                                   1745 ;	controleNivel.c:44: Echo=Echo+TL1;
+      000366 AE 8B            [24] 1746 	mov	r6,_TL1
+      000368 7F 00            [12] 1747 	mov	r7,#0x00
+      00036A EE               [12] 1748 	mov	a,r6
+      00036B 25*3E            [12] 1749 	add	a,_Echo
+      00036D F5*3E            [12] 1750 	mov	_Echo,a
+      00036F EF               [12] 1751 	mov	a,r7
+      000370 35*3F            [12] 1752 	addc	a,(_Echo + 1)
+      000372 F5*3F            [12] 1753 	mov	(_Echo + 1),a
+                           000374  1754 	C$controleNivel.c$46$1$42 ==.
+                                   1755 ;	controleNivel.c:46: sensor=0;
+                                   1756 ;	assignBit
+      000374 C2*0E            [12] 1757 	clr	_sensor
+                           000376  1758 	C$controleNivel.c$47$1$42 ==.
+                                   1759 ;	controleNivel.c:47: IE=0x93;
+      000376 75 A8 93         [24] 1760 	mov	_IE,#0x93
+                           000379  1761 	C$controleNivel.c$48$1$42 ==.
+                                   1762 ;	controleNivel.c:48: TMOD=0x22;
+      000379 75 89 22         [24] 1763 	mov	_TMOD,#0x22
+                           00037C  1764 	C$controleNivel.c$49$1$42 ==.
+                                   1765 ;	controleNivel.c:49: TL1=243;                /*conta 13*/
+      00037C 75 8B F3         [24] 1766 	mov	_TL1,#0xf3
+                           00037F  1767 	C$controleNivel.c$50$1$42 ==.
+                                   1768 ;	controleNivel.c:50: TH1=243;                /*recarrega*/
+      00037F 75 8D F3         [24] 1769 	mov	_TH1,#0xf3
+                           000382  1770 	C$controleNivel.c$51$1$42 ==.
+                                   1771 ;	controleNivel.c:51: SCON=0xC8;              /*serial modo 3*/
+      000382 75 98 C8         [24] 1772 	mov	_SCON,#0xc8
+                           000385  1773 	C$controleNivel.c$52$1$42 ==.
+                                   1774 ;	controleNivel.c:52: TR1=1;                  /*liga tc1*/
+                                   1775 ;	assignBit
+      000385 D2 8E            [12] 1776 	setb	_TR1
+                           000387  1777 	C$controleNivel.c$53$1$42 ==.
+                                   1778 ;	controleNivel.c:53: EX1=0;
+                                   1779 ;	assignBit
+      000387 C2 AA            [12] 1780 	clr	_EX1
+                           000389  1781 	C$controleNivel.c$54$1$42 ==.
+                                   1782 ;	controleNivel.c:54: REN=1;
+                                   1783 ;	assignBit
+      000389 D2 9C            [12] 1784 	setb	_REN
+      00038B D0 D0            [24] 1785 	pop	psw
+      00038D D0 06            [24] 1786 	pop	ar6
+      00038F D0 07            [24] 1787 	pop	ar7
+      000391 D0 E0            [24] 1788 	pop	acc
+                           000393  1789 	C$controleNivel.c$56$1$42 ==.
+                           000393  1790 	XG$ext_1$0$0 ==.
+      000393 32               [24] 1791 	reti
+                                   1792 ;	eliminated unneeded push/pop dpl
+                                   1793 ;	eliminated unneeded push/pop dph
+                                   1794 ;	eliminated unneeded push/pop b
+                                   1795 ;------------------------------------------------------------
+                                   1796 ;Allocation info for local variables in function 'ajustPID'
+                                   1797 ;------------------------------------------------------------
+                                   1798 ;Kx                        Allocated to registers r7 
+                                   1799 ;------------------------------------------------------------
+                           000394  1800 	G$ajustPID$0$0 ==.
+                           000394  1801 	C$controleNivel.c$57$1$42 ==.
+                                   1802 ;	controleNivel.c:57: void ajustPID(){
+                                   1803 ;	-----------------------------------------
+                                   1804 ;	 function ajustPID
+                                   1805 ;	-----------------------------------------
+      000394                       1806 _ajustPID:
+                           000394  1807 	C$controleNivel.c$58$1$42 ==.
+                                   1808 ;	controleNivel.c:58: unsigned char Kx=0;
+      000394 7F 00            [12] 1809 	mov	r7,#0x00
+                           000396  1810 	C$controleNivel.c$59$1$42 ==.
+                                   1811 ;	controleNivel.c:59: __bit ajust=1;
+                                   1812 ;	assignBit
+      000396 D2*0F            [12] 1813 	setb	_ajustPID_ajust_1_43
+                           000398  1814 	C$controleNivel.c$60$1$43 ==.
+                                   1815 ;	controleNivel.c:60: pwm=0;
+      000398 75*44 00         [24] 1816 	mov	_pwm,#0x00
+                           00039B  1817 	C$controleNivel.c$61$3$45 ==.
+                                   1818 ;	controleNivel.c:61: while(ajust){
+      00039B                       1819 00123$:
+      00039B 20*0F 03         [24] 1820 	jb	_ajustPID_ajust_1_43,00170$
+      00039E 02r04r30         [24] 1821 	ljmp	00126$
+      0003A1                       1822 00170$:
+                           0003A1  1823 	C$controleNivel.c$62$2$44 ==.
+                                   1824 ;	controleNivel.c:62: if(S1==3){
+      0003A1 74 03            [12] 1825 	mov	a,#0x03
+      0003A3 B5*00 0B         [24] 1826 	cjne	a,_S1,00102$
+                           0003A6  1827 	C$controleNivel.c$63$3$45 ==.
+                                   1828 ;	controleNivel.c:63: S1=0;
+      0003A6 75*00 00         [24] 1829 	mov	_S1,#0x00
+                           0003A9  1830 	C$controleNivel.c$64$3$45 ==.
+                                   1831 ;	controleNivel.c:64: pid[Kx]++;
+      0003A9 EF               [12] 1832 	mov	a,r7
+      0003AA 24r41            [12] 1833 	add	a,#_pid
+      0003AC F9               [12] 1834 	mov	r1,a
+      0003AD E7               [12] 1835 	mov	a,@r1
+      0003AE FE               [12] 1836 	mov	r6,a
+      0003AF 04               [12] 1837 	inc	a
+      0003B0 F7               [12] 1838 	mov	@r1,a
+      0003B1                       1839 00102$:
+                           0003B1  1840 	C$controleNivel.c$66$2$44 ==.
+                                   1841 ;	controleNivel.c:66: if(S2==3){
+      0003B1 74 03            [12] 1842 	mov	a,#0x03
+      0003B3 B5*01 0B         [24] 1843 	cjne	a,_S2,00104$
+                           0003B6  1844 	C$controleNivel.c$67$3$46 ==.
+                                   1845 ;	controleNivel.c:67: S2=0;
+      0003B6 75*01 00         [24] 1846 	mov	_S2,#0x00
+                           0003B9  1847 	C$controleNivel.c$68$3$46 ==.
+                                   1848 ;	controleNivel.c:68: pid[Kx]--;
+      0003B9 EF               [12] 1849 	mov	a,r7
+      0003BA 24r41            [12] 1850 	add	a,#_pid
+      0003BC F9               [12] 1851 	mov	r1,a
+      0003BD E7               [12] 1852 	mov	a,@r1
+      0003BE FE               [12] 1853 	mov	r6,a
+      0003BF 14               [12] 1854 	dec	a
+      0003C0 F7               [12] 1855 	mov	@r1,a
+      0003C1                       1856 00104$:
+                           0003C1  1857 	C$controleNivel.c$70$2$44 ==.
+                                   1858 ;	controleNivel.c:70: if(Kx==0) char2LCD(0x81, pid[0], 2);
+      0003C1 EF               [12] 1859 	mov	a,r7
+      0003C2 70 10            [24] 1860 	jnz	00106$
+      0003C4 85*41*34         [24] 1861 	mov	_char2LCD_PARM_2,_pid
+      0003C7 75*35 02         [24] 1862 	mov	_char2LCD_PARM_3,#0x02
+      0003CA 75 82 81         [24] 1863 	mov	dpl,#0x81
+      0003CD C0 07            [24] 1864 	push	ar7
+      0003CF 12r00rF6         [24] 1865 	lcall	_char2LCD
+      0003D2 D0 07            [24] 1866 	pop	ar7
+      0003D4                       1867 00106$:
+                           0003D4  1868 	C$controleNivel.c$71$2$44 ==.
+                                   1869 ;	controleNivel.c:71: if(Kx==1) char2LCD(0x86, pid[1], 2);
+      0003D4 BF 01 10         [24] 1870 	cjne	r7,#0x01,00108$
+      0003D7 85*42*34         [24] 1871 	mov	_char2LCD_PARM_2,(_pid + 0x0001)
+      0003DA 75*35 02         [24] 1872 	mov	_char2LCD_PARM_3,#0x02
+      0003DD 75 82 86         [24] 1873 	mov	dpl,#0x86
+      0003E0 C0 07            [24] 1874 	push	ar7
+      0003E2 12r00rF6         [24] 1875 	lcall	_char2LCD
+      0003E5 D0 07            [24] 1876 	pop	ar7
+      0003E7                       1877 00108$:
+                           0003E7  1878 	C$controleNivel.c$72$2$44 ==.
+                                   1879 ;	controleNivel.c:72: if(Kx==2) char2LCD(0x8B, pid[2], 2);
+      0003E7 BF 02 10         [24] 1880 	cjne	r7,#0x02,00110$
+      0003EA 85*43*34         [24] 1881 	mov	_char2LCD_PARM_2,(_pid + 0x0002)
+      0003ED 75*35 02         [24] 1882 	mov	_char2LCD_PARM_3,#0x02
+      0003F0 75 82 8B         [24] 1883 	mov	dpl,#0x8b
+      0003F3 C0 07            [24] 1884 	push	ar7
+      0003F5 12r00rF6         [24] 1885 	lcall	_char2LCD
+      0003F8 D0 07            [24] 1886 	pop	ar7
+      0003FA                       1887 00110$:
+                           0003FA  1888 	C$controleNivel.c$73$2$44 ==.
+                                   1889 ;	controleNivel.c:73: umSeg=0; cnt100=255;
+                                   1890 ;	assignBit
+      0003FA C2*00            [12] 1891 	clr	_umSeg
+      0003FC 75*05 FF         [24] 1892 	mov	_cnt100,#0xff
+                           0003FF  1893 	C$controleNivel.c$74$2$44 ==.
+                                   1894 ;	controleNivel.c:74: while(S1==2);
+      0003FF                       1895 00111$:
+      0003FF 74 02            [12] 1896 	mov	a,#0x02
+      000401 B5*00 02         [24] 1897 	cjne	a,_S1,00180$
+      000404 80 F9            [24] 1898 	sjmp	00111$
+      000406                       1899 00180$:
+                           000406  1900 	C$controleNivel.c$75$2$44 ==.
+                                   1901 ;	controleNivel.c:75: if(umSeg){S1=0;
+      000406 30*00 0B         [24] 1902 	jnb	_umSeg,00117$
+      000409 75*00 00         [24] 1903 	mov	_S1,#0x00
+                           00040C  1904 	C$controleNivel.c$76$3$47 ==.
+                                   1905 ;	controleNivel.c:76: umSeg=0; Kx++;
+                                   1906 ;	assignBit
+      00040C C2*00            [12] 1907 	clr	_umSeg
+      00040E 0F               [12] 1908 	inc	r7
+                           00040F  1909 	C$controleNivel.c$77$3$47 ==.
+                                   1910 ;	controleNivel.c:77: if(Kx==3) Kx=0;
+      00040F BF 03 02         [24] 1911 	cjne	r7,#0x03,00117$
+      000412 7F 00            [12] 1912 	mov	r7,#0x00
+      000414                       1913 00117$:
+                           000414  1914 	C$controleNivel.c$79$2$44 ==.
+                                   1915 ;	controleNivel.c:79: umSeg=0; cnt100=255;
+                                   1916 ;	assignBit
+      000414 C2*00            [12] 1917 	clr	_umSeg
+      000416 75*05 FF         [24] 1918 	mov	_cnt100,#0xff
+                           000419  1919 	C$controleNivel.c$80$2$44 ==.
+                                   1920 ;	controleNivel.c:80: while(S2==2);
+      000419                       1921 00118$:
+      000419 74 02            [12] 1922 	mov	a,#0x02
+      00041B B5*01 02         [24] 1923 	cjne	a,_S2,00184$
+      00041E 80 F9            [24] 1924 	sjmp	00118$
+      000420                       1925 00184$:
+                           000420  1926 	C$controleNivel.c$81$2$44 ==.
+                                   1927 ;	controleNivel.c:81: if(umSeg){S2=0;
+      000420 20*00 03         [24] 1928 	jb	_umSeg,00185$
+      000423 02r03r9B         [24] 1929 	ljmp	00123$
+      000426                       1930 00185$:
+      000426 75*01 00         [24] 1931 	mov	_S2,#0x00
+                           000429  1932 	C$controleNivel.c$82$3$48 ==.
+                                   1933 ;	controleNivel.c:82: umSeg=0; ajust=0;
+                                   1934 ;	assignBit
+      000429 C2*00            [12] 1935 	clr	_umSeg
+                                   1936 ;	assignBit
+      00042B C2*0F            [12] 1937 	clr	_ajustPID_ajust_1_43
+      00042D 02r03r9B         [24] 1938 	ljmp	00123$
+      000430                       1939 00126$:
+                           000430  1940 	C$controleNivel.c$84$1$43 ==.
+                           000430  1941 	XG$ajustPID$0$0 ==.
+      000430 22               [24] 1942 	ret
+                                   1943 ;------------------------------------------------------------
+                                   1944 ;Allocation info for local variables in function 'main'
+                                   1945 ;------------------------------------------------------------
+                                   1946 ;setup                     Allocated with name '_main_setup_1_49'
+                                   1947 ;tempC                     Allocated with name '_main_tempC_1_49'
+                                   1948 ;tempD                     Allocated to registers r6 
+                                   1949 ;errAt                     Allocated with name '_main_errAt_1_49'
+                                   1950 ;erAnt                     Allocated to registers r5 
+                                   1951 ;ctrlAt                    Allocated with name '_main_ctrlAt_1_49'
+                                   1952 ;ctlAnt                    Allocated to registers 
+                                   1953 ;P                         Allocated with name '_main_P_1_49'
+                                   1954 ;I                         Allocated with name '_main_I_1_49'
+                                   1955 ;D                         Allocated to registers r5 r7 
+                                   1956 ;tempo                     Allocated with name '_main_tempo_1_49'
+                                   1957 ;i                         Allocated to registers r5 
+                                   1958 ;contSetup                 Allocated with name '_main_contSetup_1_49'
+                                   1959 ;setupR                    Allocated with name '_main_setupR_1_49'
+                                   1960 ;number                    Allocated with name '_main_number_1_49'
+                                   1961 ;------------------------------------------------------------
+                           000431  1962 	G$main$0$0 ==.
+                           000431  1963 	C$controleNivel.c$86$1$43 ==.
+                                   1964 ;	controleNivel.c:86: void main (){
+                                   1965 ;	-----------------------------------------
+                                   1966 ;	 function main
+                                   1967 ;	-----------------------------------------
+      000431                       1968 _main:
+                           000431  1969 	C$controleNivel.c$87$1$43 ==.
+                                   1970 ;	controleNivel.c:87: unsigned char setup=25;
+      000431 75*46 19         [24] 1971 	mov	_main_setup_1_49,#0x19
+                           000434  1972 	C$controleNivel.c$88$1$43 ==.
+                                   1973 ;	controleNivel.c:88: unsigned char tempC=0;
+                           000434  1974 	C$controleNivel.c$90$1$43 ==.
+                                   1975 ;	controleNivel.c:90: signed char errAt=0;
+                           000434  1976 	C$controleNivel.c$92$1$43 ==.
+                                   1977 ;	controleNivel.c:92: signed int ctrlAt=0;
+      000434 E4               [12] 1978 	clr	a
+      000435 F5*47            [12] 1979 	mov	_main_tempC_1_49,a
+      000437 F5*48            [12] 1980 	mov	_main_errAt_1_49,a
+      000439 F5*49            [12] 1981 	mov	_main_ctrlAt_1_49,a
+      00043B F5*4A            [12] 1982 	mov	(_main_ctrlAt_1_49 + 1),a
+                           00043D  1983 	C$controleNivel.c$95$1$43 ==.
+                                   1984 ;	controleNivel.c:95: unsigned int tempo=0;
+      00043D F5*4F            [12] 1985 	mov	_main_tempo_1_49,a
+      00043F F5*50            [12] 1986 	mov	(_main_tempo_1_49 + 1),a
+                           000441  1987 	C$controleNivel.c$97$1$43 ==.
+                                   1988 ;	controleNivel.c:97: unsigned char contSetup=0;
+                                   1989 ;	1-genFromRTrack replaced	mov	_main_contSetup_1_49,#0x00
+      000441 F5*51            [12] 1990 	mov	_main_contSetup_1_49,a
+                           000443  1991 	C$controleNivel.c$98$1$43 ==.
+                                   1992 ;	controleNivel.c:98: unsigned char setupR[3]={0,0,0};
+                                   1993 ;	1-genFromRTrack replaced	mov	_main_setupR_1_49,#0x00
+      000443 F5*52            [12] 1994 	mov	_main_setupR_1_49,a
+                                   1995 ;	1-genFromRTrack replaced	mov	(_main_setupR_1_49 + 0x0001),#0x00
+      000445 F5*53            [12] 1996 	mov	(_main_setupR_1_49 + 0x0001),a
+                                   1997 ;	1-genFromRTrack replaced	mov	(_main_setupR_1_49 + 0x0002),#0x00
+      000447 F5*54            [12] 1998 	mov	(_main_setupR_1_49 + 0x0002),a
+                           000449  1999 	C$controleNivel.c$99$1$43 ==.
+                                   2000 ;	controleNivel.c:99: unsigned char number=0;
+                                   2001 ;	1-genFromRTrack replaced	mov	_main_number_1_49,#0x00
+      000449 F5*55            [12] 2002 	mov	_main_number_1_49,a
+                           00044B  2003 	C$controleNivel.c$101$1$49 ==.
+                                   2004 ;	controleNivel.c:101: TrigPin=0;
+                                   2005 ;	assignBit
+      00044B C2 92            [12] 2006 	clr	_TrigPin
+                           00044D  2007 	C$controleNivel.c$103$1$49 ==.
+                                   2008 ;	controleNivel.c:103: inic();
+      00044D 12r01rB4         [24] 2009 	lcall	_inic
+                           000450  2010 	C$controleNivel.c$104$1$49 ==.
+                                   2011 ;	controleNivel.c:104: TMOD=0x92;
+      000450 75 89 92         [24] 2012 	mov	_TMOD,#0x92
+                           000453  2013 	C$controleNivel.c$105$1$49 ==.
+                                   2014 ;	controleNivel.c:105: IT1=1;
+                                   2015 ;	assignBit
+      000453 D2 8A            [12] 2016 	setb	_IT1
+                           000455  2017 	C$controleNivel.c$106$1$49 ==.
+                                   2018 ;	controleNivel.c:106: EX1=1;
+                                   2019 ;	assignBit
+      000455 D2 AA            [12] 2020 	setb	_EX1
+                           000457  2021 	C$controleNivel.c$107$1$49 ==.
+                                   2022 ;	controleNivel.c:107: P1_3=0;
+                                   2023 ;	assignBit
+      000457 C2 93            [12] 2024 	clr	_P1_3
+                           000459  2025 	C$controleNivel.c$109$1$49 ==.
+                                   2026 ;	controleNivel.c:109: wrLCD4(comand,0x80);
+                                   2027 ;	assignBit
+      000459 C2*0D            [12] 2028 	clr	_wrLCD4_PARM_1
+      00045B 75 82 80         [24] 2029 	mov	dpl,#0x80
+      00045E 12r00rD0         [24] 2030 	lcall	_wrLCD4
+                           000461  2031 	C$controleNivel.c$110$2$50 ==.
+                                   2032 ;	controleNivel.c:110: for(i=0;i<12;i++){
+      000461 7D 00            [12] 2033 	mov	r5,#0x00
+      000463                       2034 00164$:
+                           000463  2035 	C$controleNivel.c$111$3$51 ==.
+                                   2036 ;	controleNivel.c:111: wrLCD4(letra, Tit1[i]);
+      000463 ED               [12] 2037 	mov	a,r5
+      000464 90r00r04         [24] 2038 	mov	dptr,#_Tit1
+      000467 93               [24] 2039 	movc	a,@a+dptr
+      000468 FA               [12] 2040 	mov	r2,a
+                                   2041 ;	assignBit
+      000469 D2*0D            [12] 2042 	setb	_wrLCD4_PARM_1
+      00046B 8A 82            [24] 2043 	mov	dpl,r2
+      00046D C0 05            [24] 2044 	push	ar5
+      00046F 12r00rD0         [24] 2045 	lcall	_wrLCD4
+      000472 D0 05            [24] 2046 	pop	ar5
+                           000474  2047 	C$controleNivel.c$110$2$50 ==.
+                                   2048 ;	controleNivel.c:110: for(i=0;i<12;i++){
+      000474 0D               [12] 2049 	inc	r5
+      000475 BD 0C 00         [24] 2050 	cjne	r5,#0x0c,00275$
+      000478                       2051 00275$:
+      000478 40 E9            [24] 2052 	jc	00164$
+                           00047A  2053 	C$controleNivel.c$113$1$49 ==.
+                                   2054 ;	controleNivel.c:113: wrLCD4(comand,0xC0);
+                                   2055 ;	assignBit
+      00047A C2*0D            [12] 2056 	clr	_wrLCD4_PARM_1
+      00047C 75 82 C0         [24] 2057 	mov	dpl,#0xc0
+      00047F 12r00rD0         [24] 2058 	lcall	_wrLCD4
+                           000482  2059 	C$controleNivel.c$114$2$52 ==.
+                                   2060 ;	controleNivel.c:114: for(i=0;i<12;i++){
+      000482 7D 00            [12] 2061 	mov	r5,#0x00
+      000484                       2062 00166$:
+                           000484  2063 	C$controleNivel.c$115$3$53 ==.
+                                   2064 ;	controleNivel.c:115: wrLCD4(letra, Tit2[i]);
+      000484 ED               [12] 2065 	mov	a,r5
+      000485 90r00r11         [24] 2066 	mov	dptr,#_Tit2
+      000488 93               [24] 2067 	movc	a,@a+dptr
+      000489 FA               [12] 2068 	mov	r2,a
+                                   2069 ;	assignBit
+      00048A D2*0D            [12] 2070 	setb	_wrLCD4_PARM_1
+      00048C 8A 82            [24] 2071 	mov	dpl,r2
+      00048E C0 05            [24] 2072 	push	ar5
+      000490 12r00rD0         [24] 2073 	lcall	_wrLCD4
+      000493 D0 05            [24] 2074 	pop	ar5
+                           000495  2075 	C$controleNivel.c$114$2$52 ==.
+                                   2076 ;	controleNivel.c:114: for(i=0;i<12;i++){
+      000495 0D               [12] 2077 	inc	r5
+      000496 BD 0C 00         [24] 2078 	cjne	r5,#0x0c,00277$
+      000499                       2079 00277$:
+      000499 40 E9            [24] 2080 	jc	00166$
+                           00049B  2081 	C$controleNivel.c$117$1$49 ==.
+                                   2082 ;	controleNivel.c:117: wrLCD4(comand,0xC4);
+                                   2083 ;	assignBit
+      00049B C2*0D            [12] 2084 	clr	_wrLCD4_PARM_1
+      00049D 75 82 C4         [24] 2085 	mov	dpl,#0xc4
+      0004A0 12r00rD0         [24] 2086 	lcall	_wrLCD4
+                           0004A3  2087 	C$controleNivel.c$118$1$49 ==.
+                                   2088 ;	controleNivel.c:118: wrLCD4(letra, setup);
+                                   2089 ;	assignBit
+      0004A3 D2*0D            [12] 2090 	setb	_wrLCD4_PARM_1
+      0004A5 75 82 19         [24] 2091 	mov	dpl,#0x19
+      0004A8 12r00rD0         [24] 2092 	lcall	_wrLCD4
+                           0004AB  2093 	C$controleNivel.c$119$1$49 ==.
+                                   2094 ;	controleNivel.c:119: ajustPID();
+      0004AB 12r03r94         [24] 2095 	lcall	_ajustPID
+                           0004AE  2096 	C$controleNivel.c$120$1$49 ==.
+                                   2097 ;	controleNivel.c:120: while(1){
+      0004AE                       2098 00162$:
+                           0004AE  2099 	C$controleNivel.c$122$2$54 ==.
+                                   2100 ;	controleNivel.c:122: if(S1==3){
+      0004AE 74 03            [12] 2101 	mov	a,#0x03
+      0004B0 B5*00 05         [24] 2102 	cjne	a,_S1,00104$
+                           0004B3  2103 	C$controleNivel.c$123$3$55 ==.
+                                   2104 ;	controleNivel.c:123: S1=0; setup++;
+      0004B3 75*00 00         [24] 2105 	mov	_S1,#0x00
+      0004B6 05*46            [12] 2106 	inc	_main_setup_1_49
+      0004B8                       2107 00104$:
+                           0004B8  2108 	C$controleNivel.c$125$2$54 ==.
+                                   2109 ;	controleNivel.c:125: if(S2==3){
+      0004B8 74 03            [12] 2110 	mov	a,#0x03
+      0004BA B5*01 05         [24] 2111 	cjne	a,_S2,00106$
+                           0004BD  2112 	C$controleNivel.c$126$3$56 ==.
+                                   2113 ;	controleNivel.c:126: S2=0; setup--;
+      0004BD 75*01 00         [24] 2114 	mov	_S2,#0x00
+      0004C0 15*46            [12] 2115 	dec	_main_setup_1_49
+      0004C2                       2116 00106$:
+                           0004C2  2117 	C$controleNivel.c$128$2$54 ==.
+                                   2118 ;	controleNivel.c:128: if((S1==2)&&(S2==2)){
+      0004C2 74 02            [12] 2119 	mov	a,#0x02
+      0004C4 B5*00 11         [24] 2120 	cjne	a,_S1,00108$
+      0004C7 74 02            [12] 2121 	mov	a,#0x02
+      0004C9 B5*01 0C         [24] 2122 	cjne	a,_S2,00108$
+                           0004CC  2123 	C$controleNivel.c$129$3$57 ==.
+                                   2124 ;	controleNivel.c:129: S1=0; S2=0; tempo=0;
+      0004CC E4               [12] 2125 	clr	a
+      0004CD F5*00            [12] 2126 	mov	_S1,a
+      0004CF F5*01            [12] 2127 	mov	_S2,a
+      0004D1 F5*4F            [12] 2128 	mov	_main_tempo_1_49,a
+      0004D3 F5*50            [12] 2129 	mov	(_main_tempo_1_49 + 1),a
+                           0004D5  2130 	C$controleNivel.c$130$3$57 ==.
+                                   2131 ;	controleNivel.c:130: ajustPID();
+      0004D5 12r03r94         [24] 2132 	lcall	_ajustPID
+      0004D8                       2133 00108$:
+                           0004D8  2134 	C$controleNivel.c$133$2$54 ==.
+                                   2135 ;	controleNivel.c:133: char2LCD(0xCC, tempC, 3);
+      0004D8 85*47*34         [24] 2136 	mov	_char2LCD_PARM_2,_main_tempC_1_49
+      0004DB 75*35 03         [24] 2137 	mov	_char2LCD_PARM_3,#0x03
+      0004DE 75 82 CC         [24] 2138 	mov	dpl,#0xcc
+      0004E1 12r00rF6         [24] 2139 	lcall	_char2LCD
+                           0004E4  2140 	C$controleNivel.c$135$2$54 ==.
+                                   2141 ;	controleNivel.c:135: if(!sensor){
+      0004E4 30*0E 03         [24] 2142 	jnb	_sensor,00287$
+      0004E7 02r06r23         [24] 2143 	ljmp	00144$
+      0004EA                       2144 00287$:
+                           0004EA  2145 	C$controleNivel.c$136$3$58 ==.
+                                   2146 ;	controleNivel.c:136: if(RxFlag){ RxFlag=0;
+                                   2147 ;	assignBit
+      0004EA 10*04 02         [24] 2148 	jbc	_RxFlag,00288$
+      0004ED 80 02            [24] 2149 	sjmp	00111$
+      0004EF                       2150 00288$:
+                           0004EF  2151 	C$controleNivel.c$137$4$59 ==.
+                                   2152 ;	controleNivel.c:137: contSetup++;
+      0004EF 05*51            [12] 2153 	inc	_main_contSetup_1_49
+      0004F1                       2154 00111$:
+                           0004F1  2155 	C$controleNivel.c$140$3$58 ==.
+                                   2156 ;	controleNivel.c:140: if(TxFlag){
+      0004F1 20*05 03         [24] 2157 	jb	_TxFlag,00289$
+      0004F4 02r06r23         [24] 2158 	ljmp	00144$
+      0004F7                       2159 00289$:
+                           0004F7  2160 	C$controleNivel.c$142$4$60 ==.
+                                   2161 ;	controleNivel.c:142: if(RxByte == 102){  /* Letra f */
+      0004F7 74 66            [12] 2162 	mov	a,#0x66
+      0004F9 B5*09 16         [24] 2163 	cjne	a,_RxByte,00113$
+                           0004FC  2164 	C$controleNivel.c$143$5$61 ==.
+                                   2165 ;	controleNivel.c:143: wrLCD4(comand,0xCF);
+                                   2166 ;	assignBit
+      0004FC C2*0D            [12] 2167 	clr	_wrLCD4_PARM_1
+      0004FE 75 82 CF         [24] 2168 	mov	dpl,#0xcf
+      000501 12r00rD0         [24] 2169 	lcall	_wrLCD4
+                           000504  2170 	C$controleNivel.c$144$5$61 ==.
+                                   2171 ;	controleNivel.c:144: wrLCD4(letra, 'F');
+                                   2172 ;	assignBit
+      000504 D2*0D            [12] 2173 	setb	_wrLCD4_PARM_1
+      000506 75 82 46         [24] 2174 	mov	dpl,#0x46
+      000509 12r00rD0         [24] 2175 	lcall	_wrLCD4
+                           00050C  2176 	C$controleNivel.c$145$5$61 ==.
+                                   2177 ;	controleNivel.c:145: malha=1;
+      00050C 75*45 01         [24] 2178 	mov	_malha,#0x01
+                           00050F  2179 	C$controleNivel.c$146$5$61 ==.
+                                   2180 ;	controleNivel.c:146: contSetup=0;
+      00050F 75*51 00         [24] 2181 	mov	_main_contSetup_1_49,#0x00
+      000512                       2182 00113$:
+                           000512  2183 	C$controleNivel.c$148$4$60 ==.
+                                   2184 ;	controleNivel.c:148: if(RxByte == 97){  /* Letra a */
+      000512 74 61            [12] 2185 	mov	a,#0x61
+      000514 B5*09 16         [24] 2186 	cjne	a,_RxByte,00115$
+                           000517  2187 	C$controleNivel.c$149$5$62 ==.
+                                   2188 ;	controleNivel.c:149: wrLCD4(comand,0xCF);
+                                   2189 ;	assignBit
+      000517 C2*0D            [12] 2190 	clr	_wrLCD4_PARM_1
+      000519 75 82 CF         [24] 2191 	mov	dpl,#0xcf
+      00051C 12r00rD0         [24] 2192 	lcall	_wrLCD4
+                           00051F  2193 	C$controleNivel.c$150$5$62 ==.
+                                   2194 ;	controleNivel.c:150: wrLCD4(letra, 'A');
+                                   2195 ;	assignBit
+      00051F D2*0D            [12] 2196 	setb	_wrLCD4_PARM_1
+      000521 75 82 41         [24] 2197 	mov	dpl,#0x41
+      000524 12r00rD0         [24] 2198 	lcall	_wrLCD4
+                           000527  2199 	C$controleNivel.c$151$5$62 ==.
+                                   2200 ;	controleNivel.c:151: malha=0;
+      000527 75*45 00         [24] 2201 	mov	_malha,#0x00
+                           00052A  2202 	C$controleNivel.c$152$5$62 ==.
+                                   2203 ;	controleNivel.c:152: contSetup=0;
+      00052A 75*51 00         [24] 2204 	mov	_main_contSetup_1_49,#0x00
+      00052D                       2205 00115$:
+                           00052D  2206 	C$controleNivel.c$156$4$60 ==.
+                                   2207 ;	controleNivel.c:156: if(RxByte == 32 || RxByte == 112 || RxByte == 105 || RxByte == 100 || RxByte == 109){
+      00052D 74 20            [12] 2208 	mov	a,#0x20
+      00052F B5*09 02         [24] 2209 	cjne	a,_RxByte,00294$
+      000532 80 1F            [24] 2210 	sjmp	00134$
+      000534                       2211 00294$:
+      000534 74 70            [12] 2212 	mov	a,#0x70
+      000536 B5*09 02         [24] 2213 	cjne	a,_RxByte,00295$
+      000539 80 18            [24] 2214 	sjmp	00134$
+      00053B                       2215 00295$:
+      00053B 74 69            [12] 2216 	mov	a,#0x69
+      00053D B5*09 02         [24] 2217 	cjne	a,_RxByte,00296$
+      000540 80 11            [24] 2218 	sjmp	00134$
+      000542                       2219 00296$:
+      000542 74 64            [12] 2220 	mov	a,#0x64
+      000544 B5*09 02         [24] 2221 	cjne	a,_RxByte,00297$
+      000547 80 0A            [24] 2222 	sjmp	00134$
+      000549                       2223 00297$:
+      000549 74 6D            [12] 2224 	mov	a,#0x6d
+      00054B B5*09 02         [24] 2225 	cjne	a,_RxByte,00298$
+      00054E 80 03            [24] 2226 	sjmp	00299$
+      000550                       2227 00298$:
+      000550 02r06r1B         [24] 2228 	ljmp	00135$
+      000553                       2229 00299$:
+      000553                       2230 00134$:
+                           000553  2231 	C$controleNivel.c$158$5$63 ==.
+                                   2232 ;	controleNivel.c:158: if(contSetup-1 == 1){
+      000553 AA*51            [24] 2233 	mov	r2,_main_contSetup_1_49
+      000555 7D 00            [12] 2234 	mov	r5,#0x00
+      000557 EA               [12] 2235 	mov	a,r2
+      000558 24 FF            [12] 2236 	add	a,#0xff
+      00055A FC               [12] 2237 	mov	r4,a
+      00055B ED               [12] 2238 	mov	a,r5
+      00055C 34 FF            [12] 2239 	addc	a,#0xff
+      00055E FE               [12] 2240 	mov	r6,a
+      00055F BC 01 0B         [24] 2241 	cjne	r4,#0x01,00122$
+      000562 BE 00 08         [24] 2242 	cjne	r6,#0x00,00122$
+                           000565  2243 	C$controleNivel.c$159$6$64 ==.
+                                   2244 ;	controleNivel.c:159: number = setupR[0]-48;
+      000565 E5*52            [12] 2245 	mov	a,_main_setupR_1_49
+      000567 24 D0            [12] 2246 	add	a,#0xd0
+      000569 F5*55            [12] 2247 	mov	_main_number_1_49,a
+      00056B 80 45            [24] 2248 	sjmp	00123$
+      00056D                       2249 00122$:
+                           00056D  2250 	C$controleNivel.c$160$5$63 ==.
+                                   2251 ;	controleNivel.c:160: }else if(contSetup-1 == 2){
+      00056D EA               [12] 2252 	mov	a,r2
+      00056E 24 FF            [12] 2253 	add	a,#0xff
+      000570 FC               [12] 2254 	mov	r4,a
+      000571 ED               [12] 2255 	mov	a,r5
+      000572 34 FF            [12] 2256 	addc	a,#0xff
+      000574 FE               [12] 2257 	mov	r6,a
+      000575 BC 02 15         [24] 2258 	cjne	r4,#0x02,00119$
+      000578 BE 00 12         [24] 2259 	cjne	r6,#0x00,00119$
+                           00057B  2260 	C$controleNivel.c$161$6$65 ==.
+                                   2261 ;	controleNivel.c:161: number = ((setupR[0]-48)*10)+(setupR[1]-48);
+      00057B E5*52            [12] 2262 	mov	a,_main_setupR_1_49
+      00057D 24 D0            [12] 2263 	add	a,#0xd0
+      00057F 75 F0 0A         [24] 2264 	mov	b,#0x0a
+      000582 A4               [48] 2265 	mul	ab
+      000583 FE               [12] 2266 	mov	r6,a
+      000584 E5*53            [12] 2267 	mov	a,(_main_setupR_1_49 + 0x0001)
+      000586 24 D0            [12] 2268 	add	a,#0xd0
+      000588 2E               [12] 2269 	add	a,r6
+      000589 F5*55            [12] 2270 	mov	_main_number_1_49,a
+      00058B 80 25            [24] 2271 	sjmp	00123$
+      00058D                       2272 00119$:
+                           00058D  2273 	C$controleNivel.c$163$5$63 ==.
+                                   2274 ;	controleNivel.c:163: }else if(contSetup-1 == 3){
+      00058D 1A               [12] 2275 	dec	r2
+      00058E BA FF 01         [24] 2276 	cjne	r2,#0xff,00304$
+      000591 1D               [12] 2277 	dec	r5
+      000592                       2278 00304$:
+      000592 BA 03 1D         [24] 2279 	cjne	r2,#0x03,00123$
+      000595 BD 00 1A         [24] 2280 	cjne	r5,#0x00,00123$
+                           000598  2281 	C$controleNivel.c$164$6$66 ==.
+                                   2282 ;	controleNivel.c:164: number = ((setupR[0]-48)*100)+((setupR[1]-48)*10)+((setupR[2]-48));
+      000598 E5*52            [12] 2283 	mov	a,_main_setupR_1_49
+      00059A 24 D0            [12] 2284 	add	a,#0xd0
+      00059C 75 F0 64         [24] 2285 	mov	b,#0x64
+      00059F A4               [48] 2286 	mul	ab
+      0005A0 FE               [12] 2287 	mov	r6,a
+      0005A1 E5*53            [12] 2288 	mov	a,(_main_setupR_1_49 + 0x0001)
+      0005A3 24 D0            [12] 2289 	add	a,#0xd0
+      0005A5 75 F0 0A         [24] 2290 	mov	b,#0x0a
+      0005A8 A4               [48] 2291 	mul	ab
+      0005A9 2E               [12] 2292 	add	a,r6
+      0005AA FE               [12] 2293 	mov	r6,a
+      0005AB E5*54            [12] 2294 	mov	a,(_main_setupR_1_49 + 0x0002)
+      0005AD 24 D0            [12] 2295 	add	a,#0xd0
+      0005AF 2E               [12] 2296 	add	a,r6
+      0005B0 F5*55            [12] 2297 	mov	_main_number_1_49,a
+      0005B2                       2298 00123$:
+                           0005B2  2299 	C$controleNivel.c$166$5$63 ==.
+                                   2300 ;	controleNivel.c:166: if(RxByte == 109){ /* Se Rxbyte == m */
+      0005B2 74 6D            [12] 2301 	mov	a,#0x6d
+      0005B4 B5*09 06         [24] 2302 	cjne	a,_RxByte,00125$
+                           0005B7  2303 	C$controleNivel.c$167$6$67 ==.
+                                   2304 ;	controleNivel.c:167: pwm = number;
+      0005B7 85*55*44         [24] 2305 	mov	_pwm,_main_number_1_49
+                           0005BA  2306 	C$controleNivel.c$168$6$67 ==.
+                                   2307 ;	controleNivel.c:168: contSetup = 0;
+      0005BA 75*51 00         [24] 2308 	mov	_main_contSetup_1_49,#0x00
+      0005BD                       2309 00125$:
+                           0005BD  2310 	C$controleNivel.c$170$5$63 ==.
+                                   2311 ;	controleNivel.c:170: if(RxByte == 32){ /* Se RxByte == espaÃ§o */
+      0005BD 74 20            [12] 2312 	mov	a,#0x20
+      0005BF B5*09 12         [24] 2313 	cjne	a,_RxByte,00127$
+                           0005C2  2314 	C$controleNivel.c$171$6$68 ==.
+                                   2315 ;	controleNivel.c:171: setup = number;
+      0005C2 85*55*46         [24] 2316 	mov	_main_setup_1_49,_main_number_1_49
+                           0005C5  2317 	C$controleNivel.c$172$6$68 ==.
+                                   2318 ;	controleNivel.c:172: contSetup = 0;
+      0005C5 75*51 00         [24] 2319 	mov	_main_contSetup_1_49,#0x00
+                           0005C8  2320 	C$controleNivel.c$173$6$68 ==.
+                                   2321 ;	controleNivel.c:173: char2LCD(0xC4, setup, 3);
+      0005C8 85*55*34         [24] 2322 	mov	_char2LCD_PARM_2,_main_number_1_49
+      0005CB 75*35 03         [24] 2323 	mov	_char2LCD_PARM_3,#0x03
+      0005CE 75 82 C4         [24] 2324 	mov	dpl,#0xc4
+      0005D1 12r00rF6         [24] 2325 	lcall	_char2LCD
+      0005D4                       2326 00127$:
+                           0005D4  2327 	C$controleNivel.c$175$5$63 ==.
+                                   2328 ;	controleNivel.c:175: if(RxByte == 112 ){ /* Se RxByte == p */
+      0005D4 74 70            [12] 2329 	mov	a,#0x70
+      0005D6 B5*09 12         [24] 2330 	cjne	a,_RxByte,00129$
+                           0005D9  2331 	C$controleNivel.c$176$6$69 ==.
+                                   2332 ;	controleNivel.c:176: pid[0] = number;
+      0005D9 85*55*41         [24] 2333 	mov	_pid,_main_number_1_49
+                           0005DC  2334 	C$controleNivel.c$177$6$69 ==.
+                                   2335 ;	controleNivel.c:177: contSetup = 0;
+      0005DC 75*51 00         [24] 2336 	mov	_main_contSetup_1_49,#0x00
+                           0005DF  2337 	C$controleNivel.c$178$6$69 ==.
+                                   2338 ;	controleNivel.c:178: char2LCD(0x81, pid[0], 2);
+      0005DF 85*55*34         [24] 2339 	mov	_char2LCD_PARM_2,_main_number_1_49
+      0005E2 75*35 02         [24] 2340 	mov	_char2LCD_PARM_3,#0x02
+      0005E5 75 82 81         [24] 2341 	mov	dpl,#0x81
+      0005E8 12r00rF6         [24] 2342 	lcall	_char2LCD
+      0005EB                       2343 00129$:
+                           0005EB  2344 	C$controleNivel.c$180$5$63 ==.
+                                   2345 ;	controleNivel.c:180: if(RxByte == 105){ /* Se RxByte == i */
+      0005EB 74 69            [12] 2346 	mov	a,#0x69
+      0005ED B5*09 12         [24] 2347 	cjne	a,_RxByte,00131$
+                           0005F0  2348 	C$controleNivel.c$181$6$70 ==.
+                                   2349 ;	controleNivel.c:181: pid[1] = number;
+      0005F0 85*55*42         [24] 2350 	mov	(_pid + 0x0001),_main_number_1_49
+                           0005F3  2351 	C$controleNivel.c$182$6$70 ==.
+                                   2352 ;	controleNivel.c:182: contSetup = 0;
+      0005F3 75*51 00         [24] 2353 	mov	_main_contSetup_1_49,#0x00
+                           0005F6  2354 	C$controleNivel.c$183$6$70 ==.
+                                   2355 ;	controleNivel.c:183: char2LCD(0x86, pid[1], 2);
+      0005F6 85*55*34         [24] 2356 	mov	_char2LCD_PARM_2,_main_number_1_49
+      0005F9 75*35 02         [24] 2357 	mov	_char2LCD_PARM_3,#0x02
+      0005FC 75 82 86         [24] 2358 	mov	dpl,#0x86
+      0005FF 12r00rF6         [24] 2359 	lcall	_char2LCD
+      000602                       2360 00131$:
+                           000602  2361 	C$controleNivel.c$185$5$63 ==.
+                                   2362 ;	controleNivel.c:185: if(RxByte == 100){ /* Se RxByte == d */
+      000602 74 64            [12] 2363 	mov	a,#0x64
+      000604 B5*09 1C         [24] 2364 	cjne	a,_RxByte,00144$
+                           000607  2365 	C$controleNivel.c$186$6$71 ==.
+                                   2366 ;	controleNivel.c:186: pid[2] = number;
+      000607 85*55*43         [24] 2367 	mov	(_pid + 0x0002),_main_number_1_49
+                           00060A  2368 	C$controleNivel.c$187$6$71 ==.
+                                   2369 ;	controleNivel.c:187: contSetup = 0;
+      00060A 75*51 00         [24] 2370 	mov	_main_contSetup_1_49,#0x00
+                           00060D  2371 	C$controleNivel.c$188$6$71 ==.
+                                   2372 ;	controleNivel.c:188: char2LCD(0x8B, pid[2], 2);
+      00060D 85*55*34         [24] 2373 	mov	_char2LCD_PARM_2,_main_number_1_49
+      000610 75*35 02         [24] 2374 	mov	_char2LCD_PARM_3,#0x02
+      000613 75 82 8B         [24] 2375 	mov	dpl,#0x8b
+      000616 12r00rF6         [24] 2376 	lcall	_char2LCD
+      000619 80 08            [24] 2377 	sjmp	00144$
+      00061B                       2378 00135$:
+                           00061B  2379 	C$controleNivel.c$191$5$72 ==.
+                                   2380 ;	controleNivel.c:191: setupR[contSetup-1] = RxByte;
+      00061B E5*51            [12] 2381 	mov	a,_main_contSetup_1_49
+      00061D 14               [12] 2382 	dec	a
+      00061E 24r52            [12] 2383 	add	a,#_main_setupR_1_49
+      000620 F8               [12] 2384 	mov	r0,a
+      000621 A6*09            [24] 2385 	mov	@r0,_RxByte
+      000623                       2386 00144$:
+                           000623  2387 	C$controleNivel.c$196$2$54 ==.
+                                   2388 ;	controleNivel.c:196: if(malha == 0){
+      000623 E5*45            [12] 2389 	mov	a,_malha
+                           000625  2390 	C$controleNivel.c$197$3$73 ==.
+                                   2391 ;	controleNivel.c:197: char2Ser(0,pwm,3);
+      000625 70 26            [24] 2392 	jnz	00146$
+      000627 85*44*39         [24] 2393 	mov	_char2Ser_PARM_2,_pwm
+      00062A 75*3A 03         [24] 2394 	mov	_char2Ser_PARM_3,#0x03
+      00062D F5 82            [12] 2395 	mov	dpl,a
+      00062F 12r02rE0         [24] 2396 	lcall	_char2Ser
+                           000632  2397 	C$controleNivel.c$198$3$73 ==.
+                                   2398 ;	controleNivel.c:198: char2Ser(2,tempC,3);
+      000632 85*47*39         [24] 2399 	mov	_char2Ser_PARM_2,_main_tempC_1_49
+      000635 75*3A 03         [24] 2400 	mov	_char2Ser_PARM_3,#0x03
+      000638 75 82 02         [24] 2401 	mov	dpl,#0x02
+      00063B 12r02rE0         [24] 2402 	lcall	_char2Ser
+                           00063E  2403 	C$controleNivel.c$199$3$73 ==.
+                                   2404 ;	controleNivel.c:199: int2Ser(2, tempo,5);
+      00063E 85*4F*3B         [24] 2405 	mov	_int2Ser_PARM_2,_main_tempo_1_49
+      000641 85*50*3C         [24] 2406 	mov	(_int2Ser_PARM_2 + 1),(_main_tempo_1_49 + 1)
+      000644 75*3D 05         [24] 2407 	mov	_int2Ser_PARM_3,#0x05
+      000647 75 82 02         [24] 2408 	mov	dpl,#0x02
+      00064A 12r03r04         [24] 2409 	lcall	_int2Ser
+      00064D                       2410 00146$:
+                           00064D  2411 	C$controleNivel.c$201$2$54 ==.
+                                   2412 ;	controleNivel.c:201: if(malha == 1){
+      00064D 74 01            [12] 2413 	mov	a,#0x01
+      00064F B5*45 42         [24] 2414 	cjne	a,_malha,00149$
+                           000652  2415 	C$controleNivel.c$202$3$74 ==.
+                                   2416 ;	controleNivel.c:202: char2Ser(0,errAt,3);
+      000652 85*48*39         [24] 2417 	mov	_char2Ser_PARM_2,_main_errAt_1_49
+      000655 75*3A 03         [24] 2418 	mov	_char2Ser_PARM_3,#0x03
+      000658 75 82 00         [24] 2419 	mov	dpl,#0x00
+      00065B 12r02rE0         [24] 2420 	lcall	_char2Ser
+                           00065E  2421 	C$controleNivel.c$203$3$74 ==.
+                                   2422 ;	controleNivel.c:203: int2Ser(2,ctrlAt,5);
+      00065E 85*49*3B         [24] 2423 	mov	_int2Ser_PARM_2,_main_ctrlAt_1_49
+      000661 85*4A*3C         [24] 2424 	mov	(_int2Ser_PARM_2 + 1),(_main_ctrlAt_1_49 + 1)
+      000664 75*3D 05         [24] 2425 	mov	_int2Ser_PARM_3,#0x05
+      000667 75 82 02         [24] 2426 	mov	dpl,#0x02
+      00066A 12r03r04         [24] 2427 	lcall	_int2Ser
+                           00066D  2428 	C$controleNivel.c$204$3$74 ==.
+                                   2429 ;	controleNivel.c:204: char2Ser(2,pwm,3);
+      00066D 85*44*39         [24] 2430 	mov	_char2Ser_PARM_2,_pwm
+      000670 75*3A 03         [24] 2431 	mov	_char2Ser_PARM_3,#0x03
+      000673 75 82 02         [24] 2432 	mov	dpl,#0x02
+      000676 12r02rE0         [24] 2433 	lcall	_char2Ser
+                           000679  2434 	C$controleNivel.c$205$3$74 ==.
+                                   2435 ;	controleNivel.c:205: char2Ser(2,tempC,3);
+      000679 85*47*39         [24] 2436 	mov	_char2Ser_PARM_2,_main_tempC_1_49
+      00067C 75*3A 03         [24] 2437 	mov	_char2Ser_PARM_3,#0x03
+      00067F 75 82 02         [24] 2438 	mov	dpl,#0x02
+      000682 12r02rE0         [24] 2439 	lcall	_char2Ser
+                           000685  2440 	C$controleNivel.c$206$3$74 ==.
+                                   2441 ;	controleNivel.c:206: int2Ser(2, tempo,5);
+      000685 85*4F*3B         [24] 2442 	mov	_int2Ser_PARM_2,_main_tempo_1_49
+      000688 85*50*3C         [24] 2443 	mov	(_int2Ser_PARM_2 + 1),(_main_tempo_1_49 + 1)
+      00068B 75*3D 05         [24] 2444 	mov	_int2Ser_PARM_3,#0x05
+      00068E 75 82 02         [24] 2445 	mov	dpl,#0x02
+      000691 12r03r04         [24] 2446 	lcall	_int2Ser
+                           000694  2447 	C$controleNivel.c$208$2$54 ==.
+                                   2448 ;	controleNivel.c:208: while(!TxFlag); TxFlag=0;
+      000694                       2449 00149$:
+                                   2450 ;	assignBit
+      000694 10*05 02         [24] 2451 	jbc	_TxFlag,00320$
+      000697 80 FB            [24] 2452 	sjmp	00149$
+      000699                       2453 00320$:
+                           000699  2454 	C$controleNivel.c$209$2$54 ==.
+                                   2455 ;	controleNivel.c:209: SBUF=13;
+      000699 75 99 0D         [24] 2456 	mov	_SBUF,#0x0d
+                           00069C  2457 	C$controleNivel.c$210$2$54 ==.
+                                   2458 ;	controleNivel.c:210: sensor=0;
+                                   2459 ;	assignBit
+      00069C C2*0E            [12] 2460 	clr	_sensor
+                           00069E  2461 	C$controleNivel.c$211$1$49 ==.
+                                   2462 ;	controleNivel.c:211: tempC=Echo/58;
+      00069E 75*00 3A         [24] 2463 	mov	__divuint_PARM_2,#0x3a
+      0006A1 75*01 00         [24] 2464 	mov	(__divuint_PARM_2 + 1),#0x00
+      0006A4 85*3E 82         [24] 2465 	mov	dpl,_Echo
+      0006A7 85*3F 83         [24] 2466 	mov	dph,(_Echo + 1)
+      0006AA 12r00r00         [24] 2467 	lcall	__divuint
+      0006AD AD 82            [24] 2468 	mov	r5,dpl
+      0006AF 8D*47            [24] 2469 	mov	_main_tempC_1_49,r5
+                           0006B1  2470 	C$controleNivel.c$213$2$54 ==.
+                                   2471 ;	controleNivel.c:213: tempD=30-tempC;
+      0006B1 74 1E            [12] 2472 	mov	a,#0x1e
+      0006B3 C3               [12] 2473 	clr	c
+      0006B4 95*47            [12] 2474 	subb	a,_main_tempC_1_49
+      0006B6 FE               [12] 2475 	mov	r6,a
+                           0006B7  2476 	C$controleNivel.c$215$2$54 ==.
+                                   2477 ;	controleNivel.c:215: if(malha == 1){
+      0006B7 74 01            [12] 2478 	mov	a,#0x01
+      0006B9 B5*45 02         [24] 2479 	cjne	a,_malha,00321$
+      0006BC 80 03            [24] 2480 	sjmp	00322$
+      0006BE                       2481 00321$:
+      0006BE 02r07rB8         [24] 2482 	ljmp	00158$
+      0006C1                       2483 00322$:
+                           0006C1  2484 	C$controleNivel.c$217$3$75 ==.
+                                   2485 ;	controleNivel.c:217: erAnt=errAt;
+      0006C1 AD*48            [24] 2486 	mov	r5,_main_errAt_1_49
+                           0006C3  2487 	C$controleNivel.c$218$3$75 ==.
+                                   2488 ;	controleNivel.c:218: errAt=setup-tempD;
+      0006C3 E5*46            [12] 2489 	mov	a,_main_setup_1_49
+      0006C5 C3               [12] 2490 	clr	c
+      0006C6 9E               [12] 2491 	subb	a,r6
+                           0006C7  2492 	C$controleNivel.c$220$3$75 ==.
+                                   2493 ;	controleNivel.c:220: P=errAt; I=erAnt; D=errAt-erAnt;
+      0006C7 F5*48            [12] 2494 	mov	_main_errAt_1_49,a
+      0006C9 85*48*4B         [24] 2495 	mov	_main_P_1_49,_main_errAt_1_49
+      0006CC 33               [12] 2496 	rlc	a
+      0006CD 95 E0            [12] 2497 	subb	a,acc
+      0006CF F5*4C            [12] 2498 	mov	(_main_P_1_49 + 1),a
+      0006D1 AA*4B            [24] 2499 	mov	r2,_main_P_1_49
+      0006D3 AB*4C            [24] 2500 	mov	r3,(_main_P_1_49 + 1)
+      0006D5 ED               [12] 2501 	mov	a,r5
+      0006D6 F5*4D            [12] 2502 	mov	_main_I_1_49,a
+      0006D8 33               [12] 2503 	rlc	a
+      0006D9 95 E0            [12] 2504 	subb	a,acc
+      0006DB F5*4E            [12] 2505 	mov	(_main_I_1_49 + 1),a
+      0006DD AE*4D            [24] 2506 	mov	r6,_main_I_1_49
+      0006DF AC*4E            [24] 2507 	mov	r4,(_main_I_1_49 + 1)
+      0006E1 E5*4B            [12] 2508 	mov	a,_main_P_1_49
+      0006E3 C3               [12] 2509 	clr	c
+      0006E4 95*4D            [12] 2510 	subb	a,_main_I_1_49
+      0006E6 FD               [12] 2511 	mov	r5,a
+      0006E7 E5*4C            [12] 2512 	mov	a,(_main_P_1_49 + 1)
+      0006E9 95*4E            [12] 2513 	subb	a,(_main_I_1_49 + 1)
+      0006EB FF               [12] 2514 	mov	r7,a
+                           0006EC  2515 	C$controleNivel.c$221$3$75 ==.
+                                   2516 ;	controleNivel.c:221: P=(P*pid[0])/10; I=(I*pid[1])/10; D=(D*pid[2])/10;
+      0006EC 85*41*00         [24] 2517 	mov	__mulint_PARM_2,_pid
+      0006EF 75*01 00         [24] 2518 	mov	(__mulint_PARM_2 + 1),#0x00
+      0006F2 8A 82            [24] 2519 	mov	dpl,r2
+      0006F4 8B 83            [24] 2520 	mov	dph,r3
+      0006F6 C0 07            [24] 2521 	push	ar7
+      0006F8 C0 06            [24] 2522 	push	ar6
+      0006FA C0 05            [24] 2523 	push	ar5
+      0006FC C0 04            [24] 2524 	push	ar4
+      0006FE 12r00r00         [24] 2525 	lcall	__mulint
+      000701 75*00 0A         [24] 2526 	mov	__divsint_PARM_2,#0x0a
+      000704 75*01 00         [24] 2527 	mov	(__divsint_PARM_2 + 1),#0x00
+      000707 12r00r00         [24] 2528 	lcall	__divsint
+      00070A AA 82            [24] 2529 	mov	r2,dpl
+      00070C AB 83            [24] 2530 	mov	r3,dph
+      00070E D0 04            [24] 2531 	pop	ar4
+      000710 D0 05            [24] 2532 	pop	ar5
+      000712 D0 06            [24] 2533 	pop	ar6
+      000714 85*42*00         [24] 2534 	mov	__mulint_PARM_2,(_pid + 0x0001)
+      000717 75*01 00         [24] 2535 	mov	(__mulint_PARM_2 + 1),#0x00
+      00071A 8E 82            [24] 2536 	mov	dpl,r6
+      00071C 8C 83            [24] 2537 	mov	dph,r4
+      00071E C0 05            [24] 2538 	push	ar5
+      000720 C0 03            [24] 2539 	push	ar3
+      000722 C0 02            [24] 2540 	push	ar2
+      000724 12r00r00         [24] 2541 	lcall	__mulint
+      000727 75*00 0A         [24] 2542 	mov	__divsint_PARM_2,#0x0a
+      00072A 75*01 00         [24] 2543 	mov	(__divsint_PARM_2 + 1),#0x00
+      00072D 12r00r00         [24] 2544 	lcall	__divsint
+      000730 AE 82            [24] 2545 	mov	r6,dpl
+      000732 AC 83            [24] 2546 	mov	r4,dph
+      000734 D0 02            [24] 2547 	pop	ar2
+      000736 D0 03            [24] 2548 	pop	ar3
+      000738 D0 05            [24] 2549 	pop	ar5
+      00073A D0 07            [24] 2550 	pop	ar7
+      00073C 85*43*00         [24] 2551 	mov	__mulint_PARM_2,(_pid + 0x0002)
+      00073F 75*01 00         [24] 2552 	mov	(__mulint_PARM_2 + 1),#0x00
+      000742 8D 82            [24] 2553 	mov	dpl,r5
+      000744 8F 83            [24] 2554 	mov	dph,r7
+      000746 C0 06            [24] 2555 	push	ar6
+      000748 C0 04            [24] 2556 	push	ar4
+      00074A C0 03            [24] 2557 	push	ar3
+      00074C C0 02            [24] 2558 	push	ar2
+      00074E 12r00r00         [24] 2559 	lcall	__mulint
+      000751 75*00 0A         [24] 2560 	mov	__divsint_PARM_2,#0x0a
+      000754 75*01 00         [24] 2561 	mov	(__divsint_PARM_2 + 1),#0x00
+      000757 12r00r00         [24] 2562 	lcall	__divsint
+      00075A AD 82            [24] 2563 	mov	r5,dpl
+      00075C AF 83            [24] 2564 	mov	r7,dph
+      00075E D0 02            [24] 2565 	pop	ar2
+      000760 D0 03            [24] 2566 	pop	ar3
+      000762 D0 04            [24] 2567 	pop	ar4
+      000764 D0 06            [24] 2568 	pop	ar6
+                           000766  2569 	C$controleNivel.c$223$3$75 ==.
+                                   2570 ;	controleNivel.c:223: ctrlAt=ctlAnt+P+I+D;
+      000766 EA               [12] 2571 	mov	a,r2
+      000767 25*49            [12] 2572 	add	a,_main_ctrlAt_1_49
+      000769 FA               [12] 2573 	mov	r2,a
+      00076A EB               [12] 2574 	mov	a,r3
+      00076B 35*4A            [12] 2575 	addc	a,(_main_ctrlAt_1_49 + 1)
+      00076D FB               [12] 2576 	mov	r3,a
+      00076E EE               [12] 2577 	mov	a,r6
+      00076F 2A               [12] 2578 	add	a,r2
+      000770 FE               [12] 2579 	mov	r6,a
+      000771 EC               [12] 2580 	mov	a,r4
+      000772 3B               [12] 2581 	addc	a,r3
+      000773 FC               [12] 2582 	mov	r4,a
+      000774 ED               [12] 2583 	mov	a,r5
+      000775 2E               [12] 2584 	add	a,r6
+      000776 F5*49            [12] 2585 	mov	_main_ctrlAt_1_49,a
+      000778 EF               [12] 2586 	mov	a,r7
+      000779 3C               [12] 2587 	addc	a,r4
+      00077A F5*4A            [12] 2588 	mov	(_main_ctrlAt_1_49 + 1),a
+                           00077C  2589 	C$controleNivel.c$224$3$75 ==.
+                                   2590 ;	controleNivel.c:224: if(ctrlAt>255) ctrlAt=255;
+      00077C C3               [12] 2591 	clr	c
+      00077D 74 FF            [12] 2592 	mov	a,#0xff
+      00077F 95*49            [12] 2593 	subb	a,_main_ctrlAt_1_49
+      000781 74 80            [12] 2594 	mov	a,#(0x00 ^ 0x80)
+      000783 85*4A F0         [24] 2595 	mov	b,(_main_ctrlAt_1_49 + 1)
+      000786 63 F0 80         [24] 2596 	xrl	b,#0x80
+      000789 95 F0            [12] 2597 	subb	a,b
+      00078B 50 06            [24] 2598 	jnc	00153$
+      00078D 75*49 FF         [24] 2599 	mov	_main_ctrlAt_1_49,#0xff
+      000790 75*4A 00         [24] 2600 	mov	(_main_ctrlAt_1_49 + 1),#0x00
+      000793                       2601 00153$:
+                           000793  2602 	C$controleNivel.c$225$3$75 ==.
+                                   2603 ;	controleNivel.c:225: if(ctrlAt<0) ctrlAt=0;
+      000793 E5*4A            [12] 2604 	mov	a,(_main_ctrlAt_1_49 + 1)
+      000795 30 E7 05         [24] 2605 	jnb	acc.7,00155$
+      000798 E4               [12] 2606 	clr	a
+      000799 F5*49            [12] 2607 	mov	_main_ctrlAt_1_49,a
+      00079B F5*4A            [12] 2608 	mov	(_main_ctrlAt_1_49 + 1),a
+      00079D                       2609 00155$:
+                           00079D  2610 	C$controleNivel.c$226$1$49 ==.
+                                   2611 ;	controleNivel.c:226: pwm=ctrlAt*199/255;
+      00079D 85*49*00         [24] 2612 	mov	__mulint_PARM_2,_main_ctrlAt_1_49
+      0007A0 85*4A*01         [24] 2613 	mov	(__mulint_PARM_2 + 1),(_main_ctrlAt_1_49 + 1)
+      0007A3 90 00 C7         [24] 2614 	mov	dptr,#0x00c7
+      0007A6 12r00r00         [24] 2615 	lcall	__mulint
+      0007A9 75*00 FF         [24] 2616 	mov	__divsint_PARM_2,#0xff
+      0007AC 75*01 00         [24] 2617 	mov	(__divsint_PARM_2 + 1),#0x00
+      0007AF 12r00r00         [24] 2618 	lcall	__divsint
+      0007B2 AE 82            [24] 2619 	mov	r6,dpl
+      0007B4 AF 83            [24] 2620 	mov	r7,dph
+      0007B6 8E*44            [24] 2621 	mov	_pwm,r6
+                           0007B8  2622 	C$controleNivel.c$229$2$54 ==.
+                                   2623 ;	controleNivel.c:229: while(!umSeg); umSeg=0; tempo++;
+      0007B8                       2624 00158$:
+                                   2625 ;	assignBit
+      0007B8 10*00 02         [24] 2626 	jbc	_umSeg,00325$
+      0007BB 80 FB            [24] 2627 	sjmp	00158$
+      0007BD                       2628 00325$:
+      0007BD 05*4F            [12] 2629 	inc	_main_tempo_1_49
+      0007BF E4               [12] 2630 	clr	a
+      0007C0 B5*4F 02         [24] 2631 	cjne	a,_main_tempo_1_49,00326$
+      0007C3 05*50            [12] 2632 	inc	(_main_tempo_1_49 + 1)
+      0007C5                       2633 00326$:
+      0007C5 02r04rAE         [24] 2634 	ljmp	00162$
+                           0007C8  2635 	C$controleNivel.c$233$1$49 ==.
+                           0007C8  2636 	XG$main$0$0 ==.
+      0007C8 22               [24] 2637 	ret
+                                   2638 	.area CSEG    (CODE)
+                                   2639 	.area CONST   (CODE)
+                           000000  2640 G$setLCD4$0$0 == .
+      000000                       2641 _setLCD4:
+      000000 28                    2642 	.db #0x28	; 40
+      000001 06                    2643 	.db #0x06	; 6
+      000002 0E                    2644 	.db #0x0e	; 14
+      000003 01                    2645 	.db #0x01	; 1
+                           000004  2646 G$Tit1$0$0 == .
+      000004                       2647 _Tit1:
+      000004 70 20 20 20 20 69 20  2648 	.ascii "p    i    d "
+             20 20 20 64 20
+      000010 00                    2649 	.db 0x00
+                           000011  2650 G$Tit2$0$0 == .
+      000011                       2651 _Tit2:
+      000011 53 65 74 70 20 20 20  2652 	.ascii "Setp    Dist"
+             20 44 69 73 74
+      00001D 00                    2653 	.db 0x00
+                                   2654 	.area XINIT   (CODE)
+                                   2655 	.area CABS    (ABS,CODE)
